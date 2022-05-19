@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CONTENT PAGE</title>
+<style>
+.popup{
+	width:400px;
+	background: #C4D9FE;
+	border-radius:6px;
+	border:5px solid;
+	position: absolute;
+	top:0;
+	left:50%;
+	transform:translate(-50%,-50%)scale(0.1);
+	text-align:center;
+	padding: 0 30px 30px;
+	color:#333;
+	visibility:hidden;
+	transition: transform 0.4s,top 0.4s;
+}
+.popup h2{
+	font-size:38px;
+	font-weight:500;
+	margin: 30px 30px;
+}
+.popup button{
+	width:100%;
+	margin-top:50px;
+	padding: 10px 0;
+	background: #6fd649;
+	color: #fff;
+	border: 0;
+	outline: none;
+	font-size: 18px;
+	border-radius:4px;
+	cursor: pointer;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+.open-popup{
+	visibility:visible;
+	position:fixed;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%)scale(1);
+}
+</style>
+<link href="default.css" rel="stylesheet" type="text/css">
+</head>
+<body style="background-image:url('bg1.png')">
+<div class="topnav">
+  <a href="#Sign Up">Logout</a>
+  <a href="#Login">Profile</a>
+  <a href="#Winner">Winner</a>
+  <a href="#About">About Us</a>
+    <a class="active" href="#home">Home</a>
+    <img class="logo" style="float: left;" src = "logo.png">
+    <p style="float: left;">APU Photography Competition</p>
+</div>
+<h2 style="text-align:center">CONTENT</h2>	
+<h2 style="text-align:center">COMPETITION 2:BUILDINGS </h2>	
+<br>
+<nav class="buttonbackground">
+<p align="left">
+  <a href="adminhome.html"><button type="button" class="button button1">BACK</button></a>
+</p>
+<p align="right">
+  <button class="button button2">NEXT</button>
+</p>
+</nav>
+
+
+<nav class="content1" style="background-color:#A7CAD7">
+	<div id="contentpicture1">
+	</div>
+	<div id="contentdescription1">
+		<label for="ContentCode"><b>Content Code:</b><input type="text" placeholder="code" name="code"></label>
+		<br>
+		<label for="Participant"><b>Participant Name: </b><input type="text" placeholder="name" name="name"></label>
+		<br>
+		<label for="Description"><b>Description: </b></label>
+		<input style="width:94%;height:70px;" type="text" placeholder="Description" name="description">
+		<a href="readcomment.html">
+			<button class="button button3">Read Comments</button>
+		</a><br/>
+		<div style="display:inline-block; float:right;" >
+			<button type="submit" class="button button1" onclick="openPopup()">Vote</button>
+			<div class = "popup" id="popup">
+				<h2>Voted Successfully</h2>
+				<p>Thanks for supporting</p>
+				<button type="button" onclick="closePopup()">OK</button>
+			</div>
+			<a href="comment.html">
+				<button class="button button1">Comment</button>
+			</a>
+		</div>
+	</div>
+</nav>
+
+<nav class="content1" style="background-color:#A7CAD7">
+	<div id="contentpicture1">
+	</div>
+	<div id="contentdescription1">
+		<label for="ContentCode"><b>Content Code:</b><input type="text" placeholder="code" name="code"></label>
+		<br>
+		<label for="Participant"><b>Participant Name: </b><input type="text" placeholder="name" name="name"></label>
+		<br>
+		<label for="Description"><b>Description: </b></label>
+		<input style="width:94%;height:70px;" type="text" placeholder="Description" name="description">
+		<a href="readcomment.html">
+			<button class="button button3">Read Comments</button>
+		</a>
+		<div style="display:inline-block; float:right;" >
+			<button type="submit" class="button button1" onclick="openPopup()">Vote</button>
+			<div class = "popup" id="popup">
+				<h2>Voted Successfully</h2>
+				<p>Thanks for supporting</p>
+				<button type="button" onclick="closePopup()">OK</button>
+			</div>
+			<a href="comment.html">
+				<button class="button button1">Comment</button>
+			</a>
+		</div>
+	</div>
+</nav>
+
+<nav class="content1" style="background-color:#A7CAD7; margin-bottom:30px">
+	<div id="contentpicture1">
+	</div>
+	<div id="contentdescription1">
+		<label for="ContentCode"><b>Content Code:</b><input type="text" placeholder="code" name="code"></label>
+		<br>
+		<label for="Participant"><b>Participant Name: </b><input type="text" placeholder="name" name="name"></label>
+		<br>
+		<label for="Description"><b>Description: </b></label>
+		<input style="width:94%;height:70px;" type="text" placeholder="Description" name="description">
+		<a href="readcomment.html">
+			<button class="button button3">Read Comments</button>
+		</a>
+		<div style="display:inline-block; float:right;" >
+			<button type="submit" class="button button1" onclick="openPopup()">Vote</button>
+			<div class = "popup" id="popup">
+				<h2>Voted Successfully</h2>
+				<p>Thanks for supporting</p>
+				<button type="button" onclick="closePopup()">OK</button>
+			</div>
+			<a href="comment.html">
+				<button class="button button1">Comment</button>
+			</a>
+		</div>
+	</div>
+</nav>
+
+<script>
+let popup = document.getElementById("popup");
+
+function openPopup(){
+	popup.classList.add("open-popup");
+}
+function closePopup(){
+	popup.classList.remove("open-popup");
+}
+</script>
+</body>
+</html>

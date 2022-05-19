@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+
+img.logo {
+width: 160px;
+height: 128px;
+border: 5px groove;
+}
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+padding: 0px;
+margin-left: 10px;
+overflow: hidden;
+}
+
+.topnav a {
+display: block;
+float: right;
+color: #f2f2f2;
+text-align: center;
+padding: 24px 26px;
+text-decoration: none;
+font-size: 17px;
+background-color: #333;
+}
+
+.topnav p {
+float: left;
+margin-left: 10px;
+font-size: 32px;
+padding: 0px;
+margin-top: 17px;
+font-family: Comic San;
+font-weight: bold;
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.topnav a.active {
+background-color: #04aa6d;
+color: white;
+}
+
+.title{
+	border:solid 2px black;
+	padding:25px;
+	margin:25px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns:800px 1000px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 5px 0;
+}
+   
+.grid-container1 {
+  display: grid;
+  grid-template-columns:300px 300px 300px;
+  gap: 30px;
+  justify-content: space-evenly;
+  align-content:space-evenly;
+}
+
+.grid-container1 > div {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns:300px 300px 300px;
+  gap: 30px;
+  justify-content: space-evenly;
+  align-content:space-evenly;
+}
+
+    </style>
+</head>
+
+<body style="background-image:url('bg.gif')">
+    <div class="topnav">
+        <a href="logout.html">Logout</a>
+        <a href="#Winner">Winner</a>
+        <a class="active" href="adminhome.html">Home</a>
+        <img class="logo" style="float: left" src="logo.png" />
+        <p style="float: left">APU Photography Competition</p>
+    </div>
+    <div class="container">
+        <h1>Welcome, &lt;Admin&gt;</h1>
+        <div class="col-4">
+            <div class="container"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Function</h2>
+                <div class="row">
+                    <div class="col align-self-start">
+                        <div class="Functions"></div>
+                        <a href="compadminPost.html">
+                        	<button type="button" class="btn btn-danger">Add Competition</button><br />
+                        </a>
+                        <button type="button" class="btn btn-danger mt-3">
+                            View Statistical Report</button><br />
+                        <a href="adminemail.html"><button type="button" class="btn btn-danger mt-3">
+                            Send Email</button><br /></a>
+                        <button type="button" class="btn btn-danger mt-3">
+                            Verify Content
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 offset-md-3">
+                <h2>Competition On Going</h2>
+                <div class="row">
+                    <div class="col align-self-start">
+                        <button type="button" class="btn btn-success">
+                            Competition 1
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 offset-md-6" style="margin-bottom:100px">
+                <h2>Competition Preparing</h2>
+                <div class="row">
+                    <div class="col align-self-start">
+                        <a href="viewcotent.html">
+                        	<button type="button" class="btn btn-info">Competition 2</button><br />
+                        </a>
+                        <button type="button" class="btn btn-info mt-3">Competition 3</button><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<h2 id="Winner" style="margin:25px">Winner</h2>
+<div class="title" style="background-color:#A7CAD7">
+	<p style="text-align:center; font-size:24px">Winner for the latest competition:</p>
+	<div class="grid-container1" style="padding-left:80px">
+		<div class="title" style="width:150px; height:150px"></div>
+		<div class="title" style="width:150px; height:150px"></div>
+		<div class="title" style="width:150px; height:150px"></div>
+	</div>
+	<div class="grid-container2"> 	
+		<img alt="" src="1st.png" width="40px" height="60px" style="padding-left:140px">
+		<img alt="" src="2nd.png" width="40px" height="60px" style="padding-left:120px">
+		<img alt="" src="3rd.png" width="40px" height="60px" style="padding-left:100px">
+	</div>
+	<div class="grid-container2" style="padding-left:80px">
+		<p>Name:</p>
+		<p>Name:</p>
+		<p>Name:</p>
+	</div>
+</div>
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Function</h2>
+                <div class="row">
+                    <div class="col align-self-start">
+                        <div class="Functions"></div> 
+                        <button type="button" class="btn btn-danger">Add Competition</button><br>
+                        <button type="button" class="btn btn-danger mt-3">View Statistical Report</button><br>
+                        <button type="button" class="btn btn-danger mt-3">Send Email</button><br>
+                        <button type="button" class="btn btn-danger mt-3">Verify Content</button>
+                    </div>
+                </div>  
+            </div> -->
+</body>
+
+</html>
