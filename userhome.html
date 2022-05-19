@@ -63,7 +63,7 @@ img.logo{
 }
 
 .title{
-	border:solid 2px black;
+	border:solid 2px #A7CAD7;
 	padding:25px;
 	margin:25px;
 	background-color:#A7CAD7;
@@ -95,10 +95,18 @@ img.logo{
   padding: 5px 0;
 }
 
+.flex-container {
+  display: flex;
+}
+
+.flex-container > div {
+  margin-right: 30px;
+  padding: 5px;
+}
+
 </style> 
 </head>
 
-<body style="background-image:url('bg.gif')">
 
 <body style="background-image:url('bg.gif')">
 <div class="topnav">
@@ -106,80 +114,83 @@ img.logo{
   <a href="editprofile.html">Profile</a>
   <a href="#Winner">Winner</a>
   <a href="#About">About Us</a>
-    <a class="active" href="main.html">Home</a>
+    <a class="active" href="userhome.html">Home</a>
     <img class="logo" style="float: left;" src = "logo.png">
     <p style="float: left;">APU Photography Competition</p>
 </div>
 
-<h2 id="home" style="margin:25px">Home</h2>
-<div class="grid-container">
-<div class="title" style="width:730px">
-<img alt="" src="poster.jpg" width="280px" height="280px" style="float:left">
-<form name="login" method="get"  style="margin-right:1100px; padding-left:300px; width:780px">
-	<table>
-	<tr>
-		<td style="font-size:20px"><b>Open for Registration!!!</b></td>
-	</tr>
-	<tr><td></td></tr>
-	<tr>
-		<td style="text-align:left">Title</td>
-		<td>:</td>
-		<td><input type="text" name="title" size="15" maxlength="15"/></td>
-	</tr>
-	<tr>
-		<td style="text-align:left">Theme</td>
-		<td>:</td>
-		<td><input type="text" name="theme" size="15" maxlength="15"/></td>
-	</tr>
-	<tr>
-		<td style="text-align:left">Register Date</td>
-		<td>:</td>
-		<td><input type="text" name="registerdate" size="15" maxlength="15"/></td>
-	</tr>
-	<tr>
-		<td style="text-align:left">Deadline</td>
-		<td>:</td>
-		<td><input type="text" name="deadline" size="15" maxlength="15"/></td>
-	</tr>
-	<tr>
-		<td style="text-align:left">Competition Date</td>
-		<td>:</td>
-		<td><input type="text" name="compdate" size="15" maxlength="15"/></td>
-	</tr>
-	<tr>
-		<td style="text-align:left">Prize</td>
-		<td>:</td>
-		<td><input type="text" name="prize" size="15" maxlength="8"/></td>
-	</tr>
-	<tr>
-		<td style="text-align:left">Eligibility</td>
-		<td>:</td>
-		<td><input type="text" name="eligibility" size="15" maxlength="8"/></td>
-	</tr>
-	<tr>
-		<td><a href="compread.html">Click here for more information...</a>
-	</td>
-	</tr>
-	</table>
-</form>
+<h2 id="home" style="margin:25px; text-align:center">Welcome!</h2>
+<div class="flex-container">
+	<div class=title style="width:800px; height:320px; font-size:16px; margin-bottom:90px; margin-left:80px">
+	<img alt="" src="poster.jpg" width="280px" height="280px" style="float:left">
+	<form name="login" method="get"  style=" padding-left:300px">
+		<table>
+		<tr>
+			<td style="font-size:20px"><b>Open for Registration!!!</b></td>
+		</tr>
+		<tr><td></td></tr>
+		<tr>
+			<td style="text-align:left">Title</td>
+			<td>:</td>
+			<td><input type="text" name="title" size="15" maxlength="15"/></td>
+		</tr>
+		<tr>
+			<td style="text-align:left">Theme</td>
+			<td>:</td>
+			<td><input type="text" name="theme" size="15" maxlength="15"/></td>
+		</tr>
+		<tr>
+			<td style="text-align:left">Register Date</td>
+			<td>:</td>
+			<td><input type="text" name="registerdate" size="15" maxlength="15"/></td>
+		</tr>
+		<tr>
+			<td style="text-align:left">Deadline</td>
+			<td>:</td>
+			<td><input type="text" name="deadline" size="15" maxlength="15"/></td>
+		</tr>
+		<tr>
+			<td style="text-align:left">Competition Date</td>
+			<td>:</td>
+			<td><input type="text" name="compdate" size="15" maxlength="15"/></td>
+		</tr>
+		<tr>
+			<td style="text-align:left">Prize</td>
+			<td>:</td>
+			<td><input type="text" name="prize" size="15" maxlength="8"/></td>
+		</tr>
+		<tr>
+			<td style="text-align:left">Eligibility</td>
+			<td>:</td>
+			<td><input type="text" name="eligibility" size="15" maxlength="8"/></td>
+		</tr>
+		<tr>
+			<td><a href="compread2.html">Click here for more information...</a>
+		</td>
+		</tr>
+		</table>
+	</form>
+	</div>
+
+<div style="font-size:16px">
+	<div style="padding-bottom:0px">
+		<div class="title" style="text-align:center; width:300px; height:150px; margin-left:33px">
+			<b style="font-size:17px">Competition 2 (Closed)</b><br/><br/>
+			<a href="viewcotent.html">
+				<button type="button" class="btn btn-primary">Click Here to Vote</button>
+			</a>
+		</div>
+	</div>
+
+	<div >
+		<div class="title" style="text-align:center; margin:33px;width:300px; height:130px; padding-top:50px">
+			<p>More Competitions...</p><br/><br/>
+		</div><br/>
+	</div>
+</div>
 </div>
 
-
-<div>
-<div class="title" style="text-align:center; width:250px; height:150px; margin-left:300px">
-	<b style="font-size:17px">Competition 2 (Closed)</b><br/><br/>
-	<button type="submit">Click Here to Vote</button>
-</div>
-</div>
-
-<div style="margin-left:880px; margin-bottom:900px">
-<div class="title" style="text-align:center; margin:33px;width:250px; height:80px">
-	<p style="font-size:17px">More Competitions...</p><br/><br/>
-</div><br/>
-</div>
-</div>
-
-<h2 id="Winner" style="margin:25px">Winner</h2>
+<h2 id="Winner" style="margin:25px; text-align:center">Winner</h2>
 <div class="title">
 	<p style="text-align:center; font-size:24px">Winner for the latest competition:</p>
 	<div class="grid-container1" style="padding-left:80px">
@@ -197,9 +208,9 @@ img.logo{
 		<p>Name:</p>
 		<p>Name:</p>
 	</div>
-</div>
+</div><br/><vr/>
 
-<h2 id="About" style="margin:25px">About Us</h2>
+<h2 id="About" style="margin:25px; text-align:center">About Us</h2>
 <div class="title" style="text-align:justify; margin:25px"> 
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue faucibus lectus. Nullam semper consequat neque, ac congue urna fermentum sit amet. In vehicula vulputate aliquet. Duis luctus congue ipsum. Vivamus lacinia ultrices justo, quis dignissim erat sodales ut. Sed a tincidunt lacus. Sed ac elit eros. Ut auctor ligula id massa viverra, nec bibendum sapien faucibus. Duis vitae volutpat velit. Aenean placerat arcu efficitur lacus tincidunt, eget aliquam velit sollicitudin. Integer eu lobortis mi, nec rhoncus diam. Vestibulum malesuada ultricies lacus at varius. Proin dolor nibh, facilisis vitae turpis sed, imperdiet efficitur odio. Proin vel diam ac eros vestibulum volutpat quis eget ex. Duis at massa lorem. Donec porttitor sodales neque, eu tempor ex ornare ac</p>
 	<p>Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis libero ut nunc aliquet pellentesque. Aliquam erat volutpat. Aenean ac eros non mi dignissim fermentum quis vel elit. In laoreet porta purus, nec porta sem. Morbi dictum, ante non vehicula dapibus, lorem massa semper ex, nec mollis diam sapien sit amet nibh. Morbi maximus felis id ligula mollis elementum. Morbi sit amet luctus metus, ut suscipit sapien. Duis libero massa, vehicula vel fringilla eu, porttitor ac mauris. Nullam scelerisque turpis a leo euismod vestibulum. Donec ultrices augue eu tincidunt porttitor. Etiam euismod, lacus vitae tempus ultricies, sem felis iaculis dolor, at imperdiet nibh nisi sit amet nibh. Nullam ac aliquam nibh. Cras tempus tincidunt malesuada.</p>
