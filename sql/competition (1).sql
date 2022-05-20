@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2022 at 07:27 AM
+-- Generation Time: May 20, 2022 at 09:41 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -42,13 +42,6 @@ CREATE TABLE `competition` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `competition`
---
-
-INSERT INTO `competition` (`CompetitionID`, `CompetitionTitle`, `CompetitionImage`, `Theme`, `RegisterDate`, `Deadline`, `CompetitionDate`, `Prize`, `Eligibility`, `Description`, `Guideline`) VALUES
-(1, 'To The Hero We Call Daddy', '', 'Father\'s Day', '20/5/2022', 'Before 11:59pm on 10/6/2022', '12/6/2022 - 18/6/2022', 'RM100 for 1st Runner Up\r\nRM50 for 2nd Runner Up\r\nRM30 for 3rd Runner Up\r\n(Winner will be announced on June 20th.)', 'No restrictions.', 'In honor of Father’s Day, The APU Photography Club is hosting a photo contest for dads. We want to see photos that celebrate fatherhood. Please share a photo with us that reflects what you love most about your relationship with your dad, or what you love most about fatherhood.', '1. Individuals may enter only one photo into the contest.\r\n2. Photo entries must relate to the theme of Fatherhood.\r\n3. Submission will not be accepted after the deadline.\r\n4. Image quality of all submitted photos is an important consideration. Photos must be in JPEG, PNG, or GIF format. Ideally, all submitted photos should have a minimum resolution of 5 MB and 8 megapixels or higher. Photos with watermarks or other advertisemen');
-
---
 -- Indexes for dumped tables
 --
 
@@ -66,7 +59,7 @@ ALTER TABLE `competition`
 -- AUTO_INCREMENT for table `competition`
 --
 ALTER TABLE `competition`
-  MODIFY `CompetitionID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `CompetitionID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
