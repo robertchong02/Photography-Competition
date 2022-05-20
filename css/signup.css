@@ -1,0 +1,111 @@
+img.logo{
+    width: 160px;
+    height: 128px;
+    border: 5px groove;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .topnav {
+    padding: 0px;
+    margin-left: 10px;
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    display: block;
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 24px 26px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #333;
+  }
+  
+  .topnav p {
+    float: left;
+    margin-left: 10px;
+    font-size: 32px;
+    padding: 0px;
+    margin-top: 17px;
+    font-weight: bold;
+    font-family: Comic San
+    
+  
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+  
+    /*Hello robert*/
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .title{
+      border:solid 2px black;
+      padding:25px;
+      margin:auto;
+      margin-bottom:50px;
+      text-align:center;
+      width: 450px;
+  }
+  
+  .popup{
+      width:400px;
+      background: #C4D9FE;
+      border-radius:6px;
+      border:5px solid;
+      position: absolute;
+      top:0;
+      left:50%;
+      transform:translate(-50%,-50%)scale(0.1);
+      text-align:center;
+      padding: 0 30px 30px;
+      color:#333;
+      visibility:hidden;
+      transition: transform 0.4s,top 0.4s;
+  }
+  .popup h2{
+      font-size:38px;
+      font-weight:500;
+      margin: 30px 30px;
+  }
+  .popup button{
+      width:100%;
+      margin-top:50px;
+      padding: 10px 0;
+      background: #6fd649;
+      color: #fff;
+      border: 0;
+      outline: none;
+      font-size: 18px;
+      border-radius:4px;
+      cursor: pointer;
+      box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  }
+  .open-popup{
+      visibility:visible;
+      position:fixed;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%)scale(1);
+  }
+  
+  .btn {
+    border: none;
+    color: black;
+    padding: 6px 8px;
+    cursor: pointer;
+  }
+
+  /* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+  }
