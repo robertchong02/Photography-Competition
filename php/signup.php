@@ -15,7 +15,7 @@ $ConfirmPassword = mysqli_real_escape_string($con, $_POST['confirmpassword']);
 
 
 // MySQL Queries
-$insert = "INSERT INTO usersignup (Fname, Lname, Username, Email, ContactNumber, Gender, DoB, Nationality, Password, ConfirmPassword) VALUES ('$_POST[firstname]', '$_POST[lastname]', '$_POST[username]', , '$_POST[email]', '$_POST[phone]'), '$_POST[gender]', '$_POST[dob]', '$_POST[nationality]'), '$_POST[password]', '$_POST[confirmpassword]';";
+$insert = "INSERT INTO usersignup (Fname, Lname, Username, Email, ContactNumber, Gender, DoB, Nationality, Password, ConfirmPassword) VALUES ('$_POST[firstname]', '$_POST[lastname]', '$_POST[username]',  '$_POST[email]', '$_POST[phone]', '$_POST[gender]', '$_POST[dob]', '$_POST[nationality]', '$_POST[password]', '$_POST[confirmpassword]');";
 $check_username = "SELECT * FROM usersignup WHERE Username = '$Username'";
 $check_email = "SELECT * FROM usersignup WHERE Email = '$Email'";
 
@@ -42,7 +42,7 @@ if($Password == $ConfirmPassword)
                 echo 
                 '<script>
                 alert("Sign up failed. Please try again. Sorry for the inconvience.");
-                
+                window.location.href = "usersignup.php";
                 </script>';
             }
         }
