@@ -14,7 +14,7 @@
   <link href="../css/adminaddcomp.css" rel="stylesheet" type="text/css">
 </head>
 
-<body style="background-image:url('bg1.png')">
+<body style="background-image:url('../image/bg1.png')">
 
 
   <div class="topnav">
@@ -32,6 +32,7 @@
   </p>
   <br>
   <br>
+  <h2 style="text-align:center">Add New Competition<h2>
   <br>
   <div class="add-comp-form">
     <form method="POST" action="addcomp.php" enctype="multipart/form-data">
