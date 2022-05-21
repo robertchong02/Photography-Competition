@@ -12,7 +12,7 @@
 
 <body style="background-image:url('../image/bg.gif')">
 <div class="topnav">
-  <a href="logout.html">Logout</a>
+  <a href="logout.php">Logout</a>
   <a href="editprofile.html">Profile</a>
   <a href="#Winner">Winner</a>
   <a href="#About">About Us</a>
