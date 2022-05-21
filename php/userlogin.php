@@ -21,15 +21,21 @@
 
 <div class="title" style="margin-bottom:30px ;background-color:#A7CAD7; width:600px; text-align:center; margin-left:330px">
 <h2 id="Login">Login</h2><br/><br/>
-<form name="login" method="get" action="login.html">
+<form name="login" method="get" action="login.php">
 	Username:
 	<input type="text" name="username2" size="20" maxlength="8"/><br/><br/>
 	Password:	
 	<input type="password" name="pw2" size="20" maxlength="16"/><br/><br/>
-	<a href="forgetpassword.html" style="font-size:10px">Forgot password?</a>
+	<a href="forgetpassword.html" style="font-size:15px">Forgot password?</a>
+	<br>
+	<input style="width:50%" type="submit" value="Log In as User">
+	<br>
+	<input style="width:50%" type="submit" value="Log In as Admin">
+	<br>
+	<input style="width:50%" type="submit" value="Sign Up as New Member">
 </form><br/><br/>
 
-<a href="userhome.html">  
+<!-- <a href="userhome.html">  
 	<button type="button" class="btn btn-primary">Log In as User</button> 
 </a><br/><br/>
 <a href="adminhome.html">  
@@ -37,7 +43,7 @@
 </a><br/><br/>
 <a href="signup.html">  
 	<button type="button" class="btn btn-primary">Sign Up as New Member</button>  
-</a>
+</a> -->
 </div>
 
 
