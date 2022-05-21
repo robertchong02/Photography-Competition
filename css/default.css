@@ -106,6 +106,15 @@ body {
   padding: 5px 0;
 }
 
+.flex-container {
+  display: flex;
+}
+
+.flex-container > div {
+  margin-right: 30px;
+  padding: 5px;
+}
+
 
 /*admindemail*/
 .button {
