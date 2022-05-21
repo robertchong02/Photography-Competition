@@ -72,31 +72,23 @@
     <img src = "image_test.jpg">
     <br>
     <br>
-    <p> Theme: </p>
-    <p> Register Date: </p>
-    <p> Deadline: </p>
-    <p> Competition Date: </p>
-    <p> Prize: </p>
-    <p> Eligibility: </p>
+    <p> Theme: <input style="width:fit-content;" type="text" placeholder="Theme" name="theme" readonly></p>
+    <p> Register Date: <input style="width:fit-content" type="text" placeholder="Register Date" name="rdate" readonly> </p>
+    <p> Deadline: <input style="width:fit-content" type="text" placeholder="Deadline" name="deadline" readonly></p>
+    <p> Competition Date: <input style="width:fit-content" type="text" placeholder="Competition Date" name="cdate" readonly></p>
+    <p> Prize: <input style="width:fit-content" type="text" placeholder="Prize" name="prize" readonly></p>
+    <p> Eligibility: <input style="width:fit-content" type="text" placeholder="Eligibility" name="eligibility" readonly></p>
 
   </div> 
   <div class="box2" style="background-color:#A7CAD7">
-    <h3> Terms & Conditions </h3>
-    <p> xxxxxxxxxx xxxxxx xxxxx  xxxxxxx x xxxxxx xxxx xxxxx xxxxxxxx xxxxxx xxxxxxx xxxxxxxx xxxxxx xxxxxxx xxxxxx xxxxx xxxx xxxxxx xxxxxx xxx xxxxx xxxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxx xxxxxxxxxxx xxx xxx xxxxx xxxxxxx xxxxxxx xxxxxx xxxxxxx xxxxxxxx xxxxx xxxxxxx xxxxx  xxxxxxxxx xxxxxxxxx xxxxxxxxxxx xxxxxxx xxxxx xxxxxxx xxx xxxxxxx xxxxxxx  </p>
-    <br>
-  <div class="tacbox">
-    <input id="checkbox" type="checkbox" />
-    <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
-  </div>
-    <br>
-    <hr>
-    <hr>
-
     <div class="filebox">
     <p>Upload Content Here</p>
     <form action="/user_upload.php" method="post">
-  	<input class="choosefile" type="file" id="myFile" name="filename" style="width:250px">
-	<button type="button" class="button button1 btn btn-primary joinButton" onclick="openPopup()" style="padding-bottom:35px">Join Competition</button>
+  	<input type="file" id="myFile" name="filename" style="width:40%;">
+    <br>
+    <input style="width:95%;" type="text" placeholder="Enter your content title" id="cont_title">
+    <input style="width:95%;height:100px" type="text" placeholder="Enter short content description" id="cont_desc">
+	  <button type="button" class="button button1 btn btn-primary joinButton" onclick="openPopup()" style="padding-bottom:35px">Join Competition</button>
             <div class = "popup" id="popup">
                 <h2>Thank You!</h2>
                 <p>Your content has been successfully submitted for verification.</p>

@@ -348,7 +348,7 @@ input {
   position: relative;
   border: 3px solid;
   width: 30%;
-  min-height: 750px;
+  min-height: 780px;
   margin-left: 7.5%;
   display: block;
   float: left;
@@ -380,7 +380,7 @@ font-size: 2vw;
   position: relative;
   border: 3px solid;
   width: 55%;
-  min-height: 750px;
+  min-height: 780px;
   display: block;
   float: left;
   background-color:white;
@@ -446,16 +446,8 @@ font-size: 2vw;
 .filebox p {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  font-size: 26px;
+  font-size: 20px;
   border: 2px solid;
-}
-
-.filebox input.choosefile {
-position: absolute;
-font-family: cursive;
-font-size: 1.3vmax;
-display: block;
-left: 35%;
 }
 
 .filebox input.submitbutton{
