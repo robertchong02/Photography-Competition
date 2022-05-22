@@ -40,7 +40,7 @@
 <!-- <a href="userhome.html">  
 	<button type="button" class="btn btn-primary">Log In as User</button> 
 </a><br/><br/> -->
-<a href="adminlogin.html">  
+<a href="adminlogin.php">  
 	<button type="button" class="btn btn-primary">Login as Admin</button>  
 </a><br/><br/>
 <a href="signup.html">  

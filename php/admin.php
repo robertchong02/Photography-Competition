@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             if($result && mysqli_num_rows($result)>0){
                 $user_data = mysqli_fetch_assoc($result);
 
-                    if($user_data['Password'] === $password){
+                    if($user_data['adminPassword'] === $password){
 
                         
                         $_SESSION['adminID'] = $user_data['adminID'];
@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                         echo
                         '<script>
 
-                        alert("Congrates.");
+                        alert("Congrats.");
                         window.location.href = "adminhome.html"
 
                         </script>';
