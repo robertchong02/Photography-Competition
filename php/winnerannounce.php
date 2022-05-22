@@ -165,7 +165,7 @@
         </a>
         <h1 style="margin-left:480px">Winner Annoucement</h1>
         
-        <form>
+        <form action = "winner.php" method = "POST">
         <!--nei rong qu-->
         <div style="height: auto; background-color:#A7CAD7; margin-left:100px"; class="flex">
 
