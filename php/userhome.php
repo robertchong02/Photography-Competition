@@ -29,9 +29,9 @@
 	<button type="button" class="btn btn-primary">Notifications</button>  
 </a></div>
 <h2 id="home" style="margin:25px; text-align:center">Welcome!</h2>
-<div class="flex-container" style="margin-left:30px">
-	<div class=title style="width:800px; height:350px; font-size:16px; margin:auto; margin-top:18px">
-	<form name="login" method="get"  style=" padding-left:6px">
+
+	<div class=title style="font-size:16px; margin:auto; margin-top:18px; margin:25px">
+	<form name="login" method="get"  style="padding-left:200px; margin:auto">
 		<table>
 		<?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '6'");
@@ -41,7 +41,7 @@
 		$displayData = '
 		<tr>
 		<td rowspan="11">			
-		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:300px; height:300px; padding-top:10px ">
+		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:350px; height:300px; padding-top:10px;padding-right:25px ">
 		</td>
 		<td></td>
 		<td colspan="3"style="font-size:20px; padding-top:10px;padding-left:15px"><b>Open for Registration!!!</b><br/></td>
@@ -103,9 +103,10 @@
 	</form>
 	</div>
 
-<div style="font-size:16px; margin:auto">
-	<div style="padding-bottom:0px">
-		<div class="title" style="text-align:center; width:300px; height:150px; margin-left:33px">
+
+
+	<div style="padding-right:10px; margin:auto">
+		<div class="title" style="text-align:center; height:150px">
 			<b style="font-size:17px">Competition 2 (Closed)</b><br/><br/>
 			<a href="viewcotent.html">
 				<button type="button" class="btn btn-primary">Click Here to Vote</button>
@@ -113,13 +114,13 @@
 		</div>
 	</div>
 
-	<div >
-		<div class="title" style="text-align:center; margin:33px;width:300px; height:150px; padding-top:50px">
-			<p>More Competitions...</p><br/><br/>
-		</div><br/>
+	<div style="padding-right:10px; margin:auto" >
+		<div class="title" style="text-align:center;height:80px; padding-top:20px">
+			<button type="button" class="btn btn-primary">More Competitions</button>
+		</div>
 	</div>
-</div>
-</div>
+
+
 
 <h2 id="Winner" style="margin:25px; text-align:center">Winner</h2>
 <div class="title">
@@ -143,7 +144,10 @@
 
 <h2 id="About" style="margin:25px; text-align:center">About Us</h2>
 <div class="title" style="text-align:justify; margin:25px"> 
-	<p>AP Photo is a platform that allows all the Asia Pacific University Student to show their knowledge and skills of photography by sharing their photo content that they have taken. Competition is organized by the admin to know who has the most perfect skills of photography and winner will be announce at the end. Contact Us if you need enquires. </p>
+	<p>Founded in 2022 by Asia Pacific University student in University Photography Organisation is a leading global platform dedicated to the development and advancement of photographic culture. Our programming and competition initiatives provide valuable opportunities for artists working in photography and help broaden the conversation around their work. Through our fairs we play a key role in driving the growth of the contemporary art market for photo-based art and deepening audience engagement with the medium. </p>
+	<p>Our value lies in the integrity of our expertise, our years of experience and the strength of our relationships with both individual photographers as well as our industry-leading partners around the world. Our objective is to let every student to have a platform to share their masterpiece of photography and gain their confident on photography skills plus give them an opportunity to share their experiences of photography techniques. So, competition is organized by the admin to know who has the most perfect skills of photography and winner will be announce at the end. Contact Us if you need enquires. So, what are you waiting for??? </p>
+	<br/><br/>
+	<p style="text-align:center; font-size:20px">LOGIN and JOIN US NOW!!</p>
 </div>
 
 <p style="text-align:center">Contact us by clicking
