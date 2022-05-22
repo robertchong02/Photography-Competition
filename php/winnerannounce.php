@@ -250,14 +250,6 @@
 
                 </div>
 
-<<<<<<< HEAD:html/winnerannounce.html
-            </div></form>
-        </div><br/>
-            <div style="margin-left:1030px">
-            <input type="submit" value="Post Annoucement">
-            </div>
-            
-=======
             </div>
         </div>
             <br><br>
@@ -270,7 +262,6 @@
             echo $displaypage
             ?>
             </div>
->>>>>>> 2e767b1054aa0053192af0b23e60fef7a81a0ec8:php/winnerannounce.php
 
 
 
