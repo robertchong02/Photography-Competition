@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Admin Login</title>
 	<link ref="stylesheet" href="../css/default.css">
  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,32 +20,21 @@
 </div>
 
 <div class="title" style="margin-bottom:30px ;background-color:#A7CAD7; width:600px; text-align:center; margin-left:330px">
-<h2 id="Login">Login</h2><br/><br/>
-<form name="login" method="POST" action="login.php">
-	Username:
-	<input type="text" name="username2" size="20" maxlength="8"/><br/><br/>
+<h2 id="Login">Admin Login</h2><br/><br/>
+<form name="login" method="POST" action="admin.php">
+	Admin ID:
+	<input type="text" name="adminName" size="20" maxlength="8"/><br/><br/>
 	Password:	
-	<input type="password" name="pw2" size="20" maxlength="16"/><br/><br/>
+	<input type="password" name="adminPassword" size="20" maxlength="16"/><br/><br/>
 	<a href="forgetpassword.html" style="font-size:15px">Forgot password?</a>
 	<br>
-	<input style="width:50%" type="submit" value="Log In as User">
+	<input style="width:50%" type="submit" value="Log In as Admin">
 	<br>
-
-
-	<!-- <input style="width:50%" type="submit" value="Log In as Admin">
-	<br>
-	<input style="width:50%" type="submit" value="Sign Up as New Member"> -->
 </form><br/><br/>
 
-<!-- <a href="userhome.html">  
-	<button type="button" class="btn btn-primary">Log In as User</button> 
-</a><br/><br/> -->
-<a href="adminlogin.php">  
-	<button type="button" class="btn btn-primary">Login as Admin</button>  
+<a href="userlogin.php">  
+	<button type="button" class="btn btn-primary">Back</button>  
 </a><br/><br/>
-<a href="signup.html">  
-	<button type="button" class="btn btn-primary">Sign Up as New Member</button>  
-</a>
 </div>
 
 
