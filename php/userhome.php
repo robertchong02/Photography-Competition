@@ -34,9 +34,10 @@
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
-		$displayData = '		
+		$displayData = '
+		<td>				
+		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:250px; height:230px">
 		<tr>
-		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'">
 		<td style="font-size:20px"><b>Open for Registration!!!</b></td>
 		</tr>
 		<tr><td></td></tr>
@@ -78,7 +79,8 @@
 		<tr>
 			<td><a href="compread2.html">Click here for more information...</a>
 		</td>
-		</tr>';
+		</tr>
+		</td>';
 		echo $displayData;  
 	}
 	?>	
