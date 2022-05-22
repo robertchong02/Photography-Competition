@@ -168,7 +168,7 @@
         </a>
         <h1 style="text-align:center">Winner Annoucement</h1>
         
-        <form action = "winner.php" method = "POST">
+        <form action = "winner.php" method = "POST" enctype="multipart/form-data">
         <!--nei rong qu-->
         <div style="height: auto; background-color:#A7CAD7;" class="flex">
 
@@ -225,21 +225,21 @@
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
 
-                    <input type="file" name="image" accept="image/*" required><br>
+                    <input type="file" name="image1" accept="image/*"  required><br>
                     <br>
                     <!-- <input type="submit"><br> -->
 
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
 
-                    <input type="file" name="image" accept="image/*" required><br>
+                    <input type="file" name="image2" accept="image/*"  required><br>
                     <br>
                     <!-- <input type="submit"><br> -->
 
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
                 
-                    <input type="file" name="image" accept="image/*" required><br>
+                    <input type="file" name="image3" accept="image/*" required><br>
                     <br>
 
                     <!-- <input type="submit"><br> -->
@@ -250,7 +250,13 @@
         </div>
             <br><br>
             <div class="post-container">
-            <input type="submit" value="Post Annoucement">
+            <?php
+            $displaypage="<a href='winner.php?ResultID=1'>
+            <input type='submit' value='Post Annoucement'>
+            </a>"
+            ;
+            echo $displaypage
+            ?>
             </div>
 
 
