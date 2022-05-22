@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 ﻿
+=======
+﻿<?php
+    include("connect.php");
+?>
+>>>>>>> fc4d06bcee0b80e616d767336ae7bb9369843351
 <!DOCTYPE html>
 <html>
 
@@ -25,53 +31,65 @@
 <h2 id="home" style="margin:25px; text-align:center">Welcome!</h2>
 <div class="flex-container">
 	<div class=title style="width:800px; height:320px; font-size:16px; margin-bottom:90px; margin-left:80px">
-	<img alt="" src="poster.jpg" width="280px" height="280px" style="float:left">
 	<form name="login" method="get"  style=" padding-left:300px">
 		<table>
+		<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '6'");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+		<td>				
+		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:250px; height:230px">
 		<tr>
-			<td style="font-size:20px"><b>Open for Registration!!!</b></td>
+		<td style="font-size:20px"><b>Open for Registration!!!</b></td>
 		</tr>
 		<tr><td></td></tr>
 		<tr>
 			<td style="text-align:left">Title</td>
 			<td>:</td>
-			<td><input type="text" name="title" size="15" maxlength="15"/></td>
+			<td><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50"/></td>
 		</tr>
 		<tr>
 			<td style="text-align:left">Theme</td>
 			<td>:</td>
-			<td><input type="text" name="theme" size="15" maxlength="15"/></td>
+			<td><input type="text" value = "'.$row["Theme"].'" name="theme" size="15" maxlength="15"/></td>
 		</tr>
 		<tr>
 			<td style="text-align:left">Register Date</td>
 			<td>:</td>
-			<td><input type="text" name="registerdate" size="15" maxlength="15"/></td>
+			<td><input type="text" value = "'.$row["RegisterDate"].'" name="registerdate" size="15" maxlength="15"/></td>
 		</tr>
 		<tr>
 			<td style="text-align:left">Deadline</td>
 			<td>:</td>
-			<td><input type="text" name="deadline" size="15" maxlength="15"/></td>
+			<td><input type="text" value = "'.$row["Deadline"].'" name="deadline" size="15" maxlength="15"/></td>
 		</tr>
 		<tr>
 			<td style="text-align:left">Competition Date</td>
 			<td>:</td>
-			<td><input type="text" name="compdate" size="15" maxlength="15"/></td>
+			<td><input type="text" value = "'.$row["CompetitionDate"].'" name="compdate" size="15" maxlength="15"/></td>
 		</tr>
 		<tr>
 			<td style="text-align:left">Prize</td>
 			<td>:</td>
-			<td><input type="text" name="prize" size="15" maxlength="8"/></td>
+			<td><input type="text" value = "'.$row["Prize"].'" name="prize" size="15" maxlength="8"/></td>
 		</tr>
 		<tr>
 			<td style="text-align:left">Eligibility</td>
 			<td>:</td>
-			<td><input type="text" name="eligibility" size="15" maxlength="8"/></td>
+			<td><input type="text" value = "'.$row["Eligibility"].'" name="eligibility" size="15" maxlength="8"/></td>
 		</tr>
 		<tr>
 			<td><a href="compread2.html">Click here for more information...</a>
 		</td>
 		</tr>
+		</td>';
+		echo $displayData;  
+	}
+	?>	
 		</table>
+		
 	</form>
 	</div>
 

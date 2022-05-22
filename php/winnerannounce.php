@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <title>Winner announcement</title>
+    <link rel = "stylesheet" href = "../css/main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="admin.css">
     <title>Winner Announcement</title>
     <style>
         img.logo{
@@ -29,6 +29,7 @@
         .flex{
             /*左右Flex Box*/
             display: flex;
+            width:1070px;
         }
         .baiSe{
             background-color: white;
@@ -105,54 +106,93 @@
             margin: 0px 15px 2px 2px;
             cursor: pointer;
             }
+        
+        input {
+            padding:10px;
+            border: none;
+            background: #f1f1f1;
+            font-size:14px;
+        }
+
+        form input {
+            position: relative;
+            right: 0;
+            margin: auto;
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            font-family: "Old Standard TT", serif;
+            background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+            background-size: 200%;
+            border: none;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
+            text-align: center;
+        }
+
+        .post-container {
+            padding-bottom:35px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 35%;
+            height: 5%;
+            font-family: Comic Sans;
+            font-size: 1.2vw;
+        }
+        
     </style>
 </head>
 
-<body class = "flex">
+<body style="background-image:url('../image/bg1.png')">
 
     <!--上栏-->
-    <div class ="flex1 flex column">
-        <!--头部栏-->
-        <div style="text-align: right;" class="topnav baiSe "> 
-        <!--This is navigation code-->
-            
-            <a class="active" href="#home">Home</a>
-            <a href="#Winner">Winner</a>
-            <a href="#Logout">Logout</a>
-            <img class="logo" style="float: left;" src="../image/logo.png">
-            <p style="float: left;">APU Photography Competition</p>
     
-        
+        <!--头部栏-->
+        <div class="topnav">
+            <a href="logout.html">Logout</a>
+            <a href="#Winner">Winner</a>
+            <a class="active" href="adminhome.html">Home</a>
+            <img class="logo" style="float: left" src="../image/logo.png" />
+            <p style="float: left">APU Photography Competition</p>
         </div>
+        <div class ="flex1 flex column" >
         <a href="adminhome.html">
             <button class="button button1"  style="margin-left:50px; margin-top:20px">BACK</button>
         </a>
-        <h1 style="margin-left:5px;">Winner Annoucement</h1>
+        <h1 style="margin-left:480px">Winner Annoucement</h1>
         
         <!--nei rong qu-->
-        <div style="height: auto; background-color:#A7CAD7";" class="flex">
+        <div style="height: auto; background-color:#A7CAD7; margin-left:100px"; class="flex">
 
             <!-- 左边栏 -->
+            <form method="POST" action="winner.php" ></form>
             <div class="" style="width: auto;background-color:#A7CAD7">
-
+                
                 <div style="height: 100px;" class="flex flex column boxModel">
                 <h2>Competition Title: </h2>
+                <input type="text" placeholder="Enter Title Here" name="title" required>
                 
                 
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
                 
                 <h2>1st place winner: </h2>
+                <input type="text" name="winnername1" required>
 
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
 
                 <h2>2nd place winner: </h2>
+                <input type="text" name="winnername2" required>
                 
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
                                     
                 <h2>3rd place winner: </h2>   
+                <input type="text" name="winnername3" required>
 
                 </div>
 
@@ -172,51 +212,47 @@
             <div class="" style="width: auto;">
 
                 <div style="height: 100px;" class="flex flex column boxModel ">
-                
-                <form action="">
-                    <input type="file" id="myFile" name="filename" ><br>
-                    <br>
+                    <!-- <input type="file" id="myFile" name="filename" ><br>
+                    <br> -->
 
-                    <input type="submit"><br>
-                </form>
+                    <!-- <input type="submit"><br> -->
                     
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
-                
-                    <form action="">
-                        <input type="file" id="myFile" name="filename" ><br>
-                        <br>
-                        <input type="submit"><br>
-                    </form>
+
+                    <input type="file" name="image" accept="image/*" required><br>
+                    <br>
+                    <!-- <input type="submit"><br> -->
+
+                </div>
+                <div style="height: 100px;" class="flex flex column boxModel">
+
+                    <input type="file" name="image" accept="image/*" required><br>
+                    <br>
+                    <!-- <input type="submit"><br> -->
 
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
                 
-                    <form action="">
-                        <input type="file" id="myFile" name="filename" ><br>
-                        <br>
+                    <input type="file" name="image" accept="image/*" required><br>
+                    <br>
 
-                        <input type="submit"><br>
-                    </form>
-                
-                </div>
-                <div style="height: 100px;" class="flex flex column boxModel">
-                
-                    <form action="">
-                        <input type="file" id="myFile" name="filename" ><br>
-                        <br>
+                    <!-- <input type="submit"><br> -->
 
-                        <input type="submit"><br>
-                    </form>
                 </div>
 
             </div>
+        </div><br/>
+            <div style="margin-left:1030px;ba">
+            <input class="post-container"type="submit" value="Post Annoucement">
+            </div>
+            </form>
 
 
 
         </div>
 
-    </div>
+    
 
     
 
