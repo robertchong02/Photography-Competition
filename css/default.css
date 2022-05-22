@@ -111,8 +111,8 @@ body {
 }
 
 .flex-container > div {
-  margin-right: 30px;
-  padding: 5px;
+  margin:auto;
+  padding: 50px;
   width: auto;
   height: auto;
 }
