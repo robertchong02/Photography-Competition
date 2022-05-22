@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+﻿
+=======
 ﻿<?php
     include("connect.php");
 ?>
+>>>>>>> fc4d06bcee0b80e616d767336ae7bb9369843351
 <!DOCTYPE html>
 <html>
 

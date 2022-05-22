@@ -22,7 +22,6 @@
         }
 
         
-
         /* *{
             border: 1px solid black;
         } */
@@ -30,6 +29,7 @@
             /*左右Flex Box*/
             display: flex;
             width:1070px;
+            margin:auto;
         }
         .baiSe{
             background-color: white;
@@ -113,6 +113,39 @@
             background: #f1f1f1;
             font-size:14px;
         }
+
+        form input {
+            position: relative;
+            right: 0;
+            margin: auto;
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            font-family: "Old Standard TT", serif;
+            background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+            background-size: 200%;
+            border: none;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
+            text-align: center;
+            cursor: pointer;
+
+        }
+
+        .post-container {
+            padding-bottom:35px;
+            bottom: 20px;
+            right: 20px;
+            width: 35%;
+            height: 5%;
+            font-family: Comic Sans;
+            font-size: 1.2vw;
+            text-align:right;
+            float:right;
+            margin-right: 50px;
+        }
         
     </style>
 </head>
@@ -129,17 +162,22 @@
             <img class="logo" style="float: left" src="../image/logo.png" />
             <p style="float: left">APU Photography Competition</p>
         </div>
-        <div class ="flex1 flex column" >
+        <!-- <div class ="flex1 flex column" > -->
         <a href="adminhome.html">
             <button class="button button1"  style="margin-left:50px; margin-top:20px">BACK</button>
         </a>
-        <h1 style="margin-left:480px">Winner Annoucement</h1>
+        <h1 style="text-align:center">Winner Annoucement</h1>
         
+        <form action = "winner.php" method = "POST" enctype="multipart/form-data">
         <!--nei rong qu-->
-        <div style="height: auto; background-color:#A7CAD7; margin-left:100px"; class="flex">
+        <div style="height: auto; background-color:#A7CAD7;" class="flex">
 
             <!-- 左边栏 -->
+<<<<<<< HEAD:html/winnerannounce.html
             <form method="POST" action="" >
+=======
+            <!-- <form method="POST" action="winner.php" ></form> -->
+>>>>>>> 2e767b1054aa0053192af0b23e60fef7a81a0ec8:php/winnerannounce.php
             <div class="" style="width: auto;background-color:#A7CAD7">
                 
                 <div style="height: 100px;" class="flex flex column boxModel">
@@ -183,46 +221,62 @@
             <div class="" style="width: auto;">
 
                 <div style="height: 100px;" class="flex flex column boxModel ">
-                    <input type="file" id="myFile" name="filename" ><br>
-                    <br>
+                    <!-- <input type="file" id="myFile" name="filename" ><br>
+                    <br> -->
 
                     <!-- <input type="submit"><br> -->
                     
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
 
-                    <input type="file" id="myFile" name="filename" ><br>
+                    <input type="file" name="image1" accept="image/*"  required><br>
                     <br>
                     <!-- <input type="submit"><br> -->
 
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
 
-                    <input type="file" id="myFile" name="filename" ><br>
+                    <input type="file" name="image2" accept="image/*"  required><br>
                     <br>
                     <!-- <input type="submit"><br> -->
 
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
                 
-                    <input type="file" id="myFile" name="filename" ><br>
+                    <input type="file" name="image3" accept="image/*" required><br>
                     <br>
 
                     <!-- <input type="submit"><br> -->
 
                 </div>
 
+<<<<<<< HEAD:html/winnerannounce.html
             </div></form>
         </div><br/>
             <div style="margin-left:1030px">
             <input type="submit" value="Post Annoucement">
             </div>
             
+=======
+            </div>
+        </div>
+            <br><br>
+            <div class="post-container">
+            <?php
+            $displaypage="<a href='winner.php?ResultID=1'>
+            <input type='submit' value='Post Annoucement'>
+            </a>"
+            ;
+            echo $displaypage
+            ?>
+            </div>
+>>>>>>> 2e767b1054aa0053192af0b23e60fef7a81a0ec8:php/winnerannounce.php
 
 
 
         </div>
 
+    </form>
     
 
     
