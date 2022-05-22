@@ -83,7 +83,7 @@
   <div class="box2" style="background-color:#A7CAD7">
     <div class="filebox">
     <p>Upload Content Here</p>
-    <form action="/user_upload.php" method="post">
+    <form action="user_upload.php" method="POST">
   	<input type="file" id="myFile" name="filename" style="width:40%;">
     <br>
     <input style="width:95%;" type="text" placeholder="Enter your content title" id="cont_title">
