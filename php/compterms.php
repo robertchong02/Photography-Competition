@@ -86,9 +86,9 @@
     <form action="user_upload.php" method="POST">
   	<input type="file" id="myFile" name="filename" style="width:40%;">
     <br>
-    <input style="width:95%;" type="text" placeholder="Enter your content title" id="cont_title">
-    <input style="width:95%;height:100px" type="text" placeholder="Enter short content description" id="cont_desc">
-    <input style="width:95%;" type="text" placeholder="Enter your username" id="cont_title">
+    <input style="width:95%;" type="text" placeholder="Enter your content title" id="cont_title" name="conTitle">
+    <input style="width:95%;height:100px" type="text" placeholder="Enter short content description" id="cont_desc" name="conDesc">
+    <input style="width:95%;" type="text" placeholder="Enter your username" id="cont_title" name="userName">
     <h6 style="margin-left:15px">*This Username will be displayed on the content page"</h6>
 	  <button type="button" class="button button1 btn btn-primary joinButton" onclick="openPopup()" style="padding-bottom:35px">Join Competition</button>
             <div class = "popup" id="popup">
