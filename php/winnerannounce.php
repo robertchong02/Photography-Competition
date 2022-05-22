@@ -22,7 +22,6 @@
         }
 
         
-
         /* *{
             border: 1px solid black;
         } */
@@ -130,6 +129,8 @@
             transition-duration: 0.5s;
             transition-timing-function: ease-out;
             text-align: center;
+            cursor: pointer;
+
         }
 
         .post-container {
@@ -164,11 +165,12 @@
         </a>
         <h1 style="margin-left:480px">Winner Annoucement</h1>
         
+        <form>
         <!--nei rong qu-->
         <div style="height: auto; background-color:#A7CAD7; margin-left:100px"; class="flex">
 
             <!-- 左边栏 -->
-            <form method="POST" action="winner.php" ></form>
+            <!-- <form method="POST" action="winner.php" ></form> -->
             <div class="" style="width: auto;background-color:#A7CAD7">
                 
                 <div style="height: 100px;" class="flex flex column boxModel">
@@ -242,16 +244,16 @@
                 </div>
 
             </div>
-        </div><br/>
-            <div style="margin-left:1030px;ba">
-            <input class="post-container"type="submit" value="Post Annoucement">
+        </div>
+            <div class="post-container" style="margin-left:1030px;">
+            <input type="submit" value="Post Annoucement">
             </div>
-            </form>
 
 
 
         </div>
 
+    </form>
     
 
     
