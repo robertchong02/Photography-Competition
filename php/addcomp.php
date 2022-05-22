@@ -17,6 +17,7 @@ mysqli_stmt_execute($stmt);
 
 $check = mysqli_stmt_affected_rows($stmt);
 
+echo $check;
 if($check == 1) {
     echo '<script> alert ("New competition added!");
     window.location.href= "compadminPost.php";
@@ -24,7 +25,6 @@ if($check == 1) {
 
 } else {
     echo '<script> alert ("Upload failed.");
-    window.location.href= "compadminPost.php";
     </script>';
 }
 

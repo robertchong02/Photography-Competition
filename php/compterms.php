@@ -83,38 +83,42 @@
   <div class="box2" style="background-color:#A7CAD7">
     <div class="filebox">
     <p>Upload Content Here</p>
-    <form action="user_upload.php" method="POST">
-  	<input type="file" id="myFile" name="filename" style="width:40%;">
+    <form action="user_upload.php" method="POST" enctype="multipart/form-data">
+  	<input type="File" id="myFile" name="filename" style="width:40%;" accept="image/*" require>
     <br>
-    <input style="width:95%;" type="text" placeholder="Enter your content title" id="cont_title" name="conTitle">
-    <input style="width:95%;height:100px" type="text" placeholder="Enter short content description" id="cont_desc" name="conDesc">
-    <input style="width:95%;" type="text" placeholder="Enter your username" id="cont_title" name="userName">
+    <input style="width:95%;" type="text" placeholder="Enter your content title" id="cont_title" name="conTitle" require>
+    <input style="width:95%;height:100px" type="text" placeholder="Enter short content description" id="cont_desc" name="conDesc" require>
+    <input style="width:95%;" type="text" placeholder="Enter your username" id="cont_title" name="userName" require>
     <h6 style="margin-left:15px">*This Username will be displayed on the content page"</h6>
+
+    <input type="submit" name="submit"  value="POST Comp">
 	  <button type="button" class="button button1 btn btn-primary joinButton" onclick="openPopup()" style="padding-bottom:35px">Join Competition</button>
             <div class = "popup" id="popup">
                 <h2>Thank You!</h2>
                 <p>Your content has been successfully submitted for verification.</p>
                 <button type="button" onclick="closePopup()">OK</button>
+                
+
             </div>
     </form>
     </div>
   </div>
    
 <script>
-let popup = document.getElementById("popup");
+// let popup = document.getElementById("popup");
 
-function openPopup(){
-    popup.classList.add("open-popup");
-}
+// function openPopup(){
+//     popup.classList.add("open-popup");
+// }
 
 
-function closePopup(){
+// function closePopup(){
 
-    popup.classList.remove("open-popup");
+//     popup.classList.remove("open-popup");
 
-    //redirect 
-    window.location.href = "userhome.php";
-}
+//     //redirect 
+//     window.location.href = "userhome.php";
+// }
 </script>
 
 </body>
