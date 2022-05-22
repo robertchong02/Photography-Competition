@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-﻿
-=======
-﻿<?php
-    include("connect.php");
+<?php
+include("connect.php");
 ?>
->>>>>>> fc4d06bcee0b80e616d767336ae7bb9369843351
+
 <!DOCTYPE html>
 <html>
 
@@ -34,7 +31,7 @@
 </a></div>
 <h2 id="home" style="margin:25px; text-align:center">Welcome!</h2>
 <div class="flex-container" style="margin-left:30px">
-	<div class=title style="width:800px; height:350px; font-size:16px; margin:auto; margin-top:18px">
+	<div class=title style="font-size:16px; margin:auto; margin-top:18px">
 	<form name="login" method="get"  style=" padding-left:6px">
 		<table>
 		<?php
@@ -109,7 +106,7 @@
 
 <div style="font-size:16px; margin:auto">
 	<div style="padding-bottom:0px">
-		<div class="title" style="text-align:center; width:300px; height:150px; margin-left:33px">
+		<div class="title" style="text-align:center;margin-left:33px">
 			<b style="font-size:17px">Competition 2 (Closed)</b><br/><br/>
 			<a href="viewcotent.html">
 				<button type="button" class="btn btn-primary">Click Here to Vote</button>
@@ -118,7 +115,7 @@
 	</div>
 
 	<div >
-		<div class="title" style="text-align:center; margin:33px;width:300px; height:150px; padding-top:50px">
+		<div class="title" style="text-align:center; margin:33px; padding-top:50px">
 			<p>More Competitions...</p><br/><br/>
 		</div><br/>
 	</div>
