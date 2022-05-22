@@ -29,6 +29,7 @@
             /*左右Flex Box*/
             display: flex;
             width:1070px;
+            margin:auto;
         }
         .baiSe{
             background-color: white;
@@ -135,13 +136,15 @@
 
         .post-container {
             padding-bottom:35px;
-            position: absolute;
             bottom: 20px;
             right: 20px;
             width: 35%;
             height: 5%;
             font-family: Comic Sans;
             font-size: 1.2vw;
+            text-align:right;
+            float:right;
+            margin-right: 50px;
         }
         
     </style>
@@ -159,15 +162,15 @@
             <img class="logo" style="float: left" src="../image/logo.png" />
             <p style="float: left">APU Photography Competition</p>
         </div>
-        <div class ="flex1 flex column" >
+        <!-- <div class ="flex1 flex column" > -->
         <a href="adminhome.html">
             <button class="button button1"  style="margin-left:50px; margin-top:20px">BACK</button>
         </a>
-        <h1 style="margin-left:480px">Winner Annoucement</h1>
+        <h1 style="text-align:center">Winner Annoucement</h1>
         
         <form action = "winner.php" method = "POST">
         <!--nei rong qu-->
-        <div style="height: auto; background-color:#A7CAD7; margin-left:100px"; class="flex">
+        <div style="height: auto; background-color:#A7CAD7;" class="flex">
 
             <!-- 左边栏 -->
             <!-- <form method="POST" action="winner.php" ></form> -->
@@ -245,7 +248,8 @@
 
             </div>
         </div>
-            <div class="post-container" style="margin-left:1030px;">
+            <br><br>
+            <div class="post-container">
             <input type="submit" value="Post Annoucement">
             </div>
 
