@@ -113,6 +113,35 @@
             background: #f1f1f1;
             font-size:14px;
         }
+
+        form input {
+            position: relative;
+            right: 0;
+            margin: auto;
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            font-family: "Old Standard TT", serif;
+            background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+            background-size: 200%;
+            border: none;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
+            text-align: center;
+        }
+
+        .post-container {
+            padding-bottom:35px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 35%;
+            height: 5%;
+            font-family: Comic Sans;
+            font-size: 1.2vw;
+        }
         
     </style>
 </head>
@@ -139,7 +168,7 @@
         <div style="height: auto; background-color:#A7CAD7; margin-left:100px"; class="flex">
 
             <!-- 左边栏 -->
-            <form method="POST" action="" ></form>
+            <form method="POST" action="winner.php" ></form>
             <div class="" style="width: auto;background-color:#A7CAD7">
                 
                 <div style="height: 100px;" class="flex flex column boxModel">
@@ -183,29 +212,29 @@
             <div class="" style="width: auto;">
 
                 <div style="height: 100px;" class="flex flex column boxModel ">
-                    <input type="file" id="myFile" name="filename" ><br>
-                    <br>
+                    <!-- <input type="file" id="myFile" name="filename" ><br>
+                    <br> -->
 
                     <!-- <input type="submit"><br> -->
                     
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
 
-                    <input type="file" id="myFile" name="filename" ><br>
+                    <input type="file" name="image" accept="image/*" required><br>
                     <br>
                     <!-- <input type="submit"><br> -->
 
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
 
-                    <input type="file" id="myFile" name="filename" ><br>
+                    <input type="file" name="image" accept="image/*" required><br>
                     <br>
                     <!-- <input type="submit"><br> -->
 
                 </div>
                 <div style="height: 100px;" class="flex flex column boxModel">
                 
-                    <input type="file" id="myFile" name="filename" ><br>
+                    <input type="file" name="image" accept="image/*" required><br>
                     <br>
 
                     <!-- <input type="submit"><br> -->
@@ -214,8 +243,8 @@
 
             </div>
         </div><br/>
-            <div style="margin-left:1030px">
-            <input type="submit" value="Post Annoucement">
+            <div style="margin-left:1030px;ba">
+            <input class="post-container"type="submit" value="Post Annoucement">
             </div>
             </form>
 
