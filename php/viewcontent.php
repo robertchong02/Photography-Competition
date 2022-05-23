@@ -121,7 +121,7 @@ include("connect.php");
 ?>
 </nav>
 
-<nav class="content1" style="background-color:#A7CAD7">
+<!-- <nav class="content1" style="background-color:#A7CAD7">
 	<div id="contentpicture1">
 	</div>
 	<div id="contentdescription1">
@@ -173,7 +173,7 @@ include("connect.php");
 			</a>
 		</div>
 	</div>
-</nav>
+</nav> -->
 
 <script>
 let popup = document.getElementById("popup");
