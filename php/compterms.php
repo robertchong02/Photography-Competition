@@ -102,7 +102,7 @@ include("connect.php");
     <div class="filebox">
       <p>Upload Content Here</p>
       <form action="user_upload.php" method="POST" enctype="multipart/form-data">
-      <input type="file" name="filename" style="width:40%;" accept="image/*" require>
+      <input type="file" name="image" style="width:40%;" accept="image/*" require>
       <br>
       <input style="width:95%;" type="text" placeholder="Enter your content title"  name="conTitle" require>
       <input style="width:95%;height:150px" type="text" placeholder="Enter short content description"  name="conDesc" require>
