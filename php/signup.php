@@ -34,7 +34,7 @@ if($Password == $ConfirmPassword)
                 echo 
                 '<script>
                 alert("Thank you for signing up with APU Photography Club. Please proceed to login.");
-                
+                window.location.href = "userlogin.php";
                 </script>';
             }
             else
@@ -51,7 +51,7 @@ if($Password == $ConfirmPassword)
             echo 
             '<script>
             alert("Username is already taken. Please try a different username.");
-            window.location.href = "signup.php";
+            window.location.href = "usersignup.php";
             </script>';
         }
     } 
@@ -60,7 +60,7 @@ if($Password == $ConfirmPassword)
         echo 
         '<script>
         alert("There is an existing email address similiar to what you typed. Please login or try a different email address.");
-        window.location.href = "signup.php";
+        window.location.href = "usersignup.php";
         </script>';
     }
 } else 
@@ -68,7 +68,7 @@ if($Password == $ConfirmPassword)
     echo 
     '<script>
     alert("Passwords are not matching.");
-    window.location.href = "signup.php";
+    window.location.href = "usersignup.php";
     </script>';
 }
 
