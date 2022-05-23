@@ -3,7 +3,7 @@ include("connect.php");
 include("session.php");
     $customerID = $_SESSION['ID'];
 
-	$CompetitionID = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '$CompetitionID';");
+	// $CompetitionID = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '$CompetitionID';");
 
 // include("session.php");
 //     $customerID = $_SESSION['ID'];
