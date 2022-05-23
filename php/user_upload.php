@@ -1,26 +1,13 @@
 <?php
 include("connect.php");
-include("session.php");
-    $customerID = $_SESSION['ID'];
-
-	// $CompetitionID = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '$CompetitionID';");
-
-// include("session.php");
-//     $customerID = $_SESSION['ID'];
-
-// if ($con->connect_error) {
-//     die("Connection failed: " . $con->connect_error);
-//  }
-//    echo "Connected successfully";
 
 $uploadImage = $_FILES['image']['tmp_name'];
 
 $img = file_get_contents($uploadImage);
 
-$sql = "INSERT INTO content (CompetitionID, ContentImage ,ContentTitle ,ContentDescription ,ParticipantName)
-VALUES
-(9,?,'$_POST[conTitle]','$_POST[conDesc]', '$_POST[userName]')" ;
-
+$sql="INSERT INTO content (CompetitionID, ContentImage, ContentTitle, ContentDescription, ParticipantName) 
+VALUES 
+(9, ?, '$_POST[conTitle]', '$_POST[conDesc]', '$_POST[userName]');";
 
 $stmt = mysqli_prepare($con,$sql);
 
@@ -32,7 +19,7 @@ $check = mysqli_stmt_affected_rows($stmt);
 
 echo $check;
 if($check == 1) {
-    echo '<script> alert ("New coffee beans in stock! Image uploaded.");
+    echo '<script> alert ("New competition added!");
     </script>';
 
 } else {
@@ -40,8 +27,5 @@ if($check == 1) {
     </script>';
 }
 
-
 mysqli_close($con);
-
-
 ?>
