@@ -22,22 +22,38 @@
 </div>
 <div id="profiledata" style="background-color:#A7CAD7">
 	<label for="Username"><b>Username</b></label>
+
     <input type="text" placeholder="Edit Username" name="Username">
+
 	<label for="Fname"><b>Firstname (Not Editable)</b></label>
+
     <input type="text" placeholder="Firstname" name="Fname" readonly>
+
 	<label for="Lname"><b>Lastname (Not Editable)</b></label>
+
     <input type="text" placeholder="Lastname" name="Lname" readonly>
 	<label for="Gender"><b>Gender (Not Editable)</b></label>
+
     <input type="text" placeholder="Gender" name="Gender" readonly>
+
 	<label for="Nationality"><b>Nationality (Not Editable)</b></label>
+
     <input type="text" placeholder="Nationality" name="Nationality" readonly>
+
 	<label for="Date of Birth"><b>Date of Birth (Not Editable)</b></label>
+
     <input type="text" placeholder="Date of Birth" name="Date of Birth" readonly>
+
 	<label for="Contact Number"><b>Contact Number</b></label>
+
     <input type="text" placeholder="Edit Contact Number" name="Contact Number">
+
 	<label for="Email"><b>Email</b></label>
+
     <input type="text" placeholder="Edit Email" name="Email">
+
 	<label for="Password"><b>Password</b></label>
+    
     <input type="text" placeholder="Edit Password" name="Password">
 </div>
 </nav>
