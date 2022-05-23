@@ -5,16 +5,10 @@ $uploadImage = $_FILES['image']['tmp_name'];
 
 $img = file_get_contents($uploadImage);
 
-<<<<<<< HEAD
-$sql="INSERT INTO content (CompetitionID, ContentImage, ContentTitle, ContentDescription, ParticipantName) 
-VALUES 
-(9, ?, '$_POST[conTitle]', '$_POST[conDesc]', '$_POST[userName]');";
-=======
 $sql = "INSERT INTO content (CompetitionID, ContentImage ,ContentTitle ,ContentDescription ,ParticipantName)
 VALUES
 (9,?,'$_POST[conTitle]','$_POST[conDesc]', '$_POST[userName]')" ;
 
->>>>>>> cecbe0b185030a05b1c5fc30834468dd32ed57f3
 
 $stmt = mysqli_prepare($con,$sql);
 
