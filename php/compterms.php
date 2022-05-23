@@ -89,28 +89,31 @@ include("connect.php");
       <p> Deadline: <input type="text" value = "'.$row["Deadline"].'" name="deadline" class="compread2" readonly/></p>
       <p> Competition Date: <input type="text" value = "'.$row["CompetitionDate"].'" name="compdate" class="compread2" readonly/></p>
       <p> Prize:   <textarea name = "prize" cols=40  rows=3 style="width: 80%;height: 90px;background: #f1f1f1;" readonly>'.$row["Prize"].'</textarea></p>
-      <p> Eligibility: <input type="text" value = "'.$row["Eligibility"].'" name="eligibility"  class="compread2" readonly/></p>
-
+      <p> Eligibility: <input type="text" value = "'.$row["Eligibility"].'" name="eligibility"  class="compread2" readonly/></p> 
+      ';
+      echo $displayData;  
+      }
+  ?>
   </div> 
+
+
+  
   <div class="box2" style="background-color:#A7CAD7;height:1035px">
     <div class="filebox">
-    <p>Upload Content Here</p>
-    <form action="user_upload.php" method="POST" enctype="multipart/form-data">
-  	<input type="File" id="myFile" name="filename" style="width:40%;" accept="image/*" require>
-    <br>
-    <input style="width:95%;" type="text" placeholder="Enter your content title" id="cont_title" name="conTitle" require>
-    <input style="width:95%;height:150px" type="text" placeholder="Enter short content description" id="cont_desc" name="conDesc" require>
-    <input style="width:95%;" type="text" placeholder="Enter your username" id="cont_title" name="userName" require>
-    <h6 style="margin-left:15px">*This Username will be displayed on the content page"</h6>
+      <p>Upload Content Here</p>
+      <form action="user_upload.php" method="POST" enctype="multipart/form-data">
+      <input type="file" name="image" style="width:40%;" accept="image/*" require>
+      <br>
+      <input style="width:95%;" type="text" placeholder="Enter your content title"  name="conTitle" require>
+      <input style="width:95%;height:150px" type="text" placeholder="Enter short content description"  name="conDesc" require>
+      <input style="width:95%;" type="text" placeholder="Enter your username" name="userName" require>
+      <h6 style="margin-left:15px">*This Username will be displayed on the content page"</h6>
 
-    <input style="position:absolute;bottom:0;right:0;margin-right:20px;background-color: #4CAF50;color:white" type="submit" name="submit"  value="Submit">
-
-    </form>
+      <input style="position:absolute;bottom:0;right:0;margin-right:20px;background-color: #4CAF50;color:white" type="submit" value="Submit">
+      </form>
     </div>
-  </div> ';
-    echo $displayData;  
-	}
-	?>
+  </div>
+
 	  <!-- <button type="button" class="button button1 btn btn-primary joinButton" onclick="openPopup()" style="padding-bottom:35px">Join Competition</button>
             <div class = "popup" id="popup">
                 <h2>Thank You!</h2>
@@ -119,7 +122,7 @@ include("connect.php");
                 
 
             </div>    -->
-<script>
+<!-- <script>
 // let popup = document.getElementById("popup");
 
 // function openPopup(){
@@ -134,7 +137,7 @@ include("connect.php");
 //     //redirect 
 //     window.location.href = "userhome.php";
 // }
-</script>
+</script> -->
 
 </body>
 </html>
