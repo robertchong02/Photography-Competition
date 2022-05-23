@@ -60,14 +60,14 @@ include("connect.php");
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">APU Photography Competition</p>
 </div>
-<h2 style="text-align:center">CONTENT</h2>
+<h2 style="text-align:center">POSTS</h2>
 <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '8'");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
       $displayData = '
-			<h2 style="text-align:center"><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50" style="height:50px;border:none;background-color:transparent;font-size:24px" readonly/></h2>	';
+			<h2 style="text-align:center"><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50" style="background-color:transparent;font-size:24px; text-align:center" readonly/></h2>	';
 		echo $displayData;  
 		}
 ?>	
@@ -82,40 +82,47 @@ include("connect.php");
 </nav>
 
 
-<nav class="content1" style="background-color:#A7CAD7">
+<nav class="content1 title" style="background-color:#A7CAD7">
 <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM content WHERE CompetitionID = '8'");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
       $displayData = '
-	<div id="contentpicture1">
-	<img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="width:300px; height:300px; padding-top:10px ">
-	</div>
-	<div id="contentdescription1">
-		
-		<label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["ContentTitle"].'" name="title"  class="compread2" readonly/></label>
-		<br>
-		<label for="Description"><b>Description: </b></label>
-		<textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;background: #f1f1f1;" readonly>'.$row["ContentDescription"].'</textarea>
-		<br>
-		<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
-		<br>
-		<a href="readcomment.html">
-			<button class="button button3">Read Comments</button>
-		</a><br/>
-		<div style="display:inline-block; float:right;" >
-			<button type="submit" class="button button1" onclick="openPopup()">Vote</button>
-			<div class = "popup" id="popup">
-				<h2>Voted Successfully</h2>
-				<p>Thanks for supporting</p>
-				<button type="button" onclick="closePopup()">OK</button>
-			</div>
-			<a href="comment.html">
-				<button class="button button1">Comment</button>
-			</a>
+<div class="flex-container">
+	<div style="padding-top:80px">
+		<div id="contentpicture1">
+		<img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="max-width:100%; height:250px">
 		</div>
-	</div>';
+	</div>
+
+	<div>
+		<div id="contentdescription1" style="width:600px; height:400px">
+			
+			<label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["ContentTitle"].'" name="title"  class="compread2" readonly/></label>
+			<br>
+			<label for="Description"><b>Description: </b></label>
+			<div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;background: #f1f1f1" readonly>'.$row["ContentDescription"].'</textarea></div>
+			<br>
+			<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
+			<br>
+			<div style="padding-left:15px"><a href="readcomment.html">
+				<button class="button button3">Read Comments</button>
+			</a><br/></div>
+			<div style="display:inline-block; float:right;" >
+				<button type="submit" class="button button1" onclick="openPopup()">Vote</button>
+				<div class = "popup" id="popup">
+					<h2>Voted Successfully</h2>
+					<p>Thanks for supporting</p>
+					<button type="button" onclick="closePopup()">OK</button>
+				</div>
+				<a href="comment.html">
+					<button class="button button1">Comment</button>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>';
 	echo $displayData;  
 }
 ?>
