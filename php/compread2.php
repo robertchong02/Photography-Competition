@@ -32,12 +32,12 @@ include("connect.php");
 <br>
 
   <div class="box1" style="background-color:#A7CAD7;text-align:center">
-  <form name="compread2" method="get"  style=" padding-left:6px">
+  <form name="compread2" action="compterms.php" method="get"  style=" padding-left:6px">
   <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '9'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = ".$_GET['CompID']);
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
-			
+      echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["CompID"]. '>';
       $displayData = '
       <h2>Title: <input type="text" value = "'.$row["CompetitionTitle"].'" name="title" class="compread2" readonly/></h2>
       <img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:300px; height:300px; padding-top:10px ">
@@ -63,14 +63,13 @@ include("connect.php");
         <input id="checkbox" type="checkbox" />
         <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a></label>
       </div>
-      <a href="compterms.php">
-        <input style="float:right;margin-right: 10px;" type="button" value="Next">
-      </a>
+        <input style="float:right;margin-right: 10px;" type="submit" value="Next">
     </div> ';
+
     echo $displayData;  
 	}
 	?>	
-
+</form> 
 
 </body>
 </html>

@@ -74,7 +74,7 @@ include("connect.php");
 <div class="box1" style="background-color:#A7CAD7;text-align:center">
   <form name="compread2" method="get"  style=" padding-left:6px">
   <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '9'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = ".$_GET['CompID']);
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
@@ -94,8 +94,9 @@ include("connect.php");
       echo $displayData;  
       }
   ?>
+  </form>
   </div> 
-
+    
 
   
   <div class="box2" style="background-color:#A7CAD7;height:1035px">
@@ -108,6 +109,11 @@ include("connect.php");
       <input style="width:95%;height:150px" type="text" placeholder="Enter short content description"  name="conDesc" require>
       <input style="width:95%;" type="text" placeholder="Enter your username" name="userName" require>
       <h6 style="margin-left:15px">*This Username will be displayed on the content page"</h6>
+
+
+      <?php 
+      echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["CompID"]. '>';
+      ?>
 
       <input style="position:absolute;bottom:0;right:0;margin-right:20px;background-color: #4CAF50;color:white" type="submit" value="Submit">
       </form>

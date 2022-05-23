@@ -31,7 +31,7 @@
 <h2 id="home" style="margin:25px; text-align:center">Welcome!</h2>
 
 	<div class=title style="font-size:16px; margin:auto; margin-top:18px; margin:25px">
-	<form name="login" method="get"  style="padding-left:200px; margin:auto">
+	<form name="login" method="get" action="compread2.php" style="padding-left:200px; margin:auto">
 		<table>
 		<?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '9'");
@@ -92,14 +92,15 @@
 		<tr>
 			<td></td>
 			<td colspan="3" style="padding-left:15px">
-				<a href="compread2.php">Click here for more information...</a>
+				<input type ="submit"  value= "Click here for more information..."/>
 			</td>
 		</tr>';
+		echo '<input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>';
 		echo $displayData;  
 	}
 	?>	
 		</table>
-		
+
 	</form>
 	</div>
 
