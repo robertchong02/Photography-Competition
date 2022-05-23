@@ -19,7 +19,7 @@
   <a href="editprofile.html">Profile</a>
   <a href="#Winner">Winner</a>
   <a href="#About">About Us</a>
-    <a class="active" href="userhome.html">Home</a>
+    <a class="active" href="userhome.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">APU Photography Competition</p>
 </div>
@@ -34,7 +34,7 @@
 	<form name="login" method="get"  style="padding-left:200px; margin:auto">
 		<table>
 		<?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '6'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '9'");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
@@ -108,7 +108,7 @@
 	<div style="padding-right:10px; margin:auto">
 		<div class="title" style="text-align:center; height:150px">
 			<b style="font-size:17px">Competition 2 (Closed)</b><br/><br/>
-			<a href="viewcotent.html">
+			<a href="viewcontent.php">
 				<button type="button" class="btn btn-primary">Click Here to Vote</button>
 			</a>
 		</div>
@@ -116,7 +116,9 @@
 
 	<div style="padding-right:10px; margin:auto" >
 		<div class="title" style="text-align:center;height:80px; padding-top:20px">
-			<button type="button" class="btn btn-primary">More Competitions</button>
+		<a href="morecomp.php">
+				<button type="button" class="btn btn-primary">More Competitions</button>
+			</a>
 		</div>
 	</div>
 

@@ -34,7 +34,7 @@ include("connect.php");
   <div class="box1" style="background-color:#A7CAD7;text-align:center">
   <form name="compread2" method="get"  style=" padding-left:6px">
   <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '9'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '6'");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
