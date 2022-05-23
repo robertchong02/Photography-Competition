@@ -19,7 +19,7 @@
     <p style="float: left;">APU Photography Competition</p>
 </div>
 
-<div class="title" style="margin-bottom:30px ;background-color:#A7CAD7; width:600px; text-align:center; margin-left:330px">
+<div class="title" style="background-color:#A7CAD7; width:600px; text-align:center;margin:auto">
 <h2 id="Login">Login</h2><br/><br/>
 <form name="login" method="POST" action="login.php">
 	Username:
