@@ -92,7 +92,7 @@
 		<tr>
 			<td></td>
 			<td colspan="3" style="padding-left:15px">
-				<a href="compread2.html">Click here for more information...</a>
+				<a href="compread2.php">Click here for more information...</a>
 			</td>
 		</tr>';
 		echo $displayData;  

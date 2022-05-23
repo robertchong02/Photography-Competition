@@ -1,3 +1,7 @@
+<?php
+include("connect.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,48 +66,59 @@
 </div>
 
 <p style="margin-left:50px; margin-top:20px">
-	<a href="compread2.html"><button type="button" class="button button1">BACK</button></a>
+	<a href="compread2.php"><button type="button" class="button button1">BACK</button></a>
 </p>
 <br>
 <br>
 <br>
-  <div class="box1" style="background-color:#A7CAD7; margin-bottom:30px">
-    <h3> Competition 1 (Title) </h3>
-    <img src = "image_test.jpg">
-    <br>
-    <br>
-    <p> Theme: <input style="width:fit-content;" type="text" placeholder="Theme" name="theme" readonly></p>
-    <p> Register Date: <input style="width:fit-content" type="text" placeholder="Register Date" name="rdate" readonly> </p>
-    <p> Deadline: <input style="width:fit-content" type="text" placeholder="Deadline" name="deadline" readonly></p>
-    <p> Competition Date: <input style="width:fit-content" type="text" placeholder="Competition Date" name="cdate" readonly></p>
-    <p> Prize: <input style="width:fit-content" type="text" placeholder="Prize" name="prize" readonly></p>
-    <p> Eligibility: <input style="width:fit-content" type="text" placeholder="Eligibility" name="eligibility" readonly></p>
+<div class="box1" style="background-color:#A7CAD7;text-align:center">
+  <form name="compread2" method="get"  style=" padding-left:6px">
+  <?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '6'");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+      $displayData = '
+      <h2>Title: <input type="text" value = "'.$row["CompetitionTitle"].'" name="title" class="compread2" readonly/></h2>
+      <img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:300px; height:300px; padding-top:10px ">
+      <br>
+      <br>
+
+      <p> Theme: <input type="text" value = "'.$row["Theme"].'" name="theme"  class="compread2" readonly/></p>
+      <p> Register Date: <input type="text" value = "'.$row["RegisterDate"].'" name="registerdate"  class="compread2" readonly/> </p>
+      <p> Deadline: <input type="text" value = "'.$row["Deadline"].'" name="deadline" class="compread2" readonly/></p>
+      <p> Competition Date: <input type="text" value = "'.$row["CompetitionDate"].'" name="compdate" class="compread2" readonly/></p>
+      <p> Prize:   <textarea name = "prize" cols=40  rows=3 style="width: 80%;height: 90px;background: #f1f1f1;" readonly>'.$row["Prize"].'</textarea></p>
+      <p> Eligibility: <input type="text" value = "'.$row["Eligibility"].'" name="eligibility"  class="compread2" readonly/></p>
 
   </div> 
-  <div class="box2" style="background-color:#A7CAD7">
+  <div class="box2" style="background-color:#A7CAD7;height:1035px">
     <div class="filebox">
     <p>Upload Content Here</p>
     <form action="user_upload.php" method="POST" enctype="multipart/form-data">
   	<input type="File" id="myFile" name="filename" style="width:40%;" accept="image/*" require>
     <br>
     <input style="width:95%;" type="text" placeholder="Enter your content title" id="cont_title" name="conTitle" require>
-    <input style="width:95%;height:100px" type="text" placeholder="Enter short content description" id="cont_desc" name="conDesc" require>
+    <input style="width:95%;height:150px" type="text" placeholder="Enter short content description" id="cont_desc" name="conDesc" require>
     <input style="width:95%;" type="text" placeholder="Enter your username" id="cont_title" name="userName" require>
     <h6 style="margin-left:15px">*This Username will be displayed on the content page"</h6>
 
-    <input type="submit" name="submit"  value="POST Comp">
-	  <button type="button" class="button button1 btn btn-primary joinButton" onclick="openPopup()" style="padding-bottom:35px">Join Competition</button>
+    <input style="position:absolute;bottom:0;right:0;margin-right:20px;background-color: #4CAF50;color:white" type="submit" name="submit"  value="POST Comp">
+
+    </form>
+    </div>
+  </div> ';
+    echo $displayData;  
+	}
+	?>
+	  <!-- <button type="button" class="button button1 btn btn-primary joinButton" onclick="openPopup()" style="padding-bottom:35px">Join Competition</button>
             <div class = "popup" id="popup">
                 <h2>Thank You!</h2>
                 <p>Your content has been successfully submitted for verification.</p>
                 <button type="button" onclick="closePopup()">OK</button>
                 
 
-            </div>
-    </form>
-    </div>
-  </div>
-   
+            </div>    -->
 <script>
 // let popup = document.getElementById("popup");
 

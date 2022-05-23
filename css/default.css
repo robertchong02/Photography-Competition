@@ -351,6 +351,7 @@ input {
   border: 3px solid;
   width: 30%;
   margin-left: 7.5%;
+  margin-bottom: 50px;
   display: block;
   float: left;
   background-color:white;
@@ -384,6 +385,7 @@ font-size: 2vw;
   display: block;
   float: left;
   background-color:white;
+  margin-bottom: 50px;
 }
 
 .box2 h3 {
