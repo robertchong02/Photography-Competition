@@ -82,7 +82,7 @@ body {
 
 .grid-container1 {
   display: grid;
-  grid-template-columns:300px 300px 300px;
+  grid-template-columns:300px 300px;
   gap: 30px;
   justify-content: space-evenly;
   align-content:space-evenly;
@@ -111,10 +111,10 @@ body {
 }
 
 .flex-container > div {
-  margin:auto;
-  padding: auto;
-  width: auto;
-  height: auto;
+  margin: 30px;
+  padding: 2px;
+  font-size: 30px;
+
 }
 
 
@@ -565,7 +565,7 @@ label {
 
 }
 #contentpicture1{
-	width:30%;
+	width:91%;
     height:250px;
     background-color:#FFFFFF;
     border:5px solid;
