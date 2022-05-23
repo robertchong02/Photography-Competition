@@ -62,7 +62,7 @@ include("connect.php");
 </div>
 <h2 style="text-align:center">CONTENT</h2>
 <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '9'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '8'");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			

@@ -68,6 +68,43 @@ include("connect.php");
 	}
 	?>	
 
+<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '10'");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+      $displayData = '
+<div class="box1" style="background-color:#A7CAD7;text-align:center">
+  <form name="compread2" method="get"  style=" padding-left:6px">
+  
+      <h2>Title: <input type="text" value = "'.$row["CompetitionTitle"].'" name="title" class="compread2" readonly/></h2>
+      <img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:300px; height:300px; padding-top:10px ">
+      <br>
+      <br>
+
+      <p> Theme: <input type="text" value = "'.$row["Theme"].'" name="theme"  class="compread2" readonly/></p>
+      <p> Register Date: <input type="text" value = "'.$row["RegisterDate"].'" name="registerdate"  class="compread2" readonly/> </p>
+      <p> Deadline: <input type="text" value = "'.$row["Deadline"].'" name="deadline" class="compread2" readonly/></p>
+      <p> Competition Date: <input type="text" value = "'.$row["CompetitionDate"].'" name="compdate" class="compread2" readonly/></p>
+      <p> Prize:   <textarea name = "prize" cols=40  rows=3 style="width: 80%;height: 90px;background: #f1f1f1;" readonly>'.$row["Prize"].'</textarea></p>
+      <p> Eligibility: <input type="text" value = "'.$row["Eligibility"].'" name="eligibility"  class="compread2" readonly/></p>
+
+    </div> 
+    <div class="box2" style="background-color:#A7CAD7; margin-bottom:30px; height:1035px">
+      <h3> Description </h3>
+      <textarea name = "description" cols=40  rows=3 style="width: 90%;height: 200px;margin-left:25px;background: #f1f1f1;" readonly>'.$row["Description"].'</textarea>
+      
+      <h3> Guideline </h3>
+      <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 333px;margin-left:25px;background: #f1f1f1;" readonly>'.$row["Guideline"].'</textarea>
+      <br><br><br><br><br><br>
+
+      <a href="viewcontent.php">
+      <input style="position:absolute;bottom:0;right:0;margin-right:20px;background-color: #4CAF50;color:white" type="button" value="Up Coming Event">
+      </a>
+    </div> ';
+    echo $displayData;  
+	}
+	?>	
 
 </body>
 </html>
