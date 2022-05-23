@@ -577,7 +577,7 @@ label {
 }
 
 .content1{
-    display:flex;
+    display:block;
     align-items: center;
     justify-content: space-between;
     padding: 0px 30px 0px 30px;

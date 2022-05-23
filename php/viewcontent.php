@@ -83,15 +83,24 @@ include("connect.php");
 
 
 <nav class="content1" style="background-color:#A7CAD7">
+<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM content WHERE CompetitionID = '8'");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+      $displayData = '
 	<div id="contentpicture1">
+	<img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="width:300px; height:300px; padding-top:10px ">
 	</div>
 	<div id="contentdescription1">
-		<label for="ContentCode"><b>Content Code:</b><input type="text" placeholder="code" name="code"></label>
-		<br>
-		<label for="Participant"><b>Participant Name: </b><input type="text" placeholder="name" name="name"></label>
+		
+		<label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["ContentTitle"].'" name="title"  class="compread2" readonly/></label>
 		<br>
 		<label for="Description"><b>Description: </b></label>
-		<input style="width:94%;height:70px;" type="text" placeholder="Description" name="description">
+		<textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;background: #f1f1f1;" readonly>'.$row["ContentDescription"].'</textarea>
+		<br>
+		<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
+		<br>
 		<a href="readcomment.html">
 			<button class="button button3">Read Comments</button>
 		</a><br/>
@@ -106,7 +115,10 @@ include("connect.php");
 				<button class="button button1">Comment</button>
 			</a>
 		</div>
-	</div>
+	</div>';
+	echo $displayData;  
+}
+?>
 </nav>
 
 <nav class="content1" style="background-color:#A7CAD7">
