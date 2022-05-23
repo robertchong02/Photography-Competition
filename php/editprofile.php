@@ -26,6 +26,7 @@ include("connect.php");
 <div id="profile">
 </div>
 <div id="profiledata" style="background-color:#A7CAD7">
+<form action="profile_Edit" method = "POST">
 <?php
     $fetchData = mysqli_query($con, "SELECT * FROM usersignup WHERE ID = 1");
     while($row = mysqli_fetch_assoc($fetchData)) 
@@ -59,6 +60,7 @@ include("connect.php");
 
     <label for="Password"><b>Password</b></label>
     <input type="text" placeholder="Edit Password" name="Password" value = "'.$row["Password"].'"
+
     >
   
     ';
@@ -68,7 +70,9 @@ include("connect.php");
     }
 
 ?>
+    <input class = "button button2" type ="submit" value = "Save" name = "Update"> 
 
+</form>
 </div>
 </nav>
 <nav>
