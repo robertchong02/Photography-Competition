@@ -107,10 +107,20 @@
 
 	<div style="padding-right:10px; margin:auto">
 		<div class="title" style="text-align:center; height:150px">
-			<b style="font-size:17px">Competition 2 (Closed)</b><br/><br/>
+		<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '8'");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50" style="height:50px;border:none;background-color:#A7CAD7;" readonly/>
+			<b style="font-size:17px">(Closed)</b><br/><br/>
 			<a href="viewcontent.php">
 				<button type="button" class="btn btn-primary">Click Here to Vote</button>
-			</a>
+			</a>';
+			echo $displayData;  
+		}
+		?>	
 		</div>
 	</div>
 

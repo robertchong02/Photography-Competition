@@ -1,3 +1,7 @@
+<?php
+include("connect.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,8 +60,17 @@
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">APU Photography Competition</p>
 </div>
-<h2 style="text-align:center">CONTENT</h2>	
-<h2 style="text-align:center">COMPETITION 2:BUILDINGS </h2>	
+<h2 style="text-align:center">CONTENT</h2>
+<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '9'");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+      $displayData = '
+			<h2 style="text-align:center"><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50" style="height:50px;border:none;background-color:transparent;font-size:24px" readonly/></h2>	';
+		echo $displayData;  
+		}
+?>	
 <br>
 <nav class="buttonbackground">
 <p align="left">

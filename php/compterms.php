@@ -103,7 +103,7 @@ include("connect.php");
     <input style="width:95%;" type="text" placeholder="Enter your username" id="cont_title" name="userName" require>
     <h6 style="margin-left:15px">*This Username will be displayed on the content page"</h6>
 
-    <input style="position:absolute;bottom:0;right:0;margin-right:20px;background-color: #4CAF50;color:white" type="submit" name="submit"  value="POST Comp">
+    <input style="position:absolute;bottom:0;right:0;margin-right:20px;background-color: #4CAF50;color:white" type="submit" name="submit"  value="Submit">
 
     </form>
     </div>
