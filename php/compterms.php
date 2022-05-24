@@ -79,15 +79,15 @@ include("connect.php");
   		{		
 			
       $displayData = '
-      <h2>Title: <input type="text" value = "'.$row["CompetitionTitle"].'" name="title" class="compread2" readonly/></h2>
+      <h2>Title: <input type="text" value = "'.$row["CompetitionTitle"].'" name="title" class="compread2" style="width:200px" readonly/></h2>
       <img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:300px; height:300px; padding-top:10px ">
       <br>
       <br>
 
       <p> Theme: <input type="text" value = "'.$row["Theme"].'" name="theme"  class="compread2" readonly/></p>
       <p> Register Date: <input type="text" value = "'.$row["RegisterDate"].'" name="registerdate"  class="compread2" readonly/> </p>
-      <p> Deadline: <input type="text" value = "'.$row["Deadline"].'" name="deadline" class="compread2" readonly/></p>
-      <p> Competition Date: <input type="text" value = "'.$row["CompetitionDate"].'" name="compdate" class="compread2" readonly/></p>
+      <p> Deadline: <input type="text" value = "'.$row["Deadline"].'" name="deadline" class="compread2" style="width:210px" readonly/></p>
+      <p> Competition Date: <input type="text" value = "'.$row["CompetitionDate"].'" name="compdate" class="compread2" style="width:150px" readonly/></p>
       <p> Prize:   <textarea name = "prize" cols=40  rows=3 style="width: 80%;height: 90px;background: #f1f1f1;" readonly>'.$row["Prize"].'</textarea></p>
       <p> Eligibility: <input type="text" value = "'.$row["Eligibility"].'" name="eligibility"  class="compread2" readonly/></p> 
       ';
@@ -99,7 +99,7 @@ include("connect.php");
     
 
   
-  <div class="box2" style="background-color:#A7CAD7;height:1035px">
+  <div class="box2" style="background-color:#A7CAD7;height:975px">
     <div class="filebox">
       <p>Upload Content Here</p>
       <form method="POST" action="user_upload.php" enctype="multipart/form-data">
