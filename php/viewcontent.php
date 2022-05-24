@@ -105,13 +105,13 @@ include("connect.php");
 			<br>
 			<label for="Description"><b>Description: </b></label>
 			<div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;margin-top:15px;background: #f1f1f1" readonly>'.$row["vcontentDescription"].'</textarea></div>
-			<br>
 			<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
-			<br>
+			
 			<form name="viewcomment" method="get" action="readcomment.php">
 			<div style="padding-left:15px"><a href="readcomment.php">
-				<button class="button button3">Read Comments</button>
-			</a><br/></div>
+				<input type ="submit"  value= "Read Comments" style="width:540px;background-color:#AFB4A4"/>	
+				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
+			</a></div>
 			</form>
 			<form name="viewcontent" method="get" action="comment.php" style="padding-left:200px; margin:auto">
 			<div style="display:inline-block; float:right;" >

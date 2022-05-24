@@ -1,3 +1,7 @@
+<?php
+include("connect.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +11,11 @@
 </head>
 <body style="background-image:url('../image/bg1.png')">
 <div class="topnav">
-  <a href="#Sign Up">Logout</a>
-  <a href="editprofile.html">Profile</a>
-  <a href="#Winner">Winner</a>
-  <a href="#About">About Us</a>
-    <a class="active" href="#home">Home</a>
+  <a href="logout.php">Logout</a>
+  <a href="editprofile.php">Profile</a>
+  <a href="userhome.php">Winner</a>
+  <a href="userhome.php">About Us</a>
+    <a class="active" href="userhome.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">APU Photography Competition</p>
 </div>
@@ -20,34 +24,37 @@
 <br>
 <nav class="buttonbackground">
 <p align="left">
-	<a href="viewcotent.html">
+	<a href="viewcontent.php">
   		<button class="button button1">BACK</button>
   	</a>
 </p>
 </nav>
 
 <nav class="content">
+<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcontentID = ".$_GET['vconID']);
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+      echo '<input style="display:none;" type="text" name="vconID" value='.$_GET["vconID"]. '>';
+      $displayData = '
 	<div id="contentpicture">
+	<img src="data:image/jpg;base64, '.base64_encode($row["vcontentImage"]).'" style="width:100%; height:300px">
 	</div>
 	<br>
 	<div id="contentcomment" style="margin-bottom:30px;background-color:#A7CAD7">
 	<label for="comment"><b>Comment: </b></label>
-    <input style="width:95%;height:10px;" type="text" placeholder="Comment 1" name="comment">
-	<input style="width:95%;height:10px;" type="text" placeholder="Comment 2" name="comment">
-	<input style="width:95%;height:10px;" type="text" placeholder="Comment 3" name="comment">
-	<input style="width:95%;height:10px;" type="text" placeholder="Comment 4" name="comment">
-	<input style="width:95%;height:10px;" type="text" placeholder="Comment 5" name="comment">
-	<input style="width:95%;height:10px;" type="text" placeholder="Comment 6" name="comment">
-	<input style="width:95%;height:10px;" type="text" placeholder="Comment 7" name="comment">
-	<input style="width:95%;height:10px;" type="text" placeholder="Comment 8" name="comment">
-	<input style="width:95%;height:10px;" type="text" placeholder="Comment 9" name="comment">
-	<input style="width:95%;height:10px;" type="text" placeholder="Comment 10" name="comment">
+    <input style="width:95%;height:10px;" type="text" placeholder="Comment 1" name="comment" readonly>
+
 	<p align="center" style="margin-top:0px">
-		<a href="comment.html">
+		<a href="comment.php">
 			<button class="button button1">ADD COMMENT</button>
 		</a>
 	</p>
-	</div>
+	</div>	';
+	echo $displayData;  
+}
+?>
 </nav>
+
 </body>
 </html>
