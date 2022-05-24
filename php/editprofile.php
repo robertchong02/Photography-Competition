@@ -27,7 +27,7 @@ $customerID = $_SESSION['Customer_ID'];
 <nav>
 <!-- <div id="profile">
 </div> -->
-<div id="profiledata" style="background-color:#A7CAD7; margin-left:300px">
+<div id="profiledata" style="background-color:#A7CAD7; margin-left:300px; margin-bottom:30px">
 <form action="editcontactdetails.php" method = "POST">
 <?php
     $getCustomerInfo = mysqli_query($con, "SELECT * FROM usersignup WHERE Customer_ID = '$customerID';");
