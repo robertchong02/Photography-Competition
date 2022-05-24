@@ -25,9 +25,9 @@ $customerID = $_SESSION['Customer_ID'];
 </div>
 <h2 style="text-align:center;">USER PROFILE</h2>	
 <nav>
-<div id="profile">
-</div>
-<div id="profiledata" style="background-color:#A7CAD7">
+<!-- <div id="profile">
+</div> -->
+<div id="profiledata" style="background-color:#A7CAD7; margin-left:300px">
 <form action="editcontactdetails.php" method = "POST">
 <?php
     $getCustomerInfo = mysqli_query($con, "SELECT * FROM usersignup WHERE Customer_ID = '$customerID';");
@@ -56,8 +56,8 @@ $customerID = $_SESSION['Customer_ID'];
     <label for="Contact Number"><b>Contact Number</b></label>
     <input type="text" placeholder="Edit Contact Number" name="Contact Number" value = "'.$row["ContactNumber"].'">
 
-    <label for="Email"><b>Email</b></label>
-    <input type="text" placeholder="Edit Email" name="Email" value = "'.$row["Email"].'">
+    <label for="Email"><b>Email (Not Editable)</b></label>
+    <input type="text" placeholder="Edit Email" name="Email" readonly value = "'.$row["Email"].'">
 
     <label for="Password"><b>Password</b></label>
     <input type="text" placeholder="Edit Password" name="Password" value = "'.$row["Password"].'">
@@ -74,11 +74,11 @@ $customerID = $_SESSION['Customer_ID'];
 </form>
 </div>
 </nav>
-<nav>
+<!-- <nav>
 <p align="left">
 	<h2 style="text-align:left">Select photo:</h2>
     <input type="file" id="myfile" name="myfile" style="background-color:transparent">
-</p>
+</p> -->
 
 
 </nav>
