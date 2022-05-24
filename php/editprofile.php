@@ -1,5 +1,7 @@
 <?php
 include("connect.php");
+include("session.php");
+$customerID = $_SESSION['Customer_ID'];
 
 ?>
 
@@ -27,8 +29,8 @@ include("connect.php");
 </div>
 <div id="profiledata" style="background-color:#A7CAD7">
 <?php
-    $fetchData = mysqli_query($con, "SELECT * FROM usersignup WHERE ID = 1");
-    while($row = mysqli_fetch_assoc($fetchData)) 
+    $getCustomerInfo = mysqli_query($con, "SELECT * FROM usersignup WHERE Customer_ID = '$customerID';");
+    while ($row = mysqli_fetch_assoc($getCustomerInfo))
     {
 
     $displayData ='
@@ -64,7 +66,6 @@ include("connect.php");
     ';
 
     echo $displayData;
-
     }
 
 ?>
