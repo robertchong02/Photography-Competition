@@ -16,7 +16,7 @@
 <body style="background-image:url('../image/bg.gif')">
 <div class="topnav">
   <a href="logout.php">Logout</a>
-  <a href="editprofile.html">Profile</a>
+  <a href="editprofile.php">Profile</a>
   <a href="#Winner">Winner</a>
   <a href="#About">About Us</a>
     <a class="active" href="userhome.php">Home</a>
@@ -92,6 +92,7 @@
 		<tr>
 			<td></td>
 			<td colspan="3" style="padding-left:15px">
+				<br>
 				<input type ="submit"  value= "Click here for more information..."/>
 			</td>
 		</tr>';

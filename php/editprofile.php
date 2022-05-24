@@ -17,9 +17,9 @@ $customerID = $_SESSION['Customer_ID'];
 <div class="topnav">
   <a href="#Logout">Logout</a>
   <a href="#Profile">Profile</a>
-  <a href="#Winner">Winner</a>
-  <a href="#About">About Us</a>
-    <a class="active" href="userhome.html">Home</a>
+  <a href="userhome.php">Winner</a>
+  <a href="userhome.php">About Us</a>
+    <a class="active" href="userhome.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">APU Photography Competition</p>
 </div>
@@ -28,6 +28,7 @@ $customerID = $_SESSION['Customer_ID'];
 <div id="profile">
 </div>
 <div id="profiledata" style="background-color:#A7CAD7">
+<form action="profile.php" method = "POST">
 <?php
     $getCustomerInfo = mysqli_query($con, "SELECT * FROM usersignup WHERE Customer_ID = '$customerID';");
     while ($row = mysqli_fetch_assoc($getCustomerInfo))
@@ -56,13 +57,12 @@ $customerID = $_SESSION['Customer_ID'];
     <input type="text" placeholder="Edit Contact Number" name="Contact Number" value = "'.$row["ContactNumber"].'">
 
     <label for="Email"><b>Email</b></label>
-    <input type="text" placeholder="Edit Email" name="Email" value = "'.$row["Email"].'"
-    >
+    <input type="text" placeholder="Edit Email" name="Email" value = "'.$row["Email"].'">
 
     <label for="Password"><b>Password</b></label>
-    <input type="text" placeholder="Edit Password" name="Password" value = "'.$row["Password"].'"
-    >
+    <input type="text" placeholder="Edit Password" name="Password" value = "'.$row["Password"].'">
   
+    <input class = "button button2" type ="submit" value = "Save" name = "Update"> 
     ';
 
     echo $displayData;
@@ -70,6 +70,8 @@ $customerID = $_SESSION['Customer_ID'];
 
 ?>
 
+
+</form>
 </div>
 </nav>
 <nav>
@@ -77,9 +79,7 @@ $customerID = $_SESSION['Customer_ID'];
 	<h2 style="text-align:left">Select photo:</h2>
     <input type="file" id="myfile" name="myfile" style="background-color:transparent">
 </p>
-<p align="right">
-  <button class="button button2">Save</button>
-</p>
+
 
 </nav>
 </body>

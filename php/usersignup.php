@@ -9,14 +9,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body style="background-image:url('bg1.png')">
+<body style="background-image:url('../image/bg1.png')">
 <div class="topnav">
     <a href="#Sign Up">Sign Up</a>
-    <a href="login.html">Login</a>
-    <a href="#Winner">Winner</a>
-    <a href="#About">About Us</a>
-    <a class="active" href="main.html">Home</a>
-    <img class="logo" style="float: left;" src = "logo.png">
+    <a href="userlogin.php">Login</a>
+    <a href="main.php">Winner</a>
+    <a href="main.php">About Us</a>
+    <a class="active" href="main.php">Home</a>
+    <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">APU Photography Competition</p>
 </div>
 

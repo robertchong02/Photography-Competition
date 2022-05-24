@@ -52,10 +52,10 @@ include("connect.php");
 </head>
 <body style="background-image:url('../image/bg1.png')">
 <div class="topnav">
-  <a href="#Sign Up">Logout</a>
-  <a href="#Login">Profile</a>
-  <a href="#Winner">Winner</a>
-  <a href="#About">About Us</a>
+  <a href="logout.php">Logout</a>
+  <a href="editprofile.php">Profile</a>
+  <a href="userhome.php">Winner</a>
+  <a href="userhome.php">About Us</a>
     <a class="active" href="#home">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">APU Photography Competition</p>
@@ -74,7 +74,7 @@ include("connect.php");
 <br>
 <nav class="buttonbackground">
 <p align="left">
-  <a href="adminhome.html"><button type="button" class="button button1">BACK</button></a>
+  <a href="userhome.php"><button type="button" class="button button1">BACK</button></a>
 </p>
 <p align="right">
   <button class="button button2">NEXT</button>
@@ -83,8 +83,9 @@ include("connect.php");
 
 
 <nav class="content1 title" style="background-color:#A7CAD7">
+<form name="viewcontent" method="get" action="comment.php" style="padding-left:200px; margin:auto">
 <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM content WHERE CompetitionID = '8'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcompetitionID = '8'");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
@@ -92,17 +93,17 @@ include("connect.php");
 <div class="flex-container">
 	<div style="padding-top:80px">
 		<div id="contentpicture1">
-		<img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="max-width:100%; height:250px">
+		<img src="data:image/jpg;base64, '.base64_encode($row["vcontentImage"]).'" style="max-width:100%; height:250px">
 		</div>
 	</div>
 
 	<div>
-		<div id="contentdescription1" style="width:600px; height:400px">
+		<div id="contentdescription1" style="width:600px; height:420px">
 			
-			<label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["ContentTitle"].'" name="title"  class="compread2" readonly/></label>
+			<label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["vcontentTitle"].'" name="title"  class="compread2" readonly/></label>
 			<br>
 			<label for="Description"><b>Description: </b></label>
-			<div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;background: #f1f1f1" readonly>'.$row["ContentDescription"].'</textarea></div>
+			<div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;margin-top:15px;background: #f1f1f1" readonly>'.$row["vcontentDescription"].'</textarea></div>
 			<br>
 			<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
 			<br>
@@ -116,71 +117,17 @@ include("connect.php");
 					<p>Thanks for supporting</p>
 					<button type="button" onclick="closePopup()">OK</button>
 				</div>
-				<a href="comment.html">
-					<button class="button button1">Comment</button>
-				</a>
+				<input type ="submit"  value= "Comment" style="width:100px;margin-right:20px"/>
 			</div>
 		</div>
 	</div>
 </div>';
+	echo '<input style="display:none;" type="text" name="vcontentID" value='.$row["vcontentID"]. '>';
 	echo $displayData;  
 }
 ?>
+</form>
 </nav>
-
-<!-- <nav class="content1" style="background-color:#A7CAD7">
-	<div id="contentpicture1">
-	</div>
-	<div id="contentdescription1">
-		<label for="ContentCode"><b>Content Code:</b><input type="text" placeholder="code" name="code"></label>
-		<br>
-		<label for="Participant"><b>Participant Name: </b><input type="text" placeholder="name" name="name"></label>
-		<br>
-		<label for="Description"><b>Description: </b></label>
-		<input style="width:94%;height:70px;" type="text" placeholder="Description" name="description">
-		<a href="readcomment.html">
-			<button class="button button3">Read Comments</button>
-		</a>
-		<div style="display:inline-block; float:right;" >
-			<button type="submit" class="button button1" onclick="openPopup()">Vote</button>
-			<div class = "popup" id="popup">
-				<h2>Voted Successfully</h2>
-				<p>Thanks for supporting</p>
-				<button type="button" onclick="closePopup()">OK</button>
-			</div>
-			<a href="comment.html">
-				<button class="button button1">Comment</button>
-			</a>
-		</div>
-	</div>
-</nav>
-
-<nav class="content1" style="background-color:#A7CAD7; margin-bottom:30px">
-	<div id="contentpicture1">
-	</div>
-	<div id="contentdescription1">
-		<label for="ContentCode"><b>Content Code:</b><input type="text" placeholder="code" name="code"></label>
-		<br>
-		<label for="Participant"><b>Participant Name: </b><input type="text" placeholder="name" name="name"></label>
-		<br>
-		<label for="Description"><b>Description: </b></label>
-		<input style="width:94%;height:70px;" type="text" placeholder="Description" name="description">
-		<a href="readcomment.html">
-			<button class="button button3">Read Comments</button>
-		</a>
-		<div style="display:inline-block; float:right;" >
-			<button type="submit" class="button button1" onclick="openPopup()">Vote</button>
-			<div class = "popup" id="popup">
-				<h2>Voted Successfully</h2>
-				<p>Thanks for supporting</p>
-				<button type="button" onclick="closePopup()">OK</button>
-			</div>
-			<a href="comment.html">
-				<button class="button button1">Comment</button>
-			</a>
-		</div>
-	</div>
-</nav> -->
 
 <script>
 let popup = document.getElementById("popup");
