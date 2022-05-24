@@ -13,67 +13,52 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
     //MySQL Query
 
-    
-    if(!empty($username) && !empty($password)){
-        //read sdp database (usersignup db)
 
-        $query ="SELECT * FROM usersignup WHERE Username ='$username' limit 1";
-        $result= mysqli_query($con, $query);
+        // MySQL Queries
+        $getID = "SELECT Customer_ID FROM usersignup WHERE Username = '$username' AND Password = '$password';";
+            
+        // Get customer ID
+        $findID = mysqli_query($con, $getID);
 
-        if($result){
-            if($result && mysqli_num_rows($result)>0){
-                $user_data = mysqli_fetch_assoc($result);
+        if($findID)
+        {
+            $rowCount = mysqli_num_rows($findID);
+        
+            if($rowCount == 1)
+            {
+                session_start();
+                $fetchID = mysqli_fetch_assoc($findID);
+                $_SESSION['Customer_ID'] = $fetchID['Customer_ID'];
 
-                    if($user_data['Password'] === $password){
-
-                        
-                        $_SESSION['ID'] = $user_data['ID'];
-
-                        // example redirect to main.html    
-                        
-                        echo
-                        '<script>
-
-                        alert("Congrats.");
-                        window.location.href = "userhome.php"
-
-                        </script>';
-
-
-                    }             
-             
+                echo
+                '<script>
+                alert("Login successful. Welcome to APU Photography Page!");
+                window.location.href = "userhome.php";
+                </script>';
             }
+            else
+            {
+                echo
+                '<script>
+                alert("Either username or password is incorrect. Please try again.");
+                window.location.href = "userlogin.php";
+                </script>';
+            };
         }
-
-        echo
-        '<script>
-
-        alert("Wrong username or password !!");
-        window.location.href = "userlogin.php"
-
-        </script>';
-
-    }else{
-
-        echo
-        '<script>
-
-        alert("Wrong username or password !!");
-        window.location.href = "userlogin.php"
-
-        </script>';
-
-    }
-
-}
+        else
+        {
+            echo
+            '<script>
+            alert("SQL Localhost Error.");
+            window.location.href = "userlogin.php";
+            </script>';
+        };
+    };
 
 
-
-//close connection to db
+// Close connection to database
 mysqli_close($con);
-
 ?>
-
 
 
 
