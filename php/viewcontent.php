@@ -81,8 +81,8 @@ include("connect.php");
 </p>
 </nav>
 
-
-<nav class="content1 title" style="background-color:#A7CAD7">
+<form method="get" style="margin:auto">
+<nav class="content1 title" style="background-color:#A7CAD7;">
 
 <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcompetitionID = '8'");
@@ -100,14 +100,14 @@ include("connect.php");
 	<div>
 		<div id="contentdescription1" style="width:600px; height:420px">
 			
-			<label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["vcontentTitle"].'" name="title"  class="compread2" readonly/></label>
+			<label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["vcontentTitle"].'" name="title"  class="compread2" style="width:300px" readonly/></label>
 			<br>
 			<label for="Description"><b>Description: </b></label>
 			<div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;margin-top:15px;background: #f1f1f1" readonly>'.$row["vcontentDescription"].'</textarea></div>
 			<br>
 			<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
 			<br>
-			<form name="viewcomment" method="get" action="readcomment.php" style="padding-left:200px; margin:auto">
+			<form name="viewcomment" method="get" action="readcomment.php">
 			<div style="padding-left:15px"><a href="readcomment.php">
 				<button class="button button3">Read Comments</button>
 			</a><br/></div>
@@ -128,9 +128,11 @@ include("connect.php");
 </div>';
 	echo '<input style="display:none;" type="text" name="vcontentID" value='.$row["vcontentID"]. '>';
 	echo $displayData;  
-}
-?>
+	}
+	?>
+
 </nav>
+</form>
 
 <script>
 let popup = document.getElementById("popup");
