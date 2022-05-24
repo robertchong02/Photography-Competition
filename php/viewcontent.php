@@ -84,7 +84,7 @@ include("connect.php");
 
 <nav class="content1 title" style="background-color:#A7CAD7">
 <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM content WHERE CompetitionID = '8'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcompetitionID = '8'");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
@@ -92,17 +92,17 @@ include("connect.php");
 <div class="flex-container">
 	<div style="padding-top:80px">
 		<div id="contentpicture1">
-		<img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="max-width:100%; height:250px">
+		<img src="data:image/jpg;base64, '.base64_encode($row["vcontentImage"]).'" style="max-width:100%; height:250px">
 		</div>
 	</div>
 
 	<div>
 		<div id="contentdescription1" style="width:600px; height:420px">
 			
-			<label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["ContentTitle"].'" name="title"  class="compread2" readonly/></label>
+			<label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["vcontentTitle"].'" name="title"  class="compread2" readonly/></label>
 			<br>
 			<label for="Description"><b>Description: </b></label>
-			<div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;margin-top:15px;background: #f1f1f1" readonly>'.$row["ContentDescription"].'</textarea></div>
+			<div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;margin-top:15px;background: #f1f1f1" readonly>'.$row["vcontentDescription"].'</textarea></div>
 			<br>
 			<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
 			<br>
