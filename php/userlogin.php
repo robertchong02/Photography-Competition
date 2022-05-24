@@ -10,11 +10,11 @@
 
 <body style="background-image:url('../image/bg1.png')">
 <div class="topnav">
-  <a href="signup.html">Sign Up</a>
+  <a href="usersignup.php">Sign Up</a>
   <a href="#Login">Login</a>
-  <a href="#Winner">Winner</a>
-  <a href="#About">About Us</a>
-    <a class="active" href="main.html">Home</a>
+  <a href="main.php">Winner</a>
+  <a href="main.php">About Us</a>
+    <a class="active" href="main.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">APU Photography Competition</p>
 </div>
@@ -43,7 +43,7 @@
 <a href="adminlogin.php">  
 	<button type="button" class="btn btn-primary">Login as Admin</button>  
 </a><br/><br/>
-<a href="signup.html">  
+<a href="usersignup.php">  
 	<button type="button" class="btn btn-primary">Sign Up as New Member</button>  
 </a>
 </div>

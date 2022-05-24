@@ -1,6 +1,7 @@
-<?php
+﻿<?php
     include("connect.php");
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -15,22 +16,17 @@
 
 <body style="background-image:url('../image/bg.gif')">
 <div class="topnav">
-  <a href="logout.php">Logout</a>
-  <a href="editprofile.php">Profile</a>
+  <a href="usersignup.php">Sign Up</a>
+  <a href="userlogin.php">Login</a>
   <a href="#Winner">Winner</a>
   <a href="#About">About Us</a>
-    <a class="active" href="userhome.php">Home</a>
+    <a class="active" href="main.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">APU Photography Competition</p>
 </div>
 
-<div style="text-align:right; margin-right:30px">
-<a href="email.html">  
-	<button type="button" class="btn btn-primary">Notifications</button>  
-</a></div>
-<h2 id="home" style="margin:25px; text-align:center">Welcome!</h2>
-
-	<div class=title style="font-size:16px; margin:auto; margin-top:18px; margin:25px">
+<h2 id="home" style="margin:25px; text-align:center">Home</h2>
+<div class=title style="font-size:16px; margin:auto; margin-top:18px; margin:25px">
 	<form name="login" method="get" action="compread2.php" style="padding-left:200px; margin:auto">
 		<table>
 		<?php
@@ -93,10 +89,9 @@
 			<td></td>
 			<td colspan="3" style="padding-left:15px">
 				<br>
-				<input type ="submit"  value= "Click here for more information..."/>
+				<a href="userlogin.php"><button type="button" class="button button1">Login for more information</button></a>
 			</td>
 		</tr>';
-		echo '<input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>';
 		echo $displayData;  
 	}
 	?>	
@@ -117,7 +112,7 @@
 		$displayData = '
 			<input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50" style="height:50px;border:none;background-color:#A7CAD7;" readonly/>
 			<b style="font-size:17px">(Closed)</b><br/><br/>
-			<a href="viewcontent.php">
+			<a href="userlogin.php">
 				<button type="button" class="btn btn-primary">Click Here to Vote</button>
 			</a>';
 			echo $displayData;  
@@ -128,7 +123,7 @@
 
 	<div style="padding-right:10px; margin:auto" >
 		<div class="title" style="text-align:center;height:80px; padding-top:20px">
-		<a href="morecomp.php">
+		<a href="userlogin.php">
 				<button type="button" class="btn btn-primary">More Competitions</button>
 			</a>
 		</div>
