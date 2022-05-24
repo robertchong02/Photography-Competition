@@ -108,10 +108,10 @@ include("connect.php");
 			<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
 			
 			<form name="viewcomment" method="get" action="readcomment.php">
-			<div style="padding-left:15px"><a href="readcomment.php">
+
 				<input type ="submit"  value= "Read Comments" style="width:540px;background-color:#AFB4A4"/>	
 				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
-			</a></div>
+
 			</form>
 			<form name="viewcontent" method="get" action="comment.php" style="padding-left:200px; margin:auto">
 			<div style="display:inline-block; float:right;" >
@@ -121,8 +121,10 @@ include("connect.php");
 					<p>Thanks for supporting</p>
 					<button type="button" onclick="closePopup()">OK</button>
 				</div>
+				<form method="POST" action="addcomment.php">
 				<input type ="submit"  value= "Comment" style="width:100px;margin-right:20px"/>	
 				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
+				</form>
 			</div>
 			</form>
 		</div>

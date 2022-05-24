@@ -58,7 +58,7 @@ include("connect.php");
 		<label for="comment"><b>Comment here: </b></label>
 		<input style="width:95%;height:100px;" type="text" placeholder="Comment here" name="comment">
 		<p align="center" style="margin-top:0px">
-			<button type="button" class="button button1 btn btn-success">SUBMIT</button>
+			<input type="submit" value="SUBMIT" style="background-color:green;color:white">
 		</p>
 		</div>';
 	    echo $displayData;  
