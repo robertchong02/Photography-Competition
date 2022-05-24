@@ -1,26 +1,31 @@
 <?php
 include("connect.php");
 
+$comment = mysqli_real_escape_string($con,$_POST['comment']);
+
 $sql = "INSERT INTO contentcomment (vcID, contentcomment)
 VALUES
-($_POST[vconID],?,'$_POST[comment]')" ;
+('$_POST[vconID]','$comment')" ;
 
-$stmt = mysqli_prepare($con,$sql);
+$insert = mysqli_query($con, $sql);
 
-mysqli_stmt_execute($stmt);
-
-$check = mysqli_stmt_affected_rows($stmt);
-
-echo $check;
-if($check == 1) {
-    echo '<script> alert ("New competition added!");
-    window.location.href= "compadminPost.php";
+if($insert)
+{
+    echo
+    '<script>
+    alert("Feedback submitted. Thank you for your time.");
+    window.location.href = "customerprofile.php";
     </script>';
+}
+else
+{
+    echo
+    '<script>
+    alert("Failed to submit feedback. Please try again");
 
-} else {
-    echo '<script> alert ("Upload failed.");
     </script>';
 }
 
+// Close connection to database
 mysqli_close($con);
 ?>

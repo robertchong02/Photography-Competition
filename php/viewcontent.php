@@ -121,10 +121,10 @@ include("connect.php");
 					<p>Thanks for supporting</p>
 					<button type="button" onclick="closePopup()">OK</button>
 				</div>
-				<form method="POST" action="addcomment.php">
+				
 				<input type ="submit"  value= "Comment" style="width:100px;margin-right:20px"/>	
 				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
-				</form>
+				
 			</div>
 			</form>
 		</div>

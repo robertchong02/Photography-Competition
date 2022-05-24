@@ -53,20 +53,24 @@ include("connect.php");
 		<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
 		<br>
 		</div>
+		';
+	    echo $displayData;  
+	}
+	?>
 		<br>
-		<div id="contentcomment" style="padding-bottom:5px; height:250px">
+
+</nav>
+</form>	
+
+<div id="contentcomment" style="padding-bottom:5px; height:250px">
 		<label for="comment"><b>Comment here: </b></label>
+		<form method="POST" action="addcomment.php">
 		<input style="width:95%;height:100px;" type="text" placeholder="Comment here" name="comment">
 		<p align="center" style="margin-top:0px">
 			<input type="submit" value="SUBMIT" style="background-color:green;color:white">
 		</p>
-		</div>';
-	    echo $displayData;  
-	}
-	?>
-
-</nav>
-</form>	
+		</form>
+</div>
 
 </body>
 </html>
