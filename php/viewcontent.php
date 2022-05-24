@@ -56,7 +56,7 @@ include("connect.php");
   <a href="editprofile.php">Profile</a>
   <a href="userhome.php">Winner</a>
   <a href="userhome.php">About Us</a>
-    <a class="active" href="#home">Home</a>
+    <a class="active" href="userhome.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">APU Photography Competition</p>
 </div>
@@ -83,7 +83,7 @@ include("connect.php");
 
 
 <nav class="content1 title" style="background-color:#A7CAD7">
-<form name="viewcontent" method="get" action="comment.php" style="padding-left:200px; margin:auto">
+
 <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcompetitionID = '8'");
   			while($row = mysqli_fetch_assoc($fetchData)) 
@@ -107,9 +107,12 @@ include("connect.php");
 			<br>
 			<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
 			<br>
-			<div style="padding-left:15px"><a href="readcomment.html">
+			<form name="viewcomment" method="get" action="readcomment.php" style="padding-left:200px; margin:auto">
+			<div style="padding-left:15px"><a href="readcomment.php">
 				<button class="button button3">Read Comments</button>
 			</a><br/></div>
+			</form>
+			<form name="viewcontent" method="get" action="comment.php" style="padding-left:200px; margin:auto">
 			<div style="display:inline-block; float:right;" >
 				<button type="submit" class="button button1" onclick="openPopup()">Vote</button>
 				<div class = "popup" id="popup">
@@ -119,6 +122,7 @@ include("connect.php");
 				</div>
 				<input type ="submit"  value= "Comment" style="width:100px;margin-right:20px"/>
 			</div>
+			</form>
 		</div>
 	</div>
 </div>';
@@ -126,7 +130,6 @@ include("connect.php");
 	echo $displayData;  
 }
 ?>
-</form>
 </nav>
 
 <script>

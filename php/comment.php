@@ -18,7 +18,7 @@ include("connect.php");
   <a href="editprofile.php">Profile</a>
   <a href="userhome.php">Winner</a>
   <a href="userhome.php">About Us</a>
-    <a class="active" href="#home">Home</a>
+    <a class="active" href="userhome.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">APU Photography Competition</p>
 </div>

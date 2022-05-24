@@ -15,7 +15,7 @@ $customerID = $_SESSION['Customer_ID'];
 
 <body style="background-image:url('../image/bg1.png')">
 <div class="topnav">
-  <a href="#Logout">Logout</a>
+  <a href="logout.php">Logout</a>
   <a href="#Profile">Profile</a>
   <a href="userhome.php">Winner</a>
   <a href="userhome.php">About Us</a>
