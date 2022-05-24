@@ -81,7 +81,7 @@ include("connect.php");
 </p>
 </nav>
 
-<form method="get" style="margin:auto">
+<form method="get" action="comment.php" style="margin:auto">
 <nav class="content1 title" style="background-color:#A7CAD7;">
 
 <?php
@@ -120,13 +120,14 @@ include("connect.php");
 					<p>Thanks for supporting</p>
 					<button type="button" onclick="closePopup()">OK</button>
 				</div>
-				<input type ="submit"  value= "Comment" style="width:100px;margin-right:20px"/>
+				<input type ="submit"  value= "Comment" style="width:100px;margin-right:20px"/>';
+				echo '<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"]. '>
 			</div>
 			</form>
 		</div>
 	</div>
 </div>';
-	echo '<input style="display:none;" type="text" name="vcontentID" value='.$row["vcontentID"]. '>';
+	
 	echo $displayData;  
 	}
 	?>

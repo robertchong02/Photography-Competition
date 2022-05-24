@@ -33,13 +33,13 @@ include("connect.php");
 </p>
 </nav>
 
-<nav class="content" style="margin:30px; background-color:#A7CAD7;">
 <form name="comment" method="get"  style=" padding-left:6px">
+<nav class="content" style="margin:30px; background-color:#A7CAD7;">
 <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcontentID = ".$_GET['vcontentID']);
+  			$fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcontentID = ".$_GET['vconID']);
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
-      echo '<input style="display:none;" type="text" name="vcontentID" value='.$_GET["vcontentID"]. '>';
+      echo '<input style="display:none;" type="text" name="vconID" value='.$_GET["vconID"]. '>';
       $displayData = '
 		<div id="contentpicture">
 		<img src="data:image/jpg;base64, '.base64_encode($row["vcontentImage"]).'" style="width:100%; height:290px;">
@@ -64,7 +64,9 @@ include("connect.php");
 	    echo $displayData;  
 	}
 	?>
-</form>	
+
 </nav>
+</form>	
+
 </body>
 </html>
