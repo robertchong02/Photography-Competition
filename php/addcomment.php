@@ -1,11 +1,12 @@
 <?php
 include("connect.php");
 
+$vconID = mysqli_real_escape_string($con,$_POST['vconID']);
 $comment = mysqli_real_escape_string($con,$_POST['comment']);
 
 $sql = "INSERT INTO contentcomment (vcID, contentcomment)
 VALUES
-('$_POST[vconID]','$comment')" ;
+('$vconID','$comment')" ;
 
 $insert = mysqli_query($con, $sql);
 
