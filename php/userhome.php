@@ -92,6 +92,7 @@
 		<tr>
 			<td></td>
 			<td colspan="3" style="padding-left:15px">
+				<br>
 				<input type ="submit"  value= "Click here for more information..."/>
 			</td>
 		</tr>';

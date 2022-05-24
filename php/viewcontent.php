@@ -74,7 +74,7 @@ include("connect.php");
 <br>
 <nav class="buttonbackground">
 <p align="left">
-  <a href="adminhome.html"><button type="button" class="button button1">BACK</button></a>
+  <a href="userhome.php"><button type="button" class="button button1">BACK</button></a>
 </p>
 <p align="right">
   <button class="button button2">NEXT</button>
@@ -97,12 +97,12 @@ include("connect.php");
 	</div>
 
 	<div>
-		<div id="contentdescription1" style="width:600px; height:400px">
+		<div id="contentdescription1" style="width:600px; height:420px">
 			
 			<label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["ContentTitle"].'" name="title"  class="compread2" readonly/></label>
 			<br>
 			<label for="Description"><b>Description: </b></label>
-			<div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;background: #f1f1f1" readonly>'.$row["ContentDescription"].'</textarea></div>
+			<div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;margin-top:15px;background: #f1f1f1" readonly>'.$row["ContentDescription"].'</textarea></div>
 			<br>
 			<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
 			<br>

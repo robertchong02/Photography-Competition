@@ -60,7 +60,7 @@ include("connect.php");
       <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 333px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Guideline"].'</textarea>
       <br><br><br><br><br><br>
       <div class="tacbox">
-        <input id="checkbox" type="checkbox" />
+        <input id="checkbox" type="checkbox" required/>
         <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a></label>
       </div>
         <input style="float:right;margin-right: 10px;" type="submit" value="Next">
