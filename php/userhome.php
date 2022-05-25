@@ -30,7 +30,7 @@ $customerID = $_SESSION['Customer_ID'];
 <a href="email.html">  
 	<button type="button" class="btn btn-primary">Notifications</button>  
 </a></div>
-<h2 id="home" style="margin:25px; text-align:center">Welcome!</h2>
+<h2 id="home" style="margin:25px; text-align:center">Welcome!  </h2>
 
 	<div class=title style="font-size:16px; margin:auto; margin-top:18px; margin:25px">
 	<form name="login" method="get" action="compread2.php" style="padding-left:200px; margin:auto">
