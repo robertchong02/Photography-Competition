@@ -1,5 +1,5 @@
 <?php
-    include("conn.php");
+    include("connect.php");
     include("session.php");
 
     $selectCustomer = $_SESSION['Customer_ID'];

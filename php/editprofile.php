@@ -28,7 +28,7 @@ $customerID = $_SESSION['Customer_ID'];
 <!-- <div id="profile">
 </div> -->
 <div id="profiledata" style="background-color:#A7CAD7; margin-left:300px; margin-bottom:30px">
-<form action="editcontactdetails.php" method = "POST">
+<form action="editprofile.php" method = "POST">
 <?php
     $getCustomerInfo = mysqli_query($con, "SELECT * FROM usersignup WHERE Customer_ID = '$customerID';");
     while ($row = mysqli_fetch_assoc($getCustomerInfo))
@@ -70,6 +70,29 @@ $customerID = $_SESSION['Customer_ID'];
 
 ?>
 
+
+<?php
+require_once('connect.php');
+
+if (isset($_POST['Update'])) {
+  $customerID = $_GET['Customer_ID'];
+
+  $Username=$_POST['Username'];
+  $ContactNumber=$_POST['Contact Number'];
+  $Password=$_POST['Password'];
+
+  $query = "update records set Username = '".$Username."', ContactNumber = '".$ContactNumber."', Password = '".$Password."' where Customer_ID = '".customerID."' ";
+  $result = mysqli_query($con, $query);
+
+  if ($result){
+    echo '<script type="text/javascript"> alert("Your personal information have been successfully saved!") </script>';
+  }
+  else{
+    echo '<script type="text/javascript"> alert("Unable to save your changes. Please try again.")</script>';
+  }
+
+}
+?>
 
 </form>
 </div>
