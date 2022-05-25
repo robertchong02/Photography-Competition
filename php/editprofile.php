@@ -83,8 +83,6 @@ $customerID = $_SESSION['Customer_ID'];
 </p> -->
 
 
-
-
 </nav>
 </body>
 </html>
