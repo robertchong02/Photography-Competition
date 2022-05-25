@@ -1,6 +1,7 @@
 <?php
 include("connect.php");
 
+
 if (isset($_POST['Update'])) {
 
   $customerID = $_GET['ID'];
@@ -16,10 +17,18 @@ if (isset($_POST['Update'])) {
   $result = mysqli_query($con, $query);
 
   if ($result){
-    echo '<script type="text/javascript"> alert("Your personal information have been successfully saved!") </script>';
+    echo '<script type="text/javascript"> alert("Your personal information have been successfully saved!")
+    
+    window.location.href = "userhome.php";
+    </script>';
+    
   }
   else{
-    echo '<script type="text/javascript"> alert("Unable to save your changes. Please try again.")</script>';
+    echo '<script type="text/javascript"> alert("Unable to save your changes. Please try again.")
+    
+    
+    window.location.href = "editprofile.php";
+    </script>';
   }
 
 }
