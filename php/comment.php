@@ -64,10 +64,19 @@ include("connect.php");
 
 <div id="contentcomment" style="padding-bottom:5px; height:250px">
 		<label for="comment"><b>Comment here: </b></label>
-		<form method="POST" action="addcomment.php">
+		<form action="addcomment.php" method="POST" >
+
+	
+	
 		<input style="width:95%;height:100px;" type="text" placeholder="Comment here" name="comment">
+		
+
+		<?php
+		echo '<input style = "display:none;" type = text name="vconID" value='.$_GET["vconID"].'>';
+		?>
+
 		<p align="center" style="margin-top:0px">
-			<input type="submit" value="SUBMIT" style="background-color:green;color:white">
+			<input type="submit" value="SUBMIT" style="background-color:green;color:white" >
 		</p>
 		</form>
 </div>
