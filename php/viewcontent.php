@@ -67,7 +67,7 @@ include("connect.php");
   		{		
 			
       $displayData = '
-			<h2 style="text-align:center"><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50" style="background-color:transparent;font-size:24px; text-align:center" readonly/></h2>	';
+			<h2 style="text-align:center"><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50" style="background-color:transparent;font-size:24px; text-align:center" readonly/></h2>';
 		echo $displayData;  
 		}
 ?>	
@@ -81,7 +81,7 @@ include("connect.php");
 </p>
 </nav>
 
-<form method="get" action="comment.php" style="margin:auto">
+<!-- <form method="get" action="comment.php" style="margin:auto"> -->
 <nav class="content1 title" style="background-color:#A7CAD7;">
 
 <?php
@@ -107,14 +107,16 @@ include("connect.php");
 			<div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;margin-top:15px;background: #f1f1f1" readonly>'.$row["vcontentDescription"].'</textarea></div>
 			<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
 			
+	
 			<form name="viewcomment" method="get" action="readcomment.php">
 
-				<input type ="submit"  value= "Read Comments" style="width:540px;background-color:#AFB4A4"/>	
+				<input type ="submit" value= "Read Comments" style="width:540px;background-color:#AFB4A4"/>	
 				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
 
 			</form>
+
 			<form name="viewcontent" method="get" action="comment.php" style="padding-left:200px; margin:auto">
-			<div style="display:inline-block; float:right;" >
+			<div style="display:inline-block; float:right;">
 				<button type="submit" class="button button1" onclick="openPopup()">Vote</button>
 				<div class = "popup" id="popup">
 					<h2>Voted Successfully</h2>
@@ -122,7 +124,7 @@ include("connect.php");
 					<button type="button" onclick="closePopup()">OK</button>
 				</div>
 				
-				<input type ="submit"  value= "Comment" style="width:100px;margin-right:20px"/>	
+				<input class = "button button1" type ="submit"  value= "Comment" style="width:100px;margin-right:20px"/>	
 				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
 				
 			</div>
@@ -136,7 +138,7 @@ echo $displayData;
 	?>
 
 </nav>
-</form>
+<!-- </form> -->
 
 <script>
 let popup = document.getElementById("popup");
