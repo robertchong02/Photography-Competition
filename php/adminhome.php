@@ -23,7 +23,7 @@
     <div class="topnav">
         <a href="logout.html">Logout</a>
         <a href="#Winner">Winner</a>
-        <a class="active" href="adminhome.html">Home</a>
+        <a class="active" href="adminhome.php">Home</a>
         <img class="logo" style="float: left" src="../image/logo.png" />
         <p style="float: left">APU Photography Competition</p>
     </div>
@@ -41,8 +41,8 @@
                 <div class="row">
                     <div class="col align-self-start">
                         <div class="Functions">
-                        <a href="compadminPost.html">
-                        	<button type="button" class="btn btn-danger">Add Competition</button><br />
+                        <a href="competition.php">
+                        	<button type="button" class="btn btn-danger">All Competition</button><br />
                         </a>
                         <a href="report.html">
                             <button type="button" class="btn btn-danger mt-3">View Statistical Report</button><br />

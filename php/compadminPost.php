@@ -26,7 +26,7 @@
 
   </div>
   <p style="margin-left:50px; margin-top:20px">
-    <a href="adminhome.html">
+    <a href="competition.php">
       <button type="button" class="button button1">BACK</button>
     </a>
   </p>
