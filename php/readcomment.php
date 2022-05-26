@@ -46,6 +46,7 @@ include("connect.php");
     <input style="width:95%;height:10px;" type="text" placeholder="Comment 1" name="comment" readonly>
 
 	<p align="center" style="margin-top:0px">
+	
 		<a href="comment.php">
 			<button class="button button1">ADD COMMENT</button>
 		</a>
