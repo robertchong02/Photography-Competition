@@ -25,7 +25,7 @@ include("connect.php");
 	<a href="adminhome.php"><button class="button button1">Back</button></a>
 </p>
 <p style="margin-right:50px; margin-top:20px;align:right">
-	<a href="compadminPost.php"><button class="button button2" style="font-size:20px" >Add New Competition</button></a>
+	<a href="compadminPost.php"><button class="button button2" style="font-size:20px;border:5px solid black" >+ Add New Competition</button></a>
 </p>
 </nav>
 
@@ -60,7 +60,8 @@ include("connect.php");
       <h3> Guideline </h3>
       <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 333px;margin-left:25px;background: #f1f1f1;" readonly>'.$row["Guideline"].'</textarea>
       <br><br><br><br><br><br>
-      <a href="report.php"><button class="button button1">Statistic Report</button></a>  
+      
+      <a href="report.php"><button class="button button1" style="position:absolute;bottom:0;right:0;margin: 0 20px 20px 0">Statistic Report</button></a>  
       
     </div> 
   </div>';
