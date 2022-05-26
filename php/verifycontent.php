@@ -35,7 +35,7 @@ include("connect.php");
 
             <!--Content Area-->
             <div style="height:auto; margin:10px;" >
-            <form method="POST" action="contentverified.php" enctype="multipart/form-data">
+            <form method="POST"  enctype="multipart/form-data">
             <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM content");
   			while($row = mysqli_fetch_assoc($fetchData)) 
@@ -56,15 +56,21 @@ include("connect.php");
                     <br>
                     <label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
                     <br>
+
+                    <form name="acceptcontent" method="POST" action="contentverified.php">
                     <input class="button button1" type="submit" value="Approve">
+                    </form>
+
+
+                    <form method ="post" action="rejectcontent.php">
                     <input class="button button2" type="submit" value="Reject">
+                    </form>
                     </div>                 
                 
                 </div>';
-                echo $displayData;  
+                
             }
-            ?>
-            </form>           
+            ?>         
             </div>
 
         </div>
