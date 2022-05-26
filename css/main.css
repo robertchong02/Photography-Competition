@@ -61,6 +61,15 @@ img.logo{
       margin:25px;
       background-color:#A7CAD7;
   }
+
+  .title2 {
+    border: solid 5px #A7CAD7;
+    padding: 50px;
+    margin: auto;
+    text-align: center;
+    width: 1200px;
+    height: 500px;
+}
   
   .grid-container1 {
     display: grid;

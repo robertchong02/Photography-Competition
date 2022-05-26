@@ -31,7 +31,7 @@ include("connect.php");
 <br>
 <br>
 
-  <div class="box1" style="background-color:#A7CAD7;text-align:center; height:1020px">
+  <div class="box1" style="background-color:#A7CAD7;text-align:center;">
   <form name="compread2" action="compterms.php" method="get"  style=" padding-left:6px">
   <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = ".$_GET['CompID']);
@@ -52,13 +52,13 @@ include("connect.php");
       <p> Eligibility: <input type="text" value = "'.$row["Eligibility"].'" name="eligibility"  class="compread2" readonly/></p>
 
     </div> 
-    <div class="box2" style="background-color:#A7CAD7; margin-bottom:30px">
+    <div class="box2" style="background-color:#A7CAD7; margin-bottom:100px">
       <h3> Description </h3>
-      <textarea name = "description" cols=40  rows=3 style="width: 90%;height: 200px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Description"].'</textarea>
+      <textarea name = "description" cols=40  rows=3 style="width: 90%;height: 190px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Description"].'</textarea>
       
       <h3> Guideline </h3>
       <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 333px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Guideline"].'</textarea>
-      <br><br><br><br><br><br>
+      <br><br><br><br>
       <div class="tacbox">
         <input id="checkbox" type="checkbox" required/>
         <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a></label>

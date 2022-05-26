@@ -39,22 +39,32 @@ include("connect.php");
       $displayData = '
 	<div id="contentpicture">
 	<img src="data:image/jpg;base64, '.base64_encode($row["vcontentImage"]).'" style="width:100%; height:300px">
-	</div>
+	</div>';
+	echo $displayData;  
+}
+?>
 	<br>
 	<div id="contentcomment" style="margin-bottom:30px;background-color:#A7CAD7">
 	<label for="comment"><b>Comment: </b></label>
-    <input style="width:95%;height:10px;" type="text" placeholder="Comment 1" name="comment" readonly>
-
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM contentcomment WHERE vcID = ".$_GET['vconID']);
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+      echo '<input style="display:none;" type="text" name="vconID" value='.$_GET["vconID"]. '>';
+      $displayData = '
+	
+	<input type="text" value = "'.$row["contentcomment"].'" name="comment"  style="width:95%;height:10px;" readonly/>';
+	echo $displayData;  
+}
+?>
 	<p align="center" style="margin-top:0px">
 	
 		<a href="comment.php">
 			<button class="button button1">ADD COMMENT</button>
 		</a>
 	</p>
-	</div>	';
-	echo $displayData;  
-}
-?>
+	</div>	
+
 </nav>
 
 </body>

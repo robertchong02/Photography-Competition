@@ -7,23 +7,13 @@
     <title>Home</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-    .title {
-        border: solid 5px #A7CAD7;
-        padding: 50px;
-        margin: auto;
-        text-align: center;
-        width: 1200px;
-        height: 500px;
-    }
-    </style>
 </head>
 
 <body style="background-image:url('../image/bg1.png')">
     <div class="topnav">
-        <a href="logout.html">Logout</a>
-        <a href="#Winner">Winner</a>
-        <a class="active" href="adminhome.html">Home</a>
+        <a href="logout.php">Logout</a>
+        <a href="winnerannounce.php">Winner</a>
+        <a class="active" href="adminhome.php">Home</a>
         <img class="logo" style="float: left" src="../image/logo.png" />
         <p style="float: left">APU Photography Competition</p>
     </div>
@@ -34,26 +24,26 @@
         </div>
     </div>
 
-    <div class="container" class="title" style="background-color:#A7CAD7; border:solid 2px #A7CAD7">
+    <div class="container" class="title2" style="background-color:#A7CAD7; border:solid 2px #A7CAD7">
         <div class="row">
             <div class="col">
                 <h2>Function</h2>
                 <div class="row">
                     <div class="col align-self-start">
                         <div class="Functions">
-                        <a href="compadminPost.html">
-                        	<button type="button" class="btn btn-danger">Add Competition</button><br />
+                        <a href="competition.php">
+                        	<button type="button" class="btn btn-danger">All Competition</button><br />
                         </a>
-                        <a href="report.html">
+                        <a href="report.php">
                             <button type="button" class="btn btn-danger mt-3">View Statistical Report</button><br />
                         </a>
                         <a href="adminemail.html">
                             <button type="button" class="btn btn-danger mt-3">Send Notification</button><br />
                         </a>
-                        <a href="verifyContent.html">
+                        <a href="verifycontent.php">
                         <button type="button" class="btn btn-danger mt-3">Verify Content </button>
                         </a>
-                        <a href="winnerannounce.html">
+                        <a href="winnerannounce.php">
                             <button type="button" class="btn btn-danger mt-3">Winner Announcement</button>
                         </a>
                     </div>
@@ -81,8 +71,8 @@
             </div>
         </div>
     </div>
-
-<h2 id="Winner" style="margin:25px">Winner</h2>
+<br>
+<h2 id="Winner" style="text-align:center">Winner</h2>
 <div class="title" style="background-color:#A7CAD7">
 	<p style="text-align:center; font-size:24px">Winner for the latest competition:</p>
 	<div class="grid-container1" style="padding-left:80px">

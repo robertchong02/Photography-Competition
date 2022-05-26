@@ -1,7 +1,7 @@
 <?php
 include("connect.php");
 include("session.php");
-    $customerID = $_SESSION['ID'];
+    $customerID = $_SESSION['Customer_ID'];
 
 	// $CompetitionID = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '$CompetitionID';");
 
@@ -34,10 +34,12 @@ $check = mysqli_stmt_affected_rows($stmt);
 echo $check;
 if($check == 1) {
     echo '<script> alert ("Image uploaded.");
+    window.location.href = "userhome.php";
     </script>';
 
 } else {
     echo '<script> alert ("Upload failed.");
+    window.location.href = "compterms.php";
     </script>';
 }
 

@@ -156,14 +156,14 @@
     
         <!--头部栏-->
         <div class="topnav">
-            <a href="logout.html">Logout</a>
-            <a href="#Winner">Winner</a>
-            <a class="active" href="adminhome.html">Home</a>
+            <a href="logout.php">Logout</a>
+            <a href="winnerannounce.php">Winner</a>
+            <a class="active" href="adminhome.php">Home</a>
             <img class="logo" style="float: left" src="../image/logo.png" />
             <p style="float: left">APU Photography Competition</p>
         </div>
         <!-- <div class ="flex1 flex column" > -->
-        <a href="adminhome.html">
+        <a href="adminhome.php">
             <button class="button button1"  style="margin-left:50px; margin-top:20px">BACK</button>
         </a>
         <h1 style="text-align:center">Winner Annoucement</h1>
@@ -173,11 +173,7 @@
         <div style="height: auto; background-color:#A7CAD7;" class="flex">
 
             <!-- 左边栏 -->
-<<<<<<< HEAD:html/winnerannounce.html
-            <form method="POST" action="" >
-=======
             <!-- <form method="POST" action="winner.php" ></form> -->
->>>>>>> 2e767b1054aa0053192af0b23e60fef7a81a0ec8:php/winnerannounce.php
             <div class="" style="width: auto;background-color:#A7CAD7">
                 
                 <div style="height: 100px;" class="flex flex column boxModel">

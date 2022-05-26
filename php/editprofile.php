@@ -54,7 +54,7 @@ $customerID = $_SESSION['Customer_ID'];
     <input type="text" placeholder="Date of Birth" name="Date of Birth" readonly value = "'.$row["DoB"].'">
 
     <label for="Contact Number"><b>Contact Number</b></label>
-    <input type="text" placeholder="Edit Contact Number" name="Contact_Number" value = "'.$row["ContactNumber"].'">
+    <input type="tel" placeholder="Contact Number" name="Contact_Number" pattern="[0-9]{3}-[0-9]{7}" value = "'.$row["ContactNumber"].'">
 
     <label for="Email"><b>Email (Not Editable)</b></label>
     <input type="text" placeholder="Edit Email" name="Email" readonly value = "'.$row["Email"].'">
