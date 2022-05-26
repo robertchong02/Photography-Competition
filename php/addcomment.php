@@ -5,7 +5,7 @@ include("connect.php");
 $vconID = mysqli_real_escape_string($con,$_POST['vconID']);
 $comment = mysqli_real_escape_string($con,$_POST['comment']);
 
-$sql = "INSERT INTO comment_table (vcontentID, comment)
+$sql = "INSERT INTO contentcomment (vcID, contentcomment)
 VALUES
 ('$vconID','$comment')" ;
 
@@ -16,7 +16,7 @@ if($insert)
     echo
     '<script>
     alert("Feedback submitted. Thank you for your time.");
-    window.location.href = "userhome.php";
+    window.location.href = "readcomment.php";
     </script>';
 }
 else
@@ -24,7 +24,7 @@ else
     echo
     '<script>
     alert("Failed to submit feedback. Please try again");
-
+    window.location.href = "comment.php";
     </script>';
 }
 

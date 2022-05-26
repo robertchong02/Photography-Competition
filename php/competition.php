@@ -14,8 +14,8 @@ include("connect.php");
 
 
 <div class="topnav">
-        <a href="logout.html">Logout</a>
-        <a href="#Winner">Winner</a>
+        <a href="logout.php">Logout</a>
+        <a href="winnerannounce.php">Winner</a>
         <a class="active" href="adminhome.php">Home</a>
         <img class="logo" style="float: left" src="../image/logo.png" />
         <p style="float: left">APU Photography Competition</p>

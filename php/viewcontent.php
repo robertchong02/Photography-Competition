@@ -76,9 +76,6 @@ include("connect.php");
 <p align="left">
   <a href="userhome.php"><button type="button" class="button button1">BACK</button></a>
 </p>
-<p align="right">
-  <button class="button button2">NEXT</button>
-</p>
 </nav>
 
 <!-- <form method="get" action="comment.php" style="margin:auto"> -->
