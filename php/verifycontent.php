@@ -35,7 +35,7 @@ include("connect.php");
 
             <!--Content Area-->
             <div style="height:auto; margin:10px;" >
-            <form method="POST"  enctype="multipart/form-data">
+            <form action ="contentverified.php" method="POST"  enctype="multipart/form-data">
             <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM content");
   			while($row = mysqli_fetch_assoc($fetchData)) 
@@ -68,9 +68,11 @@ include("connect.php");
                     </div>                 
                 
                 </div>';
+                echo $displayData;
                 
             }
-            ?>         
+            ?>  
+            </form>       
             </div>
 
         </div>
