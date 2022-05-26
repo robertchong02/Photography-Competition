@@ -60,7 +60,7 @@ include("connect.php");
       <h3> Guideline </h3>
       <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 333px;margin-left:25px;background: #f1f1f1;" readonly>'.$row["Guideline"].'</textarea>
       <br><br><br><br><br><br>
-
+      <a href="report.php"><button class="button button1">Statistic Report</button></a>  
       
     </div> 
   </div>';

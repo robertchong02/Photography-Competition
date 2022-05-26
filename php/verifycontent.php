@@ -25,7 +25,7 @@ include("connect.php");
     </div>
 
         <p align="left" style="margin:20px">
-            <a href="adminhome.html"><button type="button" class="button button1">BACK</button></a>
+            <a href="adminhome.php"><button type="button" class="button button1">BACK</button></a>
         </p>
 
         <h1 style=" margin-left:50px">Content Verification</h1>
