@@ -50,10 +50,10 @@
                         <a href="adminemail.html">
                             <button type="button" class="btn btn-danger mt-3">Send Notification</button><br />
                         </a>
-                        <a href="verifyContent.html">
+                        <a href="verifycontent.php">
                         <button type="button" class="btn btn-danger mt-3">Verify Content </button>
                         </a>
-                        <a href="winnerannounce.html">
+                        <a href="winnerannounce.php">
                             <button type="button" class="btn btn-danger mt-3">Winner Announcement</button>
                         </a>
                     </div>
