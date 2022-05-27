@@ -23,10 +23,11 @@
   <a href="#About">About Us</a>
     <a class="active" href="main.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
-    <p style="float: left;">APU Photography Competition</p>
+    <p style="float: left;">APU Photography Club</p>
 </div>
 
 <h2 id="home" style="margin:25px; text-align:center">Home</h2>
+<img style="object-fit: contain;width:100%;height:100%" src = "../image/home.png">
 <div class=title style="font-size:16px; margin:auto; margin-top:18px; margin:25px">
 	<form name="login" method="get" action="compread2.php" style="padding-left:200px; margin:auto">
 		<table>
@@ -38,7 +39,7 @@
 		$displayData = '
 		<tr>
 		<td rowspan="11">			
-		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:350px; height:300px; padding-top:10px;padding-right:25px ">
+		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="object-fit: contain;width:500px; height:600px; padding-top:10px;padding-right:25px ">
 		</td>
 		<td></td>
 		<td colspan="3"style="font-size:20px; padding-top:10px;padding-left:15px"><b>Open for Registration!!!</b><br/></td>
@@ -90,7 +91,7 @@
 			<td></td>
 			<td colspan="3" style="padding-left:15px">
 				<br>
-				<a href="userlogin.php"><button type="button" class="button button1">Login for more information</button></a>
+				<a href="userlogin.php"><button type="button" class="btn btn-primary">Login for more information</button></a>
 			</td>
 		</tr>';
 		echo $displayData;  
@@ -132,23 +133,73 @@
 
 
 
-<h2 id="Winner" style="margin:25px; text-align:center">Winner</h2>
+	<h2 id="Winner" style="margin:25px; text-align:center">Winner</h2>
 <div class="title">
 	<p style="text-align:center; font-size:24px">Winner for the latest competition:</p>
-	<div class="grid-container1" style="padding-left:80px">
-		<div class="title" style="width:150px; height:150px"></div>
-		<div class="title" style="width:150px; height:150px"></div>
-		<div class="title" style="width:150px; height:150px"></div>
-	</div>
-	<div class="grid-container2"> 	
-		<img alt="" src="../image/1st.png" width="40px" height="60px" style="padding-left:140px"/>
-		<img alt="" src="../image/2nd.png" width="40px" height="60px" style="padding-left:120px"/>
-		<img alt="" src="../image/3rd.png" width="40px" height="60px" style="padding-left:100px"/>
-	</div>
-	<div class="grid-container2" style="padding-left:80px">
-		<p>Name:</p>
-		<p>Name:</p>
-		<p>Name:</p>
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM winner1 ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<div style="text-align:center;font-size:24px;font-weight:bold">
+			<u>Competition Title: <input type="text" value = "'.$row["wcompTitle"].'" name="title" style="border:none;background-color:transparent;font-weight: bold;text-decoration: underline;" readonly/>
+			</u></div><br>
+			';
+			echo $displayData;  
+		}
+		?>
+	<div style="display:flex;justify-content:space-around;text-align:center">
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM `winner1` ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<div style="display:inline-block;text-align:center;font-size:18px">
+			<h3>1st Place Winner</h3>
+			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'"><br>
+			Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/><br>
+			Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			</div>
+			';
+			echo $displayData;  
+		}
+		?>
+			
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM `winner2` ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<div style="display:inline-block;text-align:center;font-size:18px;">
+			<h3>2nd Place Winner</h3>
+			<img style="object-fit: contain;width:100%;height:300px"src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
+			<br>Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/>
+			<br>Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			</div>
+			';
+			echo $displayData;  
+		}
+		?>
+
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM `winner3` ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<div style="display:inline-block;text-align:center;font-size:18px;">
+			<h3>3rd Place Winner</h3>
+			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
+			<br>Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/>
+			<br>Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			</div>
+			';
+			echo $displayData;  
+		}
+		?>
 	</div>
 </div><br/><vr/>
 
