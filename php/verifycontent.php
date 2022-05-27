@@ -35,16 +35,16 @@ include("connect.php");
 
             <!--Content Area-->
             <div style="height:auto; margin:10px;" >
-            <form method="POST" enctype="multipart/form-data">
+
             <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM content");
   			while($row = mysqli_fetch_assoc($fetchData)) 
-                {		
-                    
+                {		        
             $displayData = '
+            <form action ="approvereject.php" method="POST"  enctype="multipart/form-data">
                 <div class="flex boxBorder">
                     <div style="width: 35%; border-right: double; margin-right: 50px;">
-                        <img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="max-width:100%; height:250px" name="image">
+                    <img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="max-width:100%; height:250px">
                     </div>
                     <div style="width:60%">
                     <label for="ContentID"><b>ContentID:</b><input type="text" value = "'.$row["ContentID"].'" name="contentID"  class="compread2" readonly/></label>
@@ -59,21 +59,18 @@ include("connect.php");
                     <label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
                     <br>
 
-                    <form method="post" action="approvecontent.php">
-                        <button type="submit" name="approved">Approve</button>
-                    </form>
+                    <input type="submit" value="Approve" name="approve" />
+                    <input type="submit" value="Reject" name="reject" />
 
-                    <form method="post" action="rejectcontent.php">
-                        <button type="submit" name="rejected" >Reject</button>
-                    </form>
                     </div>                 
                 
-                </div>';
+                </div>
+                </form>
+                ';
+
                 echo $displayData;
-                
             }
-            ?>  
-            </form>       
+            ?>        
             </div>
 
         </div>
