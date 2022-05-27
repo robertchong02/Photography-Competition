@@ -47,20 +47,20 @@ include("connect.php");
                     <img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="max-width:100%; height:250px">
                     </div>
                     <div style="width:60%">
-                    <label for="ContentID"><b>ContentID:</b><input type="text" value = "'.$row["ContentID"].'" name="contentID"  class="compread2" readonly/></label>
+                    <label for="ContentID"><b>ContentID:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" value = "'.$row["ContentID"].'" name="contentID"  class="compread2" readonly/></label>
                     <br>
-                    <label for="CompetitionID"><b>CompetitionID:</b><input type="text" value = "'.$row["CompetitionID"].'" name="compID"  class="compread2" readonly/></label>
+                    <label for="CompetitionID"><b>CompetitionID:</b>&nbsp;<input type="text" value = "'.$row["CompetitionID"].'" name="compID"  class="compread2" readonly/></label>
                     <br>
-                    <label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["ContentTitle"].'" name="title"  class="compread2" readonly/></label>
+                    <label for="ContentTitle"><b>Content Title:</b>&nbsp;&nbsp;&nbsp;<input type="text" value = "'.$row["ContentTitle"].'" name="title"  class="compread2" readonly/></label>
                     <br>
                     <label for="Description"><b>Description: </b></label>
                     <div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;margin-top:15px;background: #f1f1f1" readonly>'.$row["ContentDescription"].'</textarea></div>
                     <br>
                     <label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
-                    <br>
+                    <br><br>
 
-                    <input type="submit" value="Approve" name="approve" />
-                    <input type="submit" value="Reject" name="reject" />
+                    <input type="submit button" class="button button1" style="font-size:10px; width:40px; height:2px" value="Approve" name="approve" />
+                    <input type="submit button" class="button button1" style="font-size:10px; width:40px; height:2px; background-color:red" value="Reject" name="reject" />
 
                     </div>                 
                 

@@ -142,7 +142,7 @@
   		{		
 			
 		$displayData = '
-			<div style="text-align:center;font-size:24px;font-weight:bold">
+			<div style="font-size:24px;font-weight:bold; padding-left:450px">
 			<u>Competition Title: <input type="text" value = "'.$row["wcompTitle"].'" name="title" style="border:none;background-color:transparent;font-weight: bold;text-decoration: underline;" readonly/>
 			</u></div><br>
 			';
@@ -156,11 +156,11 @@
   		{		
 			
 		$displayData = '
-			<div style="display:inline-block;text-align:center;font-size:18px">
+			<div style="display:inline-block;font-size:18px">
 			<h3>1st Place Winner</h3>
 			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'"><br>
-			Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/><br>
-			Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			<div style="text-align:center"><b>Content Title:</b> <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/></div>
+			<div style="padding-left:30px"><b>Participant Name:</b><input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/></div>
 			</div>
 			';
 			echo $displayData;  
@@ -176,8 +176,8 @@
 			<div style="display:inline-block;text-align:center;font-size:18px;">
 			<h3>2nd Place Winner</h3>
 			<img style="object-fit: contain;width:100%;height:300px"src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
-			<br>Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/>
-			<br>Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			<br><div style="padding-left:50px"><b>Content Title:</b> <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/></div>
+			<div style="padding-left:90px"><b>Participant Name:</b> <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/></div>
 			</div>
 			';
 			echo $displayData;  
@@ -190,11 +190,11 @@
   		{		
 			
 		$displayData = '
-			<div style="display:inline-block;text-align:center;font-size:18px;">
+			<div style="display:inline-block;text-align:center;font-size:18px">
 			<h3>3rd Place Winner</h3>
 			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
-			<br>Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/>
-			<br>Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			<br><div style="padding-left:40px"><b>Content Title:</b><input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/></div>
+			<div style="padding-left:80px"><b>Participant Name:</b><input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/></div>
 			</div>
 			';
 			echo $displayData;  
