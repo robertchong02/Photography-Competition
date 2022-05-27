@@ -5,9 +5,9 @@ $uploadImage = $_FILES['image1']['tmp_name'];
 
 $img = file_get_contents($uploadImage);
 
-$sql="INSERT INTO winner1 (wcompTitle, wcontentTitle, wcontentImage, wname) 
+$sql="INSERT INTO winner3 ( wcontentTitle, wcontentImage, wname) 
 VALUES 
-('$_POST[title]', '$_POST[ctitle]', ?, '$_POST[name]');";
+('$_POST[ctitle]', ?, '$_POST[name]');";
 
 $stmt = mysqli_prepare($con,$sql);
 
@@ -19,8 +19,8 @@ $check = mysqli_stmt_affected_rows($stmt);
 
 echo $check;
 if($check == 1) {
-    echo '<script> alert ("New competition added!");
-    window.location.href= "compadminPost.php";
+    echo '<script> alert ("Winner Detail Update!");
+    window.location.href= "winnerannounce.php";
     </script>';
 
 } else {

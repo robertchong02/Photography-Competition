@@ -32,14 +32,21 @@ include("connect.php");
         </a>
         <h1 style="text-align:center">Winner Annoucement</h1>
         
+        <form action = "winner1.php" method = "POST" enctype="multipart/form-data" > 
         <div style="text-align:center">
         <h2>Competition Title:
         <input type="text" placeholder="Enter Competition Title Here" name="title" style="width:500px" required> </h2>
         </div>
 		<br>
 
-		<div style="display:inline-block;text-align:center;font-size:18px;border:2px solid black;padding:20px 20px;margin:20px 20px;background-color:#A7CAD7">	
-        <form action = "winner1.php" method = "POST" enctype="multipart/form-data" > 
+		<div style="display:inline-block;
+                    text-align:center;
+                    font-size:18px;
+                    border:2px solid black;
+                    padding:20px 20px;
+                    margin:20px 20px;
+                    background-color:#A7CAD7;">	
+        
             <h3>1st Place Winner</h3>
             <h4>Upload Image here</h4>
             <input type="file" name="image1" accept="image/*" required><br>
@@ -48,11 +55,19 @@ include("connect.php");
             <br>Participant Name: <input type="text" placeholder="Enter Participant Name Here" name="name" style="width:300px" required>
             <br>
             <input style="width:200px;margin:20px 20px" type="submit" value="Submit">
-        </form> 
+        
         </div>
+        </form> 
 		
-        <div style="display:inline-block;text-align:center;font-size:18px;border:2px solid black;padding:20px 20px;margin:20px 20px;background-color:#A7CAD7">
-        <form action = "winner2.php" method = "POST" enctype="multipart/form-data" >
+        <div style="display:inline-block;
+                    text-align:center;
+                    font-size:18px;
+                    border:2px solid black;
+                    padding:20px 20px;
+                    margin:20px 20px;
+                    background-color:#A7CAD7;">	
+
+            <form action = "winner2.php" method = "POST" enctype="multipart/form-data" >
             <h3>2nd Place Winner</h3>
             <h4>Upload Image here</h4>
             <input type="file" name="image1" accept="image/*" required><br>
@@ -64,8 +79,15 @@ include("connect.php");
         </form> 
         </div>
 
-        <div style="display:inline-block;text-align:center;font-size:18px;border:2px solid black;padding:20px 20px;margin:20px 20px;background-color:#A7CAD7">
-        <form action = "winner3.php" method = "POST" enctype="multipart/form-data" >
+        <div style="display:inline-block;
+                    text-align:center;
+                    font-size:18px;
+                    border:2px solid black;
+                    padding:20px 20px;
+                    margin:20px 20px;
+                    background-color:#A7CAD7;">	
+                    
+            <form action = "winner3.php" method = "POST" enctype="multipart/form-data" >
             <h3>3rd Place Winner</h3>
             <h4>Upload Image here</h4>
             <input type="file" name="image1" accept="image/*" required><br>
