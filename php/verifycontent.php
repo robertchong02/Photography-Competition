@@ -44,7 +44,7 @@ include("connect.php");
             <form action ="approvereject.php" method="POST"  enctype="multipart/form-data">
                 <div class="flex boxBorder">
                     <div style="width: 35%; border-right: double; margin-right: 50px;">
-                    <img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="max-width:100%; height:250px">
+                    <div style="padding-left:15px; padding-top:22px"><img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="max-width:100%; height:250px"></div>
                     </div>
                     <div style="width:60%">
                     <label for="ContentID"><b>ContentID:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" value = "'.$row["ContentID"].'" name="contentID"  class="compread2" readonly/></label>
