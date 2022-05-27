@@ -6,7 +6,13 @@ if($_POST["approve"]) {
         $sql="INSERT INTO verifycontent (`vcontentID`, `vcompetitionID`, `vcontentImage` ,`vcontentTitle`, `vcontentDescription`, `ParticipantName`) 
         SELECT `ContentID`, `CompetitionID`, `ContentImage` ,`ContentTitle`, `ContentDescription`, `ParticipantName` FROM content WHERE ContentID = ".$_POST["contentID"];
         $result = $con -> query($sql);
+
+        $sql2="DELETE FROM content WHERE ContentID = ".$_POST["contentID"];
+        $result2 = $con -> query($sql2);
+
+
         echo $result;
+        echo $result2;
 
         if($result == 1) {
             echo '<script> alert ("Content verified successfully. A message will be sent to notify the participant.");
