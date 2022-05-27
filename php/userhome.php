@@ -147,14 +147,14 @@ $customerID = $_SESSION['Customer_ID'];
   		{		
 			
 		$displayData = '
-			<b><div style="text-align:center;font-size:24px">
-			Competition Title: <input type="text" value = "'.$row["wcompTitle"].'" name="title" style="border:none;background-color:transparent" readonly/>
-			</div></b><br>
+			<div style="text-align:center;font-size:24px;font-weight:bold">
+			<u>Competition Title: <input type="text" value = "'.$row["wcompTitle"].'" name="title" style="border:none;background-color:transparent;font-weight: bold;text-decoration: underline;" readonly/>
+			</u></div><br>
 			';
 			echo $displayData;  
 		}
 		?>
-	
+	<div style="display:flex;justify-content:space-around;text-align:center">
 	<?php
   			$fetchData = mysqli_query($con, "SELECT * FROM `winner1` ORDER BY winnerID DESC LIMIT 1");
   			while($row = mysqli_fetch_assoc($fetchData)) 
@@ -163,9 +163,9 @@ $customerID = $_SESSION['Customer_ID'];
 		$displayData = '
 			<div style="display:inline-block;text-align:center;font-size:18px">
 			<h3>1st Place Winner</h3>
-			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
-			<br>Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/>
-			<br>Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'"><br>
+			Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/><br>
+			Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
 			</div>
 			';
 			echo $displayData;  
@@ -205,6 +205,7 @@ $customerID = $_SESSION['Customer_ID'];
 			echo $displayData;  
 		}
 		?>
+	</div>
 	
 	<!-- <div class="grid-container1" style="padding-left:80px">
 		<div class="title" style="width:150px; height:150px"></div>
