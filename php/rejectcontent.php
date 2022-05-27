@@ -1,9 +1,9 @@
 <?php
     include("connect.php");
 
-    $selectData = $_GET['vcontentID'];
+    $selectData = $_POST['contentID'];
 
-    $deleteQuery = mysqli_query($con, "DELETE FROM verifycontent WHERE vcontentID = '$selectData';");
+    $deleteQuery = mysqli_query($con, "DELETE FROM content WHERE contentID = '$selectData';");
 
     if ($deleteQuery) {
         echo '<script>
