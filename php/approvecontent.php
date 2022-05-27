@@ -1,9 +1,9 @@
 <?php
 include("connect.php");
 
-// $uploadImage = $_FILES['image']['tmp_name'];
+$uploadImage = $_FILES['image']['tmp_name'];
 
-// $img = file_get_contents($uploadImage);
+$img = file_get_contents($uploadImage);
 
 $sql="INSERT INTO verifycontent (vcompetitionID, vcontentImage, vcontentTitle, vcontentDescription, ParticipantName) 
 VALUES 

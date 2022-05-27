@@ -35,7 +35,7 @@ include("connect.php");
 
             <!--Content Area-->
             <div style="height:auto; margin:10px;" >
-            <form action ="contentverified.php" method="POST"  enctype="multipart/form-data">
+            <form method="POST" enctype="multipart/form-data">
             <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM content");
   			while($row = mysqli_fetch_assoc($fetchData)) 
@@ -47,6 +47,8 @@ include("connect.php");
                         <img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="max-width:100%; height:250px" name="image">
                     </div>
                     <div style="width:60%">
+                    <label for="ContentID"><b>ContentID:</b><input type="text" value = "'.$row["ContentID"].'" name="contentID"  class="compread2" readonly/></label>
+                    <br>
                     <label for="CompetitionID"><b>CompetitionID:</b><input type="text" value = "'.$row["CompetitionID"].'" name="compID"  class="compread2" readonly/></label>
                     <br>
                     <label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["ContentTitle"].'" name="title"  class="compread2" readonly/></label>
@@ -57,13 +59,12 @@ include("connect.php");
                     <label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
                     <br>
 
-                    <form name="acceptcontent" method="POST" action="contentverified.php">
-                    <input class="button button1" type="submit" value="Approve">
+                    <form method="post" action="approvecontent.php">
+                        <button type="submit" name="approved">Approve</button>
                     </form>
 
-
-                    <form method ="post" action="rejectcontent.php">
-                    <input class="button button2" type="submit" value="Reject">
+                    <form method="post" action="rejectcontent.php">
+                        <button type="submit" name="rejected" >Reject</button>
                     </form>
                     </div>                 
                 
