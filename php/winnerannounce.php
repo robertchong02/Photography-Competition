@@ -39,6 +39,7 @@ include("connect.php");
         </div>
 		<br>
 
+        <div class="flex-container">
 		<div style="display:inline-block;
                     text-align:center;
                     font-size:18px;
@@ -97,6 +98,7 @@ include("connect.php");
             <br>
             <input style="width:200px;margin:20px 20px" type="submit" value="Submit">
         </form> 
+        </div>
         </div>
     
 
