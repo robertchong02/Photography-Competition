@@ -9,13 +9,13 @@ $img1 = file_get_contents($uploadImage1);
 $img2 = file_get_contents($uploadImage2);
 $img3 = file_get_contents($uploadImage3);
 
-$sql="INSERT INTO result (CompetitionTitle, WinnerName1, WinnerName2, WinnerName3) 
+$sql="INSERT INTO result (CompetitionTitle, WinnerName1, WinnerTitle1, WinnerName2, WinnerTitle2, WinnerName3, WinnerTitle3) 
 VALUES 
-('$_POST[title]', '$_POST[winnername1]', '$_POST[winnername2]', '$_POST[winnername3]')";
+('$_POST[title]', '$_POST[winnername1]', '$_POST[ct1]', '$_POST[winnername2]', '$_POST[ct2]', '$_POST[winnername3]', '$_POST[ct3]')";
 $checksql=mysqli_query($con,$sql);
-$sql1="UPDATE result set WinnerContent1=? WHERE ResultID='1' ";
-$sql2="UPDATE result set WinnerContent2=? WHERE ResultID='1' ";
-$sql3="UPDATE result set WinnerContent3=? WHERE ResultID='1' ";
+$sql1="UPDATE result set WinnerContent1=? WHERE ResultID='4' ";
+$sql2="UPDATE result set WinnerContent2=? WHERE ResultID='4' ";
+$sql3="UPDATE result set WinnerContent3=? WHERE ResultID='4' ";
 
 $stmt1 = mysqli_prepare($con,$sql1);
 $stmt2 = mysqli_prepare($con,$sql2);

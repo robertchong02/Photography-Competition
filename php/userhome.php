@@ -141,7 +141,72 @@ $customerID = $_SESSION['Customer_ID'];
 <h2 id="Winner" style="margin:25px; text-align:center">Winner</h2>
 <div class="title">
 	<p style="text-align:center; font-size:24px">Winner for the latest competition:</p>
-	<div class="grid-container1" style="padding-left:80px">
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM winner1 ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<b><div style="text-align:center;font-size:24px">
+			Competition Title: <input type="text" value = "'.$row["wcompTitle"].'" name="title" style="border:none;background-color:transparent" readonly/>
+			</div></b><br>
+			';
+			echo $displayData;  
+		}
+		?>
+	
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM `winner1` ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<div style="display:inline-block;text-align:center;font-size:18px">
+			<h3>1st Place Winner</h3>
+			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
+			<br>Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/>
+			<br>Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			</div>
+			';
+			echo $displayData;  
+		}
+		?>
+			
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM `winner2` ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<div style="display:inline-block;text-align:center;font-size:18px;">
+			<h3>2nd Place Winner</h3>
+			<img style="object-fit: contain;width:100%;height:300px"src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
+			<br>Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/>
+			<br>Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			</div>
+			';
+			echo $displayData;  
+		}
+		?>
+
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM `winner3` ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<div style="display:inline-block;text-align:center;font-size:18px;">
+			<h3>3rd Place Winner</h3>
+			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
+			<br>Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/>
+			<br>Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			</div>
+			';
+			echo $displayData;  
+		}
+		?>
+	
+	<!-- <div class="grid-container1" style="padding-left:80px">
 		<div class="title" style="width:150px; height:150px"></div>
 		<div class="title" style="width:150px; height:150px"></div>
 		<div class="title" style="width:150px; height:150px"></div>
@@ -155,7 +220,7 @@ $customerID = $_SESSION['Customer_ID'];
 		<p>Name:</p>
 		<p>Name:</p>
 		<p>Name:</p>
-	</div>
+	</div> -->
 </div><br/><vr/>
 
 <h2 id="About" style="margin:25px; text-align:center">About Us</h2>
