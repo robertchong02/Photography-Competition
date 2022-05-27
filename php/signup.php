@@ -15,9 +15,9 @@ $ConfirmPassword = mysqli_real_escape_string($con, $_POST['confirmpassword']);
 
 
 // MySQL Queries
-$insert = "INSERT INTO usersignup (Fname, Lname, Username, Email, ContactNumber, Gender, DoB, Nationality, Password, ConfirmPassword) VALUES ('$_POST[firstname]', '$_POST[lastname]', '$_POST[username]',  '$_POST[email]', '$_POST[phone]', '$_POST[gender]', '$_POST[dob]', '$_POST[nationality]', '$_POST[password]', '$_POST[confirmpassword]');";
-$check_username = "SELECT * FROM usersignup WHERE Username = '$Username'";
-$check_email = "SELECT * FROM usersignup WHERE Email = '$Email'";
+$insert = "INSERT INTO user (Fname, Lname, Username, Email, ContactNumber, Gender, DoB, Nationality, Password, ConfirmPassword) VALUES ('$_POST[firstname]', '$_POST[lastname]', '$_POST[username]',  '$_POST[email]', '$_POST[phone]', '$_POST[gender]', '$_POST[dob]', '$_POST[nationality]', '$_POST[password]', '$_POST[confirmpassword]');";
+$check_username = "SELECT * FROM user WHERE Username = '$Username'";
+$check_email = "SELECT * FROM user WHERE Email = '$Email'";
 
 $validate_username = mysqli_query($con, $check_username);
 $validate_email = mysqli_query($con, $check_email);

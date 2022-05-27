@@ -11,7 +11,7 @@ if (isset($_POST['Update'])) {
   $Password=$_POST['Password'];
 
 
-  $query = "UPDATE usersignup SET Username = '".$Username."', ContactNumber = '".$ContactNumber."', Password = '".$Password."'WHERE Customer_ID = '".$customerID."'";
+  $query = "UPDATE user SET Username = '".$Username."', ContactNumber = '".$ContactNumber."', Password = '".$Password."'WHERE Customer_ID = '".$customerID."'";
 
   
   $result = mysqli_query($con, $query);

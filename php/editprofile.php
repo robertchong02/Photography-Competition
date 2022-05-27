@@ -30,7 +30,7 @@ $customerID = $_SESSION['Customer_ID'];
 <div id="profiledata" style="background-color:#A7CAD7; margin-left:300px; margin-bottom:30px">
 <form action="update.php?ID=<?php echo $customerID?>" method = "POST">
 <?php
-    $getCustomerInfo = mysqli_query($con, "SELECT * FROM usersignup WHERE Customer_ID = '$customerID';");
+    $getCustomerInfo = mysqli_query($con, "SELECT * FROM user WHERE Customer_ID = '$customerID';");
     while ($row = mysqli_fetch_assoc($getCustomerInfo))
     {
 

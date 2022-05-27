@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 
         // MySQL Queries
-        $getID = "SELECT Customer_ID FROM usersignup WHERE Username = '$username' AND Password = '$password';";
+        $getID = "SELECT Customer_ID FROM user WHERE Username = '$username' AND Password = '$password';";
             
         // Get customer ID
         $findID = mysqli_query($con, $getID);
