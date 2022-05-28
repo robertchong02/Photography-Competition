@@ -59,8 +59,8 @@ include("connect.php");
                     <label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
                     <br><br>
 
-                    <input type="submit button" class="button button1" style="font-size:10px; width:40px; height:2px" value="Approve" name="approve" />
-                    <input type="submit button" class="button button1" style="font-size:10px; width:40px; height:2px; background-color:red" value="Reject" name="reject" />
+                    <input type="submit button" class="button button1" style="font-size:10px; width:40px; height:2px" value="Approve" name="approve" readonly/>
+                    <input type="submit button" class="button button1" style="font-size:10px; width:40px; height:2px; background-color:red" value="Reject" name="reject" readonly/>
 
                     </div>                 
                 

@@ -68,7 +68,7 @@ $customerID = $_SESSION['Customer_ID'];
 </div>
 
 <p style="margin-left:50px; margin-top:20px">
-	<a href="compread2.php"><button type="button" class="button button1">BACK</button></a>
+	<a href="userhome.php"><button type="button" class="button button1">HOME</button></a>
 </p>
 <br>
 <br>
