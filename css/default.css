@@ -545,7 +545,7 @@ font-size: 2vw;
 }
 #contentcomment{
 	width:80%;
-    height:700px;
+    min-height:700px;
     background-color:#FFFFFF;
     border:5px solid;
     border-width: thick;

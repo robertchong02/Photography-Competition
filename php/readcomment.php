@@ -19,8 +19,17 @@ include("connect.php");
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">AP Photography Club</p>
 </div>
-<h2 style="text-align:center">CONTENT</h2>	
-<h2 style="text-align:center">COMPETITION xxxxx </h2>	
+<h2 style="text-align:center">POST</h2>	
+<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '8'");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+      $displayData = '
+			<h2 style="text-align:center"><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50" style="background-color:transparent;font-size:24px; text-align:center" readonly/></h2>';
+		echo $displayData;  
+		}
+?>	
 <br>
 <nav class="buttonbackground">
 <p align="left">
@@ -57,12 +66,7 @@ include("connect.php");
 	echo $displayData;  
 }
 ?>
-	<p align="center" style="margin-top:0px">
-	
-		<a href="comment.php">
-			<button class="button button1">ADD COMMENT</button>
-		</a>
-	</p>
+
 	</div>	
 
 </nav>

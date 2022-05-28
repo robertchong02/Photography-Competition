@@ -12,7 +12,7 @@
 <body style="background-image:url('../image/bg1.png')">
     <div class="topnav">
         <a href="logout.php">Logout</a>
-        <a href="winnerannounce.php">Winner</a>
+        <a href="adminwinnerannounce.php">Winner</a>
         <a class="active" href="adminhome.php">Home</a>
         <img class="logo" style="float: left" src="../image/logo.png" />
         <p style="float: left">AP Photography Club</p>
@@ -31,19 +31,19 @@
                 <div class="row">
                     <div class="col align-self-start">
                         <div class="Functions">
-                        <a href="competition.php">
+                        <a href="admincompetition.php">
                         	<button type="button" class="btn btn-danger">All Competition</button><br />
                         </a>
-                        <a href="report.php">
+                        <a href="adminreport.php">
                             <button type="button" class="btn btn-danger mt-3">View Statistical Report</button><br />
                         </a>
                         <a href="adminemail.html">
                             <button type="button" class="btn btn-danger mt-3">Send Notification</button><br />
                         </a>
-                        <a href="verifycontent.php">
+                        <a href="adminverifycontent.php">
                         <button type="button" class="btn btn-danger mt-3">Verify Content </button>
                         </a>
-                        <a href="winnerannounce.php">
+                        <a href="adminwinnerannounce.php">
                             <button type="button" class="btn btn-danger mt-3">Winner Announcement</button>
                         </a>
                     </div>

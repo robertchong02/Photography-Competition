@@ -15,7 +15,7 @@ include("connect.php");
 
 <div class="topnav">
         <a href="logout.php">Logout</a>
-        <a href="winnerannounce.php">Winner</a>
+        <a href="adminwinnerannounce.php">Winner</a>
         <a class="active" href="adminhome.php">Home</a>
         <img class="logo" style="float: left" src="../image/logo.png" />
         <p style="float: left">AP Photography Club</p>
@@ -25,7 +25,7 @@ include("connect.php");
 	<a href="adminhome.php"><button class="button button1">Back</button></a>
 </p>
 <p style="margin-right:50px; margin-top:20px;align:right">
-	<a href="compadminPost.php"><button class="button button2" style="font-size:20px;border:5px solid black" >+ Add New Competition</button></a>
+	<a href="adminaddcomp.php"><button class="button button2" style="font-size:20px;border:5px solid black" >+ Add New Competition</button></a>
 </p>
 </nav>
 
