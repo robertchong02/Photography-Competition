@@ -1,24 +1,30 @@
-img.logo{
-    width: 160px;
-    height: 128px;
+  img.logo{
+    width: 100px;
+    height: 65px;
     border: 5px groove;
   }
   
-  .topnav {                     
-    padding: 0px;
-    margin-left: 10px;
+  .topnav {         
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
+    background-color: white;
+    height:70px;            
+    /* padding: 0px;
+    margin-left: 10px;
+    overflow: hidden; */
   }
-  
+
   .topnav a {
     display: block;
     float: right;
-    color: #f2f2f2;
+    color: #000000;
     text-align: center;
     padding: 24px 26px;
     text-decoration: none;
     font-size: 17px;
-    background-color: #333;
+    background-color: rgb(255, 255, 255);
   }
   
   .topnav p {
@@ -27,20 +33,30 @@ img.logo{
     font-size: 32px;
     padding: 0px;
     margin-top: 17px;
-    font-family: Comic San
-    font-weight: bold;
+    font-family: Comic San;
+    font-weight:bold;
   
   }
+
   
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: rgb(205, 205, 205);
     color: black;
   }
   
   .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #091dfb;
     color: white;
   }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(6, 6, 6);
+    text-align: center;
+ }
+
   
   .grid-container {
     display: grid;
@@ -104,4 +120,8 @@ img.logo{
   .flex-container > div {
     margin-right: 30px;
     padding: 5px;
+  }
+
+  .column{
+    flex-direction: column;
   }
