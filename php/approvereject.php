@@ -16,7 +16,7 @@ if($_POST["approve"]) {
 
         if($result == 1) {
             echo '<script> alert ("Content verified successfully. A message will be sent to notify the participant.");
-            window.location.href= "verifycontent.php";
+            window.location.href= "adminverifycontent.php";
             </script>';
 
         } else {
@@ -37,7 +37,7 @@ $deleteQuery = mysqli_query($con, "DELETE FROM content WHERE contentID = '$selec
 if ($deleteQuery) {
     echo '<script>
     alert ("Successfully reject content!");
-    window.location.href= "verifycontent.php";
+    window.location.href= "adminverifycontent.php";
     </script>';
     
 } else {

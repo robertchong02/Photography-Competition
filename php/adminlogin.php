@@ -12,9 +12,9 @@
 <div class="topnav">
   <a href="signup.html">Sign Up</a>
   <a href="#Login">Login</a>
-  <a href="#Winner">Winner</a>
-  <a href="#About">About Us</a>
-    <a class="active" href="main.html">Home</a>
+  <a href="main.php">Winner</a>
+  <a href="main.php">About Us</a>
+    <a class="active" href="main.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">AP Photography Club</p>
 </div>

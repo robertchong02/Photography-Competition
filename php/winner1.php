@@ -19,8 +19,8 @@ $check = mysqli_stmt_affected_rows($stmt);
 
 echo $check;
 if($check == 1) {
-    echo '<script> alert ("New competition added!");
-    window.location.href= "compadminPost.php";
+    echo '<script> alert ("Winner details updated!");
+    window.location.href= "adminwinnerannounce.php";
     </script>';
 
 } else {

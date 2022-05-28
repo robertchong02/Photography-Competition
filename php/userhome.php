@@ -36,7 +36,7 @@
 	<form name="login" method="get" action="compread2.php" style="padding-left:200px; margin:auto">
 		<table>
 		<?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '9'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID DESC LIMIT 1");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
