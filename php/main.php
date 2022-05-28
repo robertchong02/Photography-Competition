@@ -142,7 +142,7 @@
   		{		
 			
 		$displayData = '
-			<div style="font-size:24px;font-weight:bold; padding-left:450px">
+			<div style="font-size:24px;font-weight:bold;padding-left:500px">
 			<u>Competition Title: <input type="text" value = "'.$row["wcompTitle"].'" name="title" style="border:none;background-color:transparent;font-weight: bold;text-decoration: underline;" readonly/>
 			</u></div><br>
 			';
@@ -206,7 +206,7 @@
 <h2 id="About" style="margin:25px; text-align:center">About Us</h2>
 <div class="title" style="text-align:justify; margin:25px"> 
 	<p>Founded in 2022 by Asia Pacific University student in University Photography Organisation is a leading global platform dedicated to the development and advancement of photographic culture. Our programming and competition initiatives provide valuable opportunities for artists working in photography and help broaden the conversation around their work. Through our fairs we play a key role in driving the growth of the contemporary art market for photo-based art and deepening audience engagement with the medium. </p>
-	<p>Our value lies in the integrity of our expertise, our years of experience and the strength of our relationships with both individual photographers as well as our industry-leading partners around the world. Our objective is to let every student to have a platform to share their masterpiece of photography and gain their confident on photography skills plus give them an opportunity to share their experiences of photography techniques. So, competition is organized by the admin to know who has the most perfect skills of photography and winner will be announce at the end. Contact Us if you need enquires. So, what are you waiting for??? </p>
+	<p>Our value lies in the integrity of our expertise, our years of experience and the strength of our relationships with both individual photographers as well as our industry-leading partners around the world. Our objective is to let every student to have a platform to share their masterpiece of photography and gain their confident on photography skills plus give them an opportunity to share their experiences of photography techniques. So, competition is organized by the admin to know who has the most perfect skills of photography and winner will be announce at the end. Contact Us if you need enquires. So, what are you waiting for? </p>
 	<br/><br/>
 	<p style="text-align:center; font-size:20px">LOGIN and JOIN US NOW!!</p>
 </div>

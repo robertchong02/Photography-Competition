@@ -26,26 +26,21 @@
 	<input type="text" name="username2" size="20" maxlength="8"/><br/><br/>
 	Password:	
 	<input type="password" name="pw2" size="20" maxlength="16"/><br/><br/>
-	<a href="forgetpassword.html" style="font-size:15px">Forgot password?</a>
 	<br>
 	<input style="width:50%" type="submit" value="Log In as User">
 	<br>
 
-
-	<!-- <input style="width:50%" type="submit" value="Log In as Admin">
-	<br>
-	<input style="width:50%" type="submit" value="Sign Up as New Member"> -->
 </form><br/><br/>
 
-<!-- <a href="userhome.html">  
-	<button type="button" class="btn btn-primary">Log In as User</button> 
-</a><br/><br/> -->
 <a href="adminlogin.php">  
 	<button type="button" class="btn btn-primary">Login as Admin</button>  
 </a><br/><br/>
 <a href="usersignup.php">  
 	<button type="button" class="btn btn-primary">Sign Up as New Member</button>  
 </a>
+<br>
+<br>
+<a href="forgetpassword.php" style="font-size:15px">Forgot password?</a>
 </div>
 
 
