@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+include("connect.php");
+?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -50,62 +53,77 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 offset-md-3">
-                <h2>Competition On Going</h2>
-                <div class="row">
-                    <div class="col align-self-start">
-                        <button type="button" class="btn btn-success">
-                            Competition 1
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 offset-md-6" style="margin-bottom:100px">
-                <h2>Competition Preparing</h2>
-                <div class="row">
-                    <div class="col align-self-start">
-                        <button type="button" class="btn btn-info">Competition 2</button><br />
-                        <button type="button" class="btn btn-info mt-3">Competition 3</button><br />
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 <br>
-<h2 id="Winner" style="text-align:center">Winner</h2>
-<div class="title" style="background-color:#A7CAD7">
+<h2 id="Winner" style="margin:25px; text-align:center">Winner</h2>
+<div class="title">
 	<p style="text-align:center; font-size:24px">Winner for the latest competition:</p>
-	<div class="grid-container1" style="padding-left:80px">
-		<div class="title" style="width:150px; height:150px;border:solid 2px black;background-color:#A7CAD7;"></div>
-		<div class="title" style="width:150px; height:150px;border:solid 2px black;background-color:#A7CAD7;"></div>
-		<div class="title" style="width:150px; height:150px;border:solid 2px black;background-color:#A7CAD7;"></div>
-	</div>
-	<div class="grid-container2"> 	
-		<img alt="" src="1st.png" width="40px" height="60px" style="padding-left:140px">
-		<img alt="" src="2nd.png" width="40px" height="60px" style="padding-left:120px">
-		<img alt="" src="3rd.png" width="40px" height="60px" style="padding-left:100px">
-	</div>
-	<div class="grid-container2" style="padding-left:80px">
-		<p>Name:</p>
-		<p>Name:</p>
-		<p>Name:</p>
-	</div>
-</div>
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM winner1 ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<div style="font-size:24px;font-weight:bold;padding-left:500px">
+			<u>Competition Title: <input type="text" value = "'.$row["wcompTitle"].'" name="title" style="border:none;background-color:transparent;font-weight: bold;text-decoration: underline;" readonly/>
+			</u></div><br>
+			';
+			echo $displayData;  
+		}
+		?>
+	<div style="display:flex;justify-content:space-around;text-align:center">
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM `winner1` ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<div style="display:inline-block;font-size:18px">
+			<h3>1st Place Winner</h3>
+			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'"><br>
+			<div style="text-align:center"><b>Content Title:</b> <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/></div>
+			<div style="padding-left:30px"><b>Participant Name:</b><input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/></div>
+			</div>
+			';
+			echo $displayData;  
+		}
+		?>
+			
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM `winner2` ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<div style="display:inline-block;text-align:center;font-size:18px;">
+			<h3>2nd Place Winner</h3>
+			<img style="object-fit: contain;width:100%;height:300px"src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
+			<br><div style="padding-left:50px"><b>Content Title:</b> <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/></div>
+			<div style="padding-left:90px"><b>Participant Name:</b> <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/></div>
+			</div>
+			';
+			echo $displayData;  
+		}
+		?>
 
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2>Function</h2>
-                <div class="row">
-                    <div class="col align-self-start">
-                        <div class="Functions"></div> 
-                        <button type="button" class="btn btn-danger">Add Competition</button><br>
-                        <button type="button" class="btn btn-danger mt-3">View Statistical Report</button><br>
-                        <button type="button" class="btn btn-danger mt-3">Send Email</button><br>
-                        <button type="button" class="btn btn-danger mt-3">Verify Content</button>
-                    </div>
-                </div>  
-            </div> -->
+	<?php
+  			$fetchData = mysqli_query($con, "SELECT * FROM `winner3` ORDER BY winnerID DESC LIMIT 1");
+  			while($row = mysqli_fetch_assoc($fetchData)) 
+  		{		
+			
+		$displayData = '
+			<div style="display:inline-block;text-align:center;font-size:18px">
+			<h3>3rd Place Winner</h3>
+			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
+			<br><div style="padding-left:40px"><b>Content Title:</b><input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/></div>
+			<div style="padding-left:80px"><b>Participant Name:</b><input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/></div>
+			</div>
+			';
+			echo $displayData;  
+		}
+		?>
+	</div>
 </body>
 
 </html>

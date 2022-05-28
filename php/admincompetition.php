@@ -34,32 +34,35 @@ include("connect.php");
 
 <form name="compread2" method="get"  style=" padding-left:6px; height:1030px">
   <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID DESC");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
       $displayData = '
-  <div class="box1" style="background-color:#A7CAD7;text-align:center;">
-      <h2>Title: <input type="text" value = "'.$row["CompetitionTitle"].'" name="title" class="compread2" readonly/></h2>
+      <div class="box1" style="background-color:#A7CAD7;text-align:center;">
+      <h2>Title: <input type="text" value = "'.$row["CompetitionTitle"].'" name="title" class="compread2" style="width:200px" readonly/></h2>
       <img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:300px; height:300px; padding-top:10px ">
       <br>
       <br>
 
       <p> Theme: <input type="text" value = "'.$row["Theme"].'" name="theme"  class="compread2" readonly/></p>
       <p> Register Date: <input type="text" value = "'.$row["RegisterDate"].'" name="registerdate"  class="compread2" readonly/> </p>
-      <p> Deadline: <input type="text" value = "'.$row["Deadline"].'" name="deadline" class="compread2" readonly/></p>
-      <p> Competition Date: <input type="text" value = "'.$row["CompetitionDate"].'" name="compdate" class="compread2" readonly/></p>
-      <p> Prize:   <textarea name = "prize" cols=40  rows=3 style="width: 80%;height: 90px;background: #f1f1f1;" readonly>'.$row["Prize"].'</textarea></p>
+      <p> Deadline: <input type="text" value = "'.$row["Deadline"].'" name="deadline" class="compread2" style="width:210px" readonly/></p>
+      <p> Competition Date: <input type="text" value = "'.$row["CompetitionDate"].'" name="compdate" class="compread2" style="width:150px" readonly/></p>
+      <p> Prize:  <textarea name = "prize" cols=40  rows=3 style="width: 80%;height: 90px;background: #f1f1f1;font-size:16px" readonly>'.$row["Prize"].'</textarea></p>
       <p> Eligibility: <input type="text" value = "'.$row["Eligibility"].'" name="eligibility"  class="compread2" readonly/></p>
 
     </div> 
-    <div class="box2" style="background-color:#A7CAD7; margin-bottom:30px; height:978px">
+    <div class="box2" style="background-color:#A7CAD7; margin-bottom:100px">
       <h3> Description </h3>
-      <textarea name = "description" cols=40  rows=3 style="width: 90%;height: 200px;margin-left:25px;background: #f1f1f1;" readonly>'.$row["Description"].'</textarea>
+      <textarea name = "description" cols=40  rows=3 style="width: 90%;height: 333px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Description"].'</textarea>
       
       <h3> Guideline </h3>
-      <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 333px;margin-left:25px;background: #f1f1f1;" readonly>'.$row["Guideline"].'</textarea>
-      <br><br><br><br><br><br>
+      <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 350px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Guideline"].'</textarea>
+      <br><br>
+      <br><br>
+      <br><br>
+
       
       <a href="report.php"><button class="button button1" style="position:absolute;bottom:0;right:0;margin: 0 20px 20px 0">Statistic Report</button></a>  
       
