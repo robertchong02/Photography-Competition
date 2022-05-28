@@ -24,6 +24,9 @@ include("connect.php");
 <p style="margin-left:50px; margin-top:20px;align:left">
 	<a href="adminhome.php"><button class="button button1">Back</button></a>
 </p>
+<!-- <p style="margin-top:20px;position:absolute;right:350px">
+	<a href="admineditcomp.php"><button class="button button2" style="font-size:20px;border:5px solid black" >> Edit Competition Status</button></a>
+</p> -->
 <p style="margin-right:50px; margin-top:20px;align:right">
 	<a href="adminaddcomp.php"><button class="button button2" style="font-size:20px;border:5px solid black" >+ Add New Competition</button></a>
 </p>
