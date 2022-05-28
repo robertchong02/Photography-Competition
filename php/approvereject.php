@@ -37,7 +37,7 @@ $deleteQuery = mysqli_query($con, "DELETE FROM content WHERE contentID = '$selec
 if ($deleteQuery) {
     echo '<script>
     alert ("Successfully reject content!");
-    window.location.href= "verifycontent.php";
+    window.location.href= "adminverifycontent.php";
     </script>';
     
 } else {
