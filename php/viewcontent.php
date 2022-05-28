@@ -111,20 +111,24 @@ $customerID = $_SESSION['Customer_ID'];
 
 				<input type ="submit" value= "Read Comments" style="width:540px;background-color:#AFB4A4"/>	
 				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
+				<input style="display:none;" type="text" name="vcompetitionID" value='.$row["vcompetitionID"].'>
 
 			</form>
 
-			<form name="viewcontent" method="get" action="comment.php" style="padding-left:200px; margin:auto">
+			<form name="viewcontent" method="get" action="vote.php" style="padding-left:200px; margin:auto">
 			<div style="display:inline-block; float:right;">
-				<button type="submit" class="button button1" onclick="openPopup()">Vote</button>
-				<div class = "popup" id="popup">
-					<h2>Voted Successfully</h2>
-					<p>Thanks for supporting</p>
-					<button type="button" onclick="closePopup()">OK</button>
-				</div>
-				
-				<input class = "button button1" type ="submit"  value= "Comment" style="width:100px;margin-right:20px"/>	
+				<input class = "button button1" type ="submit"  value= "Vote" name="vote" style="width:100px;margin-right:20px"/>		
 				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
+				<input style="display:none;" type="text" name="vcompetitionID" value='.$row["vcompetitionID"].'>
+				
+			</div>
+			</form>
+
+			<form name="comment" method="get" action="comment.php" style="padding-left:200px; margin:auto">
+			<div style="display:inline-block; float:right;">		
+				<input class = "button button1" type ="submit"  value= "Comment" name="comment" style="width:100px;margin-right:20px"/>	
+				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
+				<input style="display:none;" type="text" name="vcompetitionID" value='.$row["vcompetitionID"].'>
 				
 			</div>
 			</form>
