@@ -5,6 +5,32 @@ include("connect.php");
 <html>
 
 <head>
+<style>
+.admingrid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  background-color: #A7CAD7;
+  padding: 10px;
+  margin: 20px 20px 20px 20px;
+}
+.admingrid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 20px 20px 20px;
+  font-size: 30px;
+  text-align: center;
+  display:block;
+  margin:10px;
+}
+.functbtn{
+    border:none;
+    background-color:#de2843;
+    color:white;
+    font-size:20px;
+    border-radius: 12px;
+}
+
+</style>
     <!-- Link to CSS -->
     <link rel = "stylesheet" href = "../css/main.css">
     <title>Home</title>
@@ -26,34 +52,38 @@ include("connect.php");
         <div class="col-4">
         </div>
     </div>
-
-    <div class="container" class="title2" style="background-color:#A7CAD7; border:solid 2px #A7CAD7">
-        <div class="row">
-            <div class="col">
-                <h2>Function</h2>
-                <div class="row">
-                    <div class="col align-self-start">
-                        <div class="Functions">
-                        <a href="admincompetition.php">
-                        	<button type="button" class="btn btn-danger">All Competition</button><br />
-                        </a>
-                        <a href="adminreport.php">
-                            <button type="button" class="btn btn-danger mt-3">View Statistical Report</button><br />
-                        </a>
-                        <a href="adminemail.html">
-                            <button type="button" class="btn btn-danger mt-3">Send Notification</button><br />
-                        </a>
-                        <a href="adminverifycontent.php">
-                        <button type="button" class="btn btn-danger mt-3">Verify Content </button>
-                        </a>
-                        <a href="adminwinnerannounce.php">
-                            <button type="button" class="btn btn-danger mt-3">Winner Announcement</button>
-                        </a>
-                    </div>
-                    </div>
-                </div>
-            </div>
+    <br>
+    <div style="text-align:center"><h2>Functions</h2></div>
+    <div class="admingrid-container">
+        <div class="admingrid-item">
+            <img  style="object-fit: contain;width:90%;height:90%" src="../image/photography.jpeg" />
+            <br>
+            <a href="admincompetition.php">
+            <button type="button" class="functbtn">All Competition</button><br />
+            </a>
         </div>
+        <div class="admingrid-item">
+            <img style="object-fit: contain;width:90%;height:90%" src="../image/verification.png" />
+            <br>
+            <a href="adminverifycontent.php">
+            <button type="button" class="functbtn">Verify Content </button>
+            </a>
+        </div>
+        <div class="admingrid-item">
+            <img style="object-fit: contain;width:90%;height:90%" src="../image/report.png" />
+            <br>
+            <a href="adminreport.php">
+            <button type="button" class="functbtn">View Statistical Report</button><br />
+            </a>
+        </div>  
+        <div class="admingrid-item">
+            <img style="object-fit: contain;width:90%;height:90%" src="../image/winner.jpg" />
+            <br>
+            <a href="adminwinnerannounce.php">
+            <button type="button" class="functbtn">Winner Announcement</button>
+            </a>
+        </div>
+    </div>
     </div>
 <br>
 <h2 id="Winner" style="margin:25px; text-align:center">Winner</h2>
