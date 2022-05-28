@@ -23,7 +23,7 @@
   <a href="#About">About Us</a>
     <a class="active" href="main.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
-    <p style="float: left;">APU Photography Club</p>
+    <p style="float: left;">AP Photography Club</p>
 </div>
 
 <h2 id="home" style="margin:25px; text-align:center">Home</h2>
@@ -39,7 +39,7 @@
 		$displayData = '
 		<tr>
 		<td rowspan="11">			
-		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="object-fit: contain;width:500px; height:600px; padding-top:10px;padding-right:25px ">
+		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="object-fit: contain;width:500px; height:600px; padding-top:10px;padding-right:35px ">
 		</td>
 		<td></td>
 		<td colspan="3"style="font-size:20px; padding-top:10px;padding-left:15px"><b>Open for Registration!!!</b><br/></td>

@@ -58,7 +58,7 @@ include("connect.php");
   <a href="userhome.php">About Us</a>
     <a class="active" href="userhome.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
-    <p style="float: left;">APU Photography Competition</p>
+    <p style="float: left;">AP Photography Club</p>
 </div>
 <h2 style="text-align:center">POSTS</h2>
 <?php

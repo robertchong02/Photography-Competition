@@ -58,7 +58,7 @@
   <a href="main.php">About Us</a>
     <a class="active" href="main.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
-    <p style="float: left;">APU Photography Competition</p>
+    <p style="float: left;">AP Photography Club</p>
 </div>
 
 <p style="margin-left:50px; margin-top:20px">

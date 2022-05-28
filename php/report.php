@@ -132,7 +132,7 @@
             <a href="#Winner">Winner</a>
             <a href="#Logout">Logout</a>
             <img class="logo" style="float: left;" src = "../image/logo.png">
-            <p style="float: left;">APU Photography Competition</p>
+            <p style="float: left;">AP Photography Club</p>
     </div>
     <h1 style="margin: 50px;font-size: 50px; border: 5px solid black; height: 100 px;text-align:center;">Competition Detail</h1>
     <p style="margin: auto;font-size: 30px; border: 5px solid black; height:50 px; width: 500px; text-align:center;background-color:#A7CAD7; ";>Number of Voting: 0 votes</p>
