@@ -23,7 +23,7 @@
   <a href="#About">About Us</a>
     <a class="active" href="userhome.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
-    <p style="float: left;">APU Photography Competition</p>
+    <p style="float: left;">AP Photography Club</p>
 </div>
 
 <div style="text-align:right; margin-right:30px">
@@ -31,7 +31,7 @@
 	<button type="button" class="btn btn-primary">Notifications</button>  
 </a></div>
 <h2 id="home" style="margin:25px; text-align:center">Welcome!  </h2>
-
+<img style="object-fit: contain;width:100%;height:100%" src = "../image/home.png">
 	<div class=title style="font-size:16px; margin:auto; margin-top:18px; margin:25px">
 	<form name="login" method="get" action="compread2.php" style="padding-left:200px; margin:auto">
 		<table>
@@ -43,7 +43,7 @@
 		$displayData = '
 		<tr>
 		<td rowspan="11">			
-		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:350px; height:300px; padding-top:10px;padding-right:25px ">
+		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="object-fit: contain;width:500px; height:600px; padding-top:10px;padding-right:35px ">
 		</td>
 		<td></td>
 		<td colspan="3"style="font-size:20px; padding-top:10px;padding-left:15px"><b>Open for Registration!!!</b><br/></td>
@@ -95,7 +95,7 @@
 			<td></td>
 			<td colspan="3" style="padding-left:15px">
 				<br>
-				<input type ="submit"  value= "Click here for more information..."/>
+				<input type ="submit" class="btn btn-primary"  value= "Click here for more information..."/>
 			</td>
 		</tr>';
 		echo '<input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>';
@@ -138,7 +138,7 @@
 
 
 
-<h2 id="Winner" style="margin:25px; text-align:center">Winner</h2>
+	<h2 id="Winner" style="margin:25px; text-align:center">Winner</h2>
 <div class="title">
 	<p style="text-align:center; font-size:24px">Winner for the latest competition:</p>
 	<?php
@@ -147,7 +147,7 @@
   		{		
 			
 		$displayData = '
-			<div style="text-align:center;font-size:24px;font-weight:bold">
+			<div style="font-size:24px;font-weight:bold;padding-left:500px">
 			<u>Competition Title: <input type="text" value = "'.$row["wcompTitle"].'" name="title" style="border:none;background-color:transparent;font-weight: bold;text-decoration: underline;" readonly/>
 			</u></div><br>
 			';
@@ -161,11 +161,11 @@
   		{		
 			
 		$displayData = '
-			<div style="display:inline-block;text-align:center;font-size:18px">
+			<div style="display:inline-block;font-size:18px">
 			<h3>1st Place Winner</h3>
 			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'"><br>
-			Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/><br>
-			Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			<div style="text-align:center"><b>Content Title:</b> <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/></div>
+			<div style="padding-left:30px"><b>Participant Name:</b><input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/></div>
 			</div>
 			';
 			echo $displayData;  
@@ -181,8 +181,8 @@
 			<div style="display:inline-block;text-align:center;font-size:18px;">
 			<h3>2nd Place Winner</h3>
 			<img style="object-fit: contain;width:100%;height:300px"src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
-			<br>Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/>
-			<br>Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			<br><div style="padding-left:50px"><b>Content Title:</b> <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/></div>
+			<div style="padding-left:90px"><b>Participant Name:</b> <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/></div>
 			</div>
 			';
 			echo $displayData;  
@@ -195,39 +195,23 @@
   		{		
 			
 		$displayData = '
-			<div style="display:inline-block;text-align:center;font-size:18px;">
+			<div style="display:inline-block;text-align:center;font-size:18px">
 			<h3>3rd Place Winner</h3>
 			<img style="object-fit: contain;width:100%;height:300px" src="data:image/jpg;base64, '.base64_encode($row["wcontentImage"]).'">
-			<br>Content Title: <input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/>
-			<br>Participant Name: <input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/>
+			<br><div style="padding-left:40px"><b>Content Title:</b><input type="text" value = "'.$row["wcontentTitle"].'" name="ctitle" style="border:none;background-color:transparent" readonly/></div>
+			<div style="padding-left:80px"><b>Participant Name:</b><input type="text" value = "'.$row["wname"].'" name="name" style="border:none;background-color:transparent" readonly/></div>
 			</div>
 			';
 			echo $displayData;  
 		}
 		?>
 	</div>
-	
-	<!-- <div class="grid-container1" style="padding-left:80px">
-		<div class="title" style="width:150px; height:150px"></div>
-		<div class="title" style="width:150px; height:150px"></div>
-		<div class="title" style="width:150px; height:150px"></div>
-	</div>
-	<div class="grid-container2"> 	
-		<img alt="" src="../image/1st.png" width="40px" height="60px" style="padding-left:140px"/>
-		<img alt="" src="../image/2nd.png" width="40px" height="60px" style="padding-left:120px"/>
-		<img alt="" src="../image/3rd.png" width="40px" height="60px" style="padding-left:100px"/>
-	</div>
-	<div class="grid-container2" style="padding-left:80px">
-		<p>Name:</p>
-		<p>Name:</p>
-		<p>Name:</p>
-	</div> -->
 </div><br/><vr/>
 
 <h2 id="About" style="margin:25px; text-align:center">About Us</h2>
 <div class="title" style="text-align:justify; margin:25px"> 
 	<p>Founded in 2022 by Asia Pacific University student in University Photography Organisation is a leading global platform dedicated to the development and advancement of photographic culture. Our programming and competition initiatives provide valuable opportunities for artists working in photography and help broaden the conversation around their work. Through our fairs we play a key role in driving the growth of the contemporary art market for photo-based art and deepening audience engagement with the medium. </p>
-	<p>Our value lies in the integrity of our expertise, our years of experience and the strength of our relationships with both individual photographers as well as our industry-leading partners around the world. Our objective is to let every student to have a platform to share their masterpiece of photography and gain their confident on photography skills plus give them an opportunity to share their experiences of photography techniques. So, competition is organized by the admin to know who has the most perfect skills of photography and winner will be announce at the end. Contact Us if you need enquires. So, what are you waiting for??? </p>
+	<p>Our value lies in the integrity of our expertise, our years of experience and the strength of our relationships with both individual photographers as well as our industry-leading partners around the world. Our objective is to let every student to have a platform to share their masterpiece of photography and gain their confident on photography skills plus give them an opportunity to share their experiences of photography techniques. So, competition is organized by the admin to know who has the most perfect skills of photography and winner will be announce at the end. Contact Us if you need enquires. So, what are you waiting for? </p>
 	<br/><br/>
 	<p style="text-align:center; font-size:20px">LOGIN and JOIN US NOW!!</p>
 </div>

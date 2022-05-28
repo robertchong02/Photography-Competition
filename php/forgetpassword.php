@@ -52,22 +52,22 @@
 <body style="background-image:url('../image/bg1.png')">
 
 <div class="topnav">
-  <a href="#Sign Up">Sign Up</a>
-  <a href="#Login">Login</a>
-  <a href="#Winner">Winner</a>
-  <a href="#About">About Us</a>
-    <a class="active" href="#home">Home</a>
+  <a href="usersignup.php">Sign Up</a>
+  <a href="userlogin.php">Login</a>
+  <a href="main.php">Winner</a>
+  <a href="main.php">About Us</a>
+    <a class="active" href="main.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
-    <p style="float: left;">APU Photography Competition</p>
+    <p style="float: left;">AP Photography Club</p>
 </div>
 
 <p style="margin-left:50px; margin-top:20px">
-<a href="login.html" >
+<a href="userlogin.php" >
 	<button type="button" class="button button1">BACK</button>
 </a></p>
 
-<div class="title" style="width:500px; text-align:center; margin-left:350px">
-	<img alt="" src="reset.png" width="80px" height="80px">
+<div class="title" style="width:500px; text-align:center;margin:auto">
+	<img alt="" src="../image/reset.png" width="80px" height="80px">
 	<h2>Reset Password</h2>
 	<button type="submit" class="button button1" onclick="openPopup()">Gmail</button>
 	<div class = "popup" id="popup">

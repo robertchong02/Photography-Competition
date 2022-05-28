@@ -22,7 +22,7 @@ $customerID = $_SESSION['Customer_ID'];
   <a href="userhome.php">About Us</a>
     <a class="active" href="userhome.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
-    <p style="float: left;">APU Photography Competition</p>
+    <p style="float: left;">AP Photography Club</p>
 </div>
 <h2 style="text-align:center">CONTENT</h2>	
 <h2 style="text-align:center">COMPETITION xxxxx </h2>	
