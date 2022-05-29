@@ -17,8 +17,8 @@
 
 <body style="background-image:url('../image/bg.gif');font-family:Old Standard TT, serif;">
 <div class="topnav">
-  <a href="usersignup.php">Sign Up</a>
-  <a href="userlogin.php">Login</a>
+  <a href="logout.php">Logout</a>
+  <a href="editprofile.php">Profile</a>
   <a href="#Winner">Winner</a>
   <a href="#About">About Us</a>
   <a class="active" href="main.php">Home</a>
