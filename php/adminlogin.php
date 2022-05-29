@@ -28,7 +28,6 @@
 	<input type="text" name="adminName" size="20" maxlength="8"/><br/><br/>
 	Password:	
 	<input type="password" name="adminPassword" size="20" maxlength="16"/><br/><br/>
-	<a href="forgetpassword.html" style="font-size:15px">Forgot password?</a>
 	<br>
 	<input style="width:50%;border-radius:15px;background-color:#4CAF50;color:white" type="submit" value="Log In as Admin">
 	<br>

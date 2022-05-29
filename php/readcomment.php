@@ -35,27 +35,42 @@ $customerID = $_SESSION['Customer_ID'];
 <br>
 <nav class="buttonbackground">
 <p align="left">
-	<a href="viewcontent.php">
+	<a href="userhome.php">
   		<button class="button button1">BACK</button>
   	</a>
 </p>
 </nav>
 
-<nav class="content">
+<form name="comment" method="get"  style=" padding-left:6px">
+<nav class="content" style="margin:30px; background-color:#A7CAD7;">
 <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcontentID = ".$_GET['vconID']);
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
       echo '<input style="display:none;" type="text" name="vconID" value='.$_GET["vconID"]. '>';
       $displayData = '
-	<div id="contentpicture">
-	<img src="data:image/jpg;base64, '.base64_encode($row["vcontentImage"]).'" style="width:100%; height:300px">
-	</div>';
-	echo $displayData;  
-}
-?>
+		<div id="contentpicture">
+		<img src="data:image/jpg;base64, '.base64_encode($row["vcontentImage"]).'" style="width:100%; height:300px;">
+		</div>
+		<br>
+		<div id="contentdescription" style="padding-bottom:300px;height:100px">
+		<label for="ContentTitle"><b>Content Title:</b><input type="text" value = "'.$row["vcontentTitle"].'" name="title" style="width:90%" readonly/></label>
+		<br>
+		<label for="Description"><b>Description: </b></label>
+		<div style="padding-left:10px"><textarea name = "description" cols=40  rows=3 style="width: 80%;height: 90px;margin-top:15px;background: #f1f1f1" readonly>'.$row["vcontentDescription"].'</textarea></div>
+		<label for="Participant"><b>Participant Name: </b><input type="text" value = "'.$row["ParticipantName"].'" name="name"  class="compread2" readonly/></label>
+		<br>
+		</div>
+		';
+	    echo $displayData;  
+	}
+	?>
+		<br>
+
+
+</form>	
 	<br>
-	<div id="contentcomment" style="margin-bottom:30px;background-color:#A7CAD7">
+	<div id="contentcomment" style="margin-bottom:30px;background-color:white">
 	<label for="comment"><b>Comment: </b></label>
 	<?php
   			$fetchData = mysqli_query($con, "SELECT * FROM contentcomment WHERE vcID = ".$_GET['vconID']);
@@ -71,6 +86,19 @@ $customerID = $_SESSION['Customer_ID'];
 
 	</div>	
 
+
+<div id="contentcomment" style="padding-bottom:5px;">
+		<label for="comment"><b>Comment here: </b></label>
+		<form action="addcomment.php" method="POST" >
+		<input style="width:95%;height:100px;" type="text" placeholder="Comment here" name="comment">
+		<?php
+		echo '<input style = "display:none;" type = text name="vconID" value='.$_GET["vconID"].'>';
+		?>
+		<p align="center" style="margin-top:0px">
+			<input type="submit" value="SUBMIT" style="background-color:green;color:white" >
+		</p>
+		</form>
+</div>
 </nav>
 
 <!-- footer -->

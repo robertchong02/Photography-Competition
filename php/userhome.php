@@ -103,8 +103,9 @@
 	</div>
 
 
-
+	
 	<div style="padding-right:10px; margin:auto">
+	<form method="get" action="viewcontent.php">
 		<div class="title" style="text-align:center;">
 		<?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID ASC LIMIT 1");
@@ -116,14 +117,15 @@
 			<b style="font-size:28px">(Closed)</b><br/><br/>
 			<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="object-fit: contain;width:500px; height:600px;">
 			<br><br>
-			<a href="viewcontent.php">
-				<button type="button" class="btn btn-primary">Click Here to Vote</button>
-			</a>';
+			<input type ="submit" class="btn btn-primary"  value= "Click here to vote"/>';
+			echo '<input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>';
 			echo $displayData;  
 		}
 		?>	
 		</div>
+	</form>
 	</div>
+	
 
 	<div style="padding-right:10px; margin:auto" >
 		<div class="title" style="text-align:center;height:80px; padding-top:20px">

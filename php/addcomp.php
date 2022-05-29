@@ -20,7 +20,7 @@ $check = mysqli_stmt_affected_rows($stmt);
 echo $check;
 if($check == 1) {
     echo '<script> alert ("New competition added!");
-    window.location.href= "compadminPost.php";
+    window.location.href= "adminhome.php";
     </script>';
 
 } else {

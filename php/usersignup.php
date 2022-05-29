@@ -68,12 +68,12 @@
  	<tr>
  		<td style="text-align:left">Password</td>
  		<td>:</td>
- 		<td><input type="text" name="password" size="20" maxlength="15"/></td>
+ 		<td><input type="password" name="password" size="20" maxlength="15"/></td>
  	</tr>
  	<tr>
  		<td style="text-align:left">Confirm Password</td>
  		<td>:</td>
- 		<td><input type="text" name="confirmpassword" size="20" maxlength="15"/></td>
+ 		<td><input type="password" name="confirmpassword" size="20" maxlength="15"/></td>
  	</tr>
  		<td></td>
  	<tr></tr>

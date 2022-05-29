@@ -101,14 +101,14 @@ $customerID = $_SESSION['Customer_ID'];
     
 
   
-  <div class="box2" style="background-color:#A7CAD7;height:975px">
+  <div class="box2" style="background-color:#A7CAD7;height:977px">
     <div class="filebox">
       <p>Upload Content Here</p>
       <form method="POST" action="user_upload.php" enctype="multipart/form-data">
       <input type="file" name="image" style="width:40%;" accept="image/*" require>
       <br>
       <input style="width:95%;" type="text" placeholder="Enter your content title"  name="conTitle" require>
-      <input style="width:95%;height:150px" type="text" placeholder="Enter short content description"  name="conDesc" require>
+      <input style="width:95%;height:152px" type="text" placeholder="Enter short content description"  name="conDesc" require>
       <input style="width:95%;" type="text" placeholder="Enter your username" name="userName" require>
       <h6 style="margin-left:15px">*This Username will be displayed on the content page"</h6>
 
@@ -149,7 +149,7 @@ $customerID = $_SESSION['Customer_ID'];
 </script> -->
 
 <!-- footer -->
-<div class="footer" style="font-size:14px; margin-top:1000px" >
+<div class="footer" style="font-size:14px; margin-top:1100px" >
 	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
 	<div style="padding-top:20px"> 
 		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>

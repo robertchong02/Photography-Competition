@@ -16,7 +16,7 @@ if($insert)
     echo
     '<script>
     alert("Feedback submitted. Thank you for your time.");
-    window.location.href = "readcomment.php";
+    window.location.href = "userhome.php";
     </script>';
 }
 else
@@ -24,7 +24,7 @@ else
     echo
     '<script>
     alert("Failed to submit feedback. Please try again");
-    window.location.href = "comment.php";
+    window.location.href = "userhome.php";
     </script>';
 }
 
