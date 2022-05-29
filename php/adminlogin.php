@@ -10,12 +10,15 @@
 
 <body style="background-image:url('../image/bg.gif');font-family:Old Standard TT, serif">
 <div class="topnav">
-  <a href="logout.php">Logout</a>
-  <a href="#Winner">Winner</a>
-  <a class="active" href="adminhome.php">Home</a>
-  <a style="float:left; position:relative; bottom:20px;"><img class="logo" src = "../image/logo.png"></a>
-  <a style="font-family: Comic San; font-weight:bold; position:relative; right:16cm" >AP Photography Club</a>
-</div><br/><br/>
+  <a href="usersignup.php">Sign Up</a>
+  <a href="userlogin.php">Login</a>
+  <a href="main.php">Winner</a>
+  <a href="main.php">About Us</a>
+    <a class="active" href="main.php">Home</a>
+    <img class="logo" style="float: left;" src = "../image/logo.png">
+    <p style="float: left;">AP Photography Club</p>
+</div>
+<br><br><br>
 
 
 <div class="logintitle">
@@ -34,12 +37,12 @@
 <a href="userlogin.php">  
 	<button type="button" class="btn btn-primary">Back</button>  
 </a><br/><br/>
-</div><br/><br/>
+</div><br/><br/><br>
 
 <!-- footer -->
 <div class="footer" style="font-size:14px" >
 	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left;font-size:14px">
-	<div style="padding-top:20px"> 
+	<div> 
 		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
 	</div>
 	<div style="font-size:14px">
