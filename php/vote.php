@@ -22,7 +22,7 @@ if($_GET["vote"]) {
 
         if (($customerID == $row_CustomerID["Customer_ID"]) && ($vcompetitionID == $row_CompID["vcompetitionID"])){
         echo '<script> alert ("Vote already existed");
-            window.location.href= "viewcontent.php";
+            window.location.href= "userhome.php";
             </script>';
         }
         else {
@@ -33,7 +33,7 @@ if($_GET["vote"]) {
 
             if($result == 1) {
                 echo '<script> alert ("Voted Successfully");
-                window.location.href= "viewcontent.php";
+                window.location.href= "userhome.php";
                 </script>';
 
             } else {

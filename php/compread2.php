@@ -40,7 +40,7 @@ $customerID = $_SESSION['Customer_ID'];
   		{		
       echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["CompID"]. '>';
       $displayData = '
-      <h2>Title: <input type="text" value = "'.$row["CompetitionTitle"].'" name="title" class="compread2" style="width:200px; height:10px" readonly/></h2>
+      <h2>Title: <input type="text" value = "'.$row["CompetitionTitle"].'" name="title" class="compread2" style="width:200px; height:50px" readonly/></h2>
       <img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:300px; height:300px; padding-top:10px ">
       <br>
       <br>
@@ -55,10 +55,10 @@ $customerID = $_SESSION['Customer_ID'];
     </div> 
     <div class="box2" style="background-color:#A7CAD7; margin-bottom:100px">
       <h3> Description </h3>
-      <textarea name = "description" cols=40  rows=3 style="width: 90%;height: 190px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Description"].'</textarea>
+      <textarea name = "description" cols=40  rows=3 style="width: 90%;height: 205px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Description"].'</textarea>
       
       <h3> Guideline </h3>
-      <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 333px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Guideline"].'</textarea>
+      <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 337px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Guideline"].'</textarea>
       <br><br><br><br>
       <div class="tacbox">
         <input id="checkbox" type="checkbox" required/>
@@ -73,7 +73,7 @@ $customerID = $_SESSION['Customer_ID'];
 </form> 
 
 <!-- footer -->
-<div class="footer" style="font-size:14px; margin-top:1000px" >
+<div class="footer" style="font-size:14px; margin-top:1100px" >
 	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
 	<div style="padding-top:20px"> 
 		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
