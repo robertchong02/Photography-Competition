@@ -1,7 +1,8 @@
 img.logo{
-    width: 160px;
-    height: 128px;
+    width: 100px;
+    height: 60px;
     border: 5px groove;
+    margin-left:15px;
   }
   
   body{
@@ -33,43 +34,58 @@ img.logo{
   }
 
   /* This is nav bar styling */
-  .topnav {
-  padding: 0px;
-  margin-left: 10px;
+  .topnav {         
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    height:70px;            
+    /* padding: 0px;
+    margin-left: 10px;
+    overflow: hidden; */
   }
 
   .topnav a {
-  display: block;
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 24px 26px;
-  text-decoration: none;
-  font-size: 17px;
-  background-color: #333;
+    display: block;
+    float: right;
+    color: #000000;
+    text-align: center;
+    padding: 24px 26px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: rgb(255, 255, 255);
   }
-
-  .topnav p {
-  float: left;
-  margin-left: 10px;
-  font-size: 32px;
-  padding: 0px;
-  margin-top: 17px;
-  font-weight: bold;
-  font-family: Comic San
   
-
+  .topnav p {
+    float: left;
+    margin-left: 10px;
+    font-size: 32px;
+    padding: 0px;
+    margin-top: 17px;
+    font-family: Comic San;
+    font-weight:bold;
+  
   }
 
+  
   .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+    background-color: rgb(205, 205, 205);
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #091dfb;
+    color: white;
   }
 
-  .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-  }
+  .footer {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(6, 6, 6);
+    text-align: center;
+ }
 
 
   .boxModel{
@@ -81,10 +97,10 @@ img.logo{
 
   .button1 {
       background-color: #4CAF50;
-      margin: 20px 0 20px 20px;
+      margin: 20px 0 20px 30px;
   } 
   .button {
-      align:right;
+      align-items:right;
       border: none;
       color: white;
       padding: 10px 22px;
@@ -92,8 +108,7 @@ img.logo{
       align-items: center;
       display: inline-block;
       text-decoration: none;
-      font-size: 14px;
-      margin: 0px 15px 2px 2px;
+      font-size: 20px;
       cursor: pointer;
       }
   
@@ -137,3 +152,11 @@ img.logo{
       margin-right: 50px;
   }
 
+  .flex-container {
+    display: flex;
+  }
+  
+  .flex-container > div {
+    margin-right: 30px;
+    padding: 5px;
+  }

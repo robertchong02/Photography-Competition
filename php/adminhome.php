@@ -3,8 +3,6 @@ include("connect.php");
 ?>
 <!DOCTYPE html>
 <html>
-
-<head>
 <style>
 .admingrid-container {
   display: grid;
@@ -31,6 +29,7 @@ include("connect.php");
 }
 
 </style>
+<head>
     <!-- Link to CSS -->
     <link rel = "stylesheet" href = "../css/main.css">
     <title>Home</title>
@@ -38,7 +37,7 @@ include("connect.php");
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
-<body style="background-image:url('../image/bg1.png')">
+<body style="background-image:url('../image/bg.gif');font-family:Old Standard TT, serif;">
     <div class="topnav">
         <a href="logout.php">Logout</a>
         <a href="adminwinnerannounce.php">Winner</a>
@@ -85,8 +84,8 @@ include("connect.php");
         </div>
     </div>
     </div>
-<br>
-<h2 id="Winner" style="margin:25px; text-align:center">Winner</h2>
+<br><br><br>
+<h2 id="Winner" style="margin:25px; text-align:center;font-family:Franklin Gothic Medium;">Winner</h2>
 <div class="title">
 	<p style="text-align:center; font-size:24px">Winner for the latest competition:</p>
 	<?php
@@ -154,6 +153,39 @@ include("connect.php");
 		}
 		?>
 	</div>
+</div>
+<br><br><br><br>
+
+<h2 style="margin:25px; text-align:center;font-family:Franklin Gothic Medium;">About Us</h2>
+<div class="title" style="text-align:justify; margin:25px;font-size:20px"> 
+	<p>Founded in 2022 by Asia Pacific University student in University Photography Organisation is a leading global platform dedicated to the development and advancement of photographic culture. Our programming and competition initiatives provide valuable opportunities for artists working in photography and help broaden the conversation around their work. Through our fairs we play a key role in driving the growth of the contemporary art market for photo-based art and deepening audience engagement with the medium. </p>
+	<p>Our value lies in the integrity of our expertise, our years of experience and the strength of our relationships with both individual photographers as well as our industry-leading partners around the world. Our objective is to let every student to have a platform to share their masterpiece of photography and gain their confident on photography skills plus give them an opportunity to share their experiences of photography techniques. So, competition is organized by the admin to know who has the most perfect skills of photography and winner will be announce at the end. Contact Us if you need enquires. So, what are you waiting for? </p>
+	<br/><br/>
+</div>
+<br><br><br><br>
+
+<!-- footer -->
+<div class="footer column" style="font-size:14px" >
+	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
+	<div style="padding-top:20px"> 
+		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
+	</div>
+	<div>
+		<p><b>Asia Pacific University</b></p>
+		Jalan Teknologi 5, </br>
+		Taman Teknologi Malaysia,</br>
+		57000 Kuala Lumpur,</br>
+		Wilayah Persekutuan Kuala Lumpur.
+	</div>
+	</div></br>
+	<div>
+		<p style="text-align:center">Contact us by clicking
+		<a href="https://api.whatsapp.com/send?phone=60163543712&text=Hello,%20I%20have%20questions%20regarding%20the%20AP%20Photo%20Competition%20%3E.%3C">here</a>
+		</p>
+	</div>
+	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
+</div></br>
+
 </body>
 
 </html>
