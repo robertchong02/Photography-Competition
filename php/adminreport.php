@@ -151,11 +151,11 @@
 
 </head>
 
-<body style="background-image:url('../image/bg1.png')">
+<body style="background-image:url('../image/bg.gif')">
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
-            <a href="#Winner">Winner</a>
             <a href="#Logout">Logout</a>
+            <a href="#Winner">Winner</a>
+            <a class="active" href="#home">Home</a>
             <img class="logo" style="float: left;" src = "../image/logo.png">
             <p style="float: left;">AP Photography Club</p>
     </div>
