@@ -55,7 +55,7 @@ body {
 }
 
 .footer {
-  position: absolute;
+  position:absolute;
   width: 100%;
   background-color: rgb(255, 255, 255);
   color: rgb(6, 6, 6);
@@ -137,10 +137,18 @@ body {
 }
 
 .flex-container > div {
-  margin: 30px;
+  margin: 20px;
   padding: 5px;
   font-size: 30px;
+}
 
+.fc2 {
+  display: flex;
+}
+
+.fc2 > div {
+  margin-right: 30px;
+  padding: 5px;
 }
 
 /*admindemail*/
@@ -170,6 +178,21 @@ body {
 	margin: 20px 0 20px 20px;
 } 
 .button2 {background-color: #008CBA;}
+
+.compbtn{
+    background-color: #4CAF50;
+    margin: 20px 0 20px 30px;
+    align-items:right;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    display:flex;
+    align-items: center;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+} 
 
 .btn {
   background-color: DodgerBlue;
@@ -372,10 +395,8 @@ input {
 
 /*compadminpost*/
 .box1 {
-  position: relative;
   border: 3px solid;
   width: 30%;
-  min-height: 780px;
   margin-left: 7.5%;
   display: block;
   float: left;
@@ -404,10 +425,8 @@ font-size: 2vw;
 }
 
 .box2 {
-  position: relative;
   border: 3px solid;
   width: 55%;
-  min-height: 780px;
   display: block;
   float: left;
   background-color:white;
