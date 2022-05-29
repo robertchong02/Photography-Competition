@@ -54,7 +54,7 @@ $customerID = $_SESSION['Customer_ID'];
 </style>
 <link href="../css/default.css" rel="stylesheet" type="text/css">
 </head>
-<body style="background-image:url('../image/bg1.png')">
+<body style="background-image:url('../image/bg.gif');font-family:Old Standard TT, serif">
 
 
 <div class="topnav">
@@ -147,5 +147,26 @@ $customerID = $_SESSION['Customer_ID'];
 // }
 </script> -->
 
+<!-- footer -->
+<div class="footer" style="font-size:14px; margin-top:1000px" >
+	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
+	<div style="padding-top:20px"> 
+		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
+	</div>
+	<div style="font-size:14px">
+		<p><b>Asia Pacific University</b></p>
+		Jalan Teknologi 5, </br>
+		Taman Teknologi Malaysia,</br>
+		57000 Kuala Lumpur,</br>
+		Wilayah Persekutuan Kuala Lumpur.
+	</div>
+	</div></br>
+	<div>
+		<p style="text-align:center">Contact us by clicking
+		<a href="https://api.whatsapp.com/send?phone=60163543712&text=Hello,%20I%20have%20questions%20regarding%20the%20AP%20Photo%20Competition%20%3E.%3C">here</a>
+		</p>
+	</div>
+	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
+</div></br>
 </body>
 </html>
