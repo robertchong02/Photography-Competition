@@ -1,29 +1,37 @@
 ﻿img.logo{
-  width: 160px;
-  height: 128px;
+  width: 100px;
+  height: 65px;
   border: 5px groove;
+  margin-left:15px;
 }
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* navigation */
-.topnav {                     
-  padding: 0px;
-  margin-left: 10px;
+.topnav {         
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
+  background-color: white;
+  height:70px;            
+  /* padding: 0px;
+  margin-left: 10px;
+  overflow: hidden; */
 }
 
 .topnav a {
   display: block;
   float: right;
-  color: #f2f2f2;
+  color: #000000;
   text-align: center;
   padding: 24px 26px;
   text-decoration: none;
   font-size: 17px;
-  background-color: #333;
+  background-color: rgb(255, 255, 255);
 }
 
 .topnav p {
@@ -32,25 +40,46 @@ body {
   font-size: 32px;
   padding: 0px;
   margin-top: 17px;
-  font-weight: bold;
-  font-family: Comic San
+  font-family: Comic San;
+  font-weight:bold;
+
 }
 
+
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(205, 205, 205);
   color: black;
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #091dfb;
   color: white;
 }
 
+.footer {
+  position: absolute;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(6, 6, 6);
+  text-align: center;
+}
+
+
 .title{
-	border:solid 2px #A7CAD7;
+  border:solid 2px #A7CAD7;
+  padding:25px;
+  margin:25px;
+  background-color:#A7CAD7;
+}
+
+.logintitle{
+  border-radius: 20px;
 	padding:25px;
-	margin:25px;
-	background-color:#A7CAD7;
+  width: 600px;
+	background-color:white;
+  text-align:center;
+  margin:auto;
+  box-shadow: 10px 10px #888888;
 }
 
 /* grid container */
@@ -112,11 +141,10 @@ body {
 
 .flex-container > div {
   margin: 30px;
-  padding: 2px;
+  padding: 5px;
   font-size: 30px;
 
 }
-
 
 /*admindemail*/
 .button {
@@ -144,7 +172,7 @@ body {
 	background-color: #4CAF50;
 	margin: 20px 0 20px 20px;
 } 
-.button2 {background-color: #008CBA;} /* Blue */
+.button2 {background-color: #008CBA;}
 
 .btn {
   background-color: DodgerBlue;

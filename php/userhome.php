@@ -107,7 +107,7 @@
 	<div style="padding-right:10px; margin:auto">
 		<div class="title" style="text-align:center;">
 		<?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '8'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID ASC LIMIT 1");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			

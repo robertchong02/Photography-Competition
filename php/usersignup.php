@@ -9,18 +9,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body style="background-image:url('../image/bg1.png')">
+<body style="background-image:url('../image/bg.gif');font-family:Old Standard TT, serif;">
 <div class="topnav">
-    <a href="#Sign Up">Sign Up</a>
-    <a href="userlogin.php">Login</a>
-    <a href="main.php">Winner</a>
-    <a href="main.php">About Us</a>
+  <a href="usersignup.php">Sign Up</a>
+  <a href="userlogin.php">Login</a>
+  <a href="main.php">Winner</a>
+  <a href="main.php">About Us</a>
     <a class="active" href="main.php">Home</a>
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">AP Photography Club</p>
 </div>
-
-<div class="title" style="background-color:#A7CAD7"><h2 id="Sign Up" >Sign Up</h2><br/>
+<br><br><br>
+<div class="signuptitle"><h2 id="Sign Up" >Sign Up</h2><br/>
     <form method="POST" action="signup.php">
     <table>
     <tr>
@@ -78,22 +78,36 @@
  		<td></td>
  	<tr></tr>
  	</table>
-    <input type="submit" value="Sign Up">
-    </form><br/><br/>
-
-<!-- <button type="button" class="button button1 btn btn-primary">Sign Up</button>
-            <div class = "popup" id="popup">
-                <h2>Signed Up Successfully</h2>
-                <p>Please click on "Login as User" to login to your account.</p>
-                <button type="button" onclick="closePopup()">OK</button>
-            </div><br/><br/>
-            
-<a href="login.html">  
-    <button type="button" class="btn btn-primary">Login as User</button>  
-</a> -->
-
-
+	<br>
+    <input type="submit" value="Sign Up" style="background-color:#4CAF50;color:white;border:none;border-radius:15px;padding:10px 20px">
+    </form><br/>
 </div>
+<br/><br/>
+<br/><br/>
+<!-- footer -->
+<div class="footer" style="font-size:14px" >
+	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
+	<div style="padding-top:20px"> 
+		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
+	</div>
+	<div>
+		<p><b>Asia Pacific University</b></p>
+		Jalan Teknologi 5, </br>
+		Taman Teknologi Malaysia,</br>
+		57000 Kuala Lumpur,</br>
+		Wilayah Persekutuan Kuala Lumpur.
+	</div>
+	</div></br>
+	<div>
+		<p style="text-align:center">Contact us by clicking
+		<a href="https://api.whatsapp.com/send?phone=60163543712&text=Hello,%20I%20have%20questions%20regarding%20the%20AP%20Photo%20Competition%20%3E.%3C">here</a>
+		</p>
+	</div>
+	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
+</div></br>
+
+
+
 
 
 </body>
