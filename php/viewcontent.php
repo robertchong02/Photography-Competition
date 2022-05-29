@@ -58,7 +58,7 @@ $customerID = $_SESSION['Customer_ID'];
   <a href="editprofile.php">Profile</a>
   <a href="#Winner">Winner</a>
   <a href="#About">About Us</a>
-  <a class="active" href="main.php">Home</a>
+  <a class="active" href="userhome.php">Home</a>
   <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">AP Photography Club</p>
 </div>
@@ -81,7 +81,7 @@ $customerID = $_SESSION['Customer_ID'];
 </nav>
 
 <!-- <form method="get" action="comment.php" style="margin:auto"> -->
-<nav class="content1 title" style="background-color:#A7CAD7;">
+<nav class="content1 title" >
 <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcompetitionID = ".$_GET['CompID']);
   			while($row = mysqli_fetch_assoc($fetchData)) 
@@ -90,10 +90,10 @@ $customerID = $_SESSION['Customer_ID'];
 			
       $displayData = '
 	  
-<div class="flex-container">
+<div class="flex-container" style="margin:auto;  justify-content:center">
 	<div style="padding-top:80px">
 		<div id="contentpicture1">
-		<img src="data:image/jpg;base64, '.base64_encode($row["vcontentImage"]).'" style="max-width:100%; height:250px">
+		<img src="data:image/jpg;base64, '.base64_encode($row["vcontentImage"]).'" style="width:400px; height:250px">
 		</div>
 	</div>
 

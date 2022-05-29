@@ -20,6 +20,15 @@ include("connect.php");
     <link rel="stylesheet" href="../css/report.css">
 </head>
 
+<<<<<<< HEAD
+<body style="background-image:url('../image/bg.gif')">
+    <div class="topnav">
+            <a href="#Logout">Logout</a>
+            <a href="#Winner">Winner</a>
+            <a class="active" href="#home">Home</a>
+            <img class="logo" style="float: left;" src = "../image/logo.png">
+            <p style="float: left;">AP Photography Club</p>
+=======
 <body style="background-image:url('../image/bg.gif');font-family:Old Standard TT, serif;">
     
     <div class="topnav">
@@ -28,6 +37,7 @@ include("connect.php");
         <a class="active" href="adminhome.php">Home</a>
         <img class="logo" style="float: left" src="../image/logo.png" />
         <p style="float: left">AP Photography Club</p>
+>>>>>>> ba08232c4dd0cd1a93f9b645d8b7269b7eb387af
     </div>
     <a href="adminhome.php">
             <button class="button button1">BACK</button>
