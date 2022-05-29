@@ -51,36 +51,73 @@ include("connect.php");
 		echo $displayData;  
 		}
     ?>	
+    <br>
 
     <!--Php for Statistical Chart-->
 
     <?php     
-
-
-        $query = $con->query("SELECT COUNT(Customer_ID) AS 'mon', vcontentID AS 'total' FROM voting GROUP BY vcontentID");
+        $query = $con->query("SELECT COUNT(Customer_ID) AS 'mon', vcontentID  FROM voting GROUP BY vcontentID");
 
         foreach($query as $data)
         {
-            $x[] = $data['total'];
+            $x[] = $data['vcontentID'];
             $y[] = $data['mon'];
         }
     ?>
 
     <?php
-        $fetchData = $con->query("SELECT monthname AS 'Months', amount AS 'amo' FROM test ");
+    //ORDER BY 后面可以不要 给你们看Difference
+        $query = $con->query("SELECT COUNT(contentcomment) AS 'conTotal', vcID  FROM contentcomment GROUP BY vcID ORDER BY vcID DESC");
     
-        foreach($fetchData as $data_1){
+        foreach($query as $data_1){
 
-            $tot = $data_1['amo'];
-            $month= $data_1['Months'];
+            $_id[]= $data_1['vcID'];
+            $conTotal[] = $data_1['conTotal'];
         }
+
     ?>
+
+    
 
     <!--Php for commend Chart-->
     <!-- 左右Flex 布局 -->
-    <div class = "flex-container" style="height:700px">
+    <div class = "flex-container" style="height:1000px">
 
-        <div class="baise" style="width: 500px; background-color: red;">
+        <!--左边区域-->
+        <div class="baise flex-container column " style="width: 500px; background-color: #DAF7A6;">
+
+        <?php
+        $query = "SELECT COUNT(ContentID) AS 'Total', ContentTitle FROM content";
+        $result= mysqli_query($con, $query);
+        if($result){
+            while($row=mysqli_fetch_assoc($result)){
+                $display_Data = '
+                    <div class="">
+                    <b>Competition Title: </b><input type="text" value = "'.$row["ContentTitle"].'" name="ContentTitle" readonly>
+                    </div>
+
+                    <div>
+                    <b>Total Number of Participant: </b><input type="text" value = "'.$row['Total'].'" name="ContentTitle" readonly>
+                    </div>
+
+                    <div>
+                    <b>Number of Content Approved: </b><input type = "text">
+                    </div>
+
+                    <div>
+                    <b>Number of Content Rejected:</b> <input type = "text">
+                    </div>
+
+                ';
+                echo $display_Data;
+
+            }
+        }
+        
+        
+        ?>
+
+
         </div>
 
         <div class="baise flex-container column" style="width: 500px;">
@@ -89,15 +126,72 @@ include("connect.php");
             <canvas id="voteChart"></canvas>
             </div>
 
+
+            <!--HAVENT DONE-->
             <!--Statistical Commend-->
             <div class= "title" style="background-color:#A7CAD7;">
             <canvas id= "commentChart"></canvas>
             </div>
+
+
+            
+            <?php
+                $fetchData = mysqli_query($con, "SELECT * FROM content");
+                while($row = mysqli_fetch_assoc($fetchData)){
+                    $disData= '
+                    <div style="border: 1px solid black">
+                        <p>This Tab Should list every Content ID and The Tilte And The Participant</p>
+
+                        <b>Content ID: </b><input type="text" value="'.$row["ContentID"].'"><br>
+                        
+                        <b>Content Tilte: </b> <input type="text" value="'.$row["ContentTitle"].'"><br>
+                        <b>Participant Name: </b> <input type="text" value="'.$row["ParticipantName"].'"><br>
+
+
+                        
+                    </div>
+
+                    
+                    
+                    ';
+                    echo $disData;
+                }
+            
+            
+            ?>
+            
+            
         </div>
     </div>
 
-    <!--Statistically Report JS-->
-    <script>  
+    
+    
+    
+<!-- footer -->
+<div class="footer column" style="font-size:14px" >
+	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
+	<div style="padding-top:20px"> 
+		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
+	</div>
+	<div>
+		<p><b>Asia Pacific University</b></p>
+		Jalan Teknologi 5, </br>
+		Taman Teknologi Malaysia,</br>
+		57000 Kuala Lumpur,</br>
+		Wilayah Persekutuan Kuala Lumpur.
+	</div>
+	</div></br>
+	<div>
+		<p style="text-align:center">Contact us by clicking
+		<a href="https://api.whatsapp.com/send?phone=60163543712&text=Hello,%20I%20have%20questions%20regarding%20the%20AP%20Photo%20Competition%20%3E.%3C">here</a>
+		</p>
+	</div>
+	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
+</div></br>
+
+
+<!--Statistically Report JS-->
+<script>  
             const labels = <?php echo json_encode($x)?>;
             const data = {
             labels: labels,
@@ -144,14 +238,14 @@ include("connect.php");
             );
 
         // comment Statistic
-        // data of pie chart
+        // data of Comment chart
 
-        const comlab = <?php echo json_encode($month)?>;
+        const comlab = <?php echo json_encode($_id)?>;
         const dataCom = {
             labels: comlab,
             datasets: [{
                 label: 'Comment Report',
-                data: <?php echo json_encode($tot)?>,
+                data: <?php echo json_encode($conTotal)?>,
                 backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(255, 159, 64, 0.2)',
@@ -197,30 +291,6 @@ include("connect.php");
     
 
     </script>
-    
-    
-<!-- footer -->
-<div class="footer column" style="font-size:14px" >
-	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
-	<div style="padding-top:20px"> 
-		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
-	</div>
-	<div>
-		<p><b>Asia Pacific University</b></p>
-		Jalan Teknologi 5, </br>
-		Taman Teknologi Malaysia,</br>
-		57000 Kuala Lumpur,</br>
-		Wilayah Persekutuan Kuala Lumpur.
-	</div>
-	</div></br>
-	<div>
-		<p style="text-align:center">Contact us by clicking
-		<a href="https://api.whatsapp.com/send?phone=60163543712&text=Hello,%20I%20have%20questions%20regarding%20the%20AP%20Photo%20Competition%20%3E.%3C">here</a>
-		</p>
-	</div>
-	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
-</div></br>
-
 </body>
 
 </html>
