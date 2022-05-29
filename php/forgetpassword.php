@@ -60,13 +60,9 @@
     <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">AP Photography Club</p>
 </div>
+<br><br><br><br><br>
 
-<p style="margin-left:50px; margin-top:20px">
-<a href="userlogin.php" >
-	<button type="button" class="button button1">BACK</button>
-</a></p>
-
-<div class="title" style="width:500px; text-align:center;margin:auto">
+<div class="logintitle" style="width:500px; text-align:center;margin:auto">
 	<img alt="" src="../image/reset.png" width="80px" height="80px">
 	<h2>Reset Password</h2>
 	<button type="submit" class="button button1" onclick="openPopup()">Gmail</button>
@@ -75,6 +71,9 @@
         <p>Recovery password is successfully send to your Gmail account.</p>
         <button type="button" onclick="closePopup()">OK</button>
     </div><br/><br/>
+    <a href="userlogin.php" >
+	<button type="button" class="button button1">Back to login page</button>
+    </a>
     <p>A password change verification will send to your Gmail account.</p>
 </div>
 

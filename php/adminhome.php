@@ -40,7 +40,7 @@ include("connect.php");
 <body style="background-image:url('../image/bg.gif');font-family:Old Standard TT, serif;">
     <div class="topnav">
         <a href="logout.php">Logout</a>
-        <a href="adminwinnerannounce.php">Winner</a>
+        <a href="#Winner">Winner</a>
         <a class="active" href="adminhome.php">Home</a>
         <img class="logo" style="float: left" src="../image/logo.png" />
         <p style="float: left">AP Photography Club</p>
