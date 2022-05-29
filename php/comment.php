@@ -72,7 +72,7 @@ $customerID = $_SESSION['Customer_ID'];
 
 	
 	
-		<input style="width:95%;height:100px;" type="text" placeholder="Comment here" name="comment">
+		<input style=" position: static;" type="text" placeholder="Comment here" name="comment">
 		
 
 		<?php
