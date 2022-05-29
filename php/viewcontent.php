@@ -69,7 +69,7 @@ $customerID = $_SESSION['Customer_ID'];
   		{		
 			
       $displayData = '
-			<h2 style="text-align:center"><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50" style="background-color:transparent;font-size:24px; text-align:center" readonly/></h2>';
+			<h2 style="text-align:center"><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="60" style="background-color:transparent;font-size:24px; text-align:center" readonly/></h2>';
 		echo $displayData;  
 		}
 ?>	

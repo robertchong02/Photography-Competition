@@ -61,6 +61,8 @@ include("connect.php");
             <button type="button" class="functbtn">All Competition</button><br />
             </a>
         </div>
+		
+
         <div class="admingrid-item">
             <img style="object-fit: contain;width:90%;height:90%" src="../image/verification.png" />
             <br>
