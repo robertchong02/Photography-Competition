@@ -18,7 +18,7 @@
 </div><br/><br/>
 
 
-<div class="title" style="background-color:#A7CAD7; width:600px; text-align:center; margin:auto">
+<div class="logintitle">
 <h2 id="Login">Admin Login</h2><br/><br/>
 <form name="login" method="POST" action="admin.php">
 	Admin ID:
@@ -27,7 +27,7 @@
 	<input type="password" name="adminPassword" size="20" maxlength="16"/><br/><br/>
 	<a href="forgetpassword.html" style="font-size:15px">Forgot password?</a>
 	<br>
-	<input style="width:50%" type="submit" value="Log In as Admin">
+	<input style="width:50%;border-radius:15px;background-color:#4CAF50;color:white" type="submit" value="Log In as Admin">
 	<br>
 </form><br/><br/>
 

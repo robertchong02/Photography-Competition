@@ -21,9 +21,9 @@
   <a href="userlogin.php">Login</a>
   <a href="#Winner">Winner</a>
   <a href="#About">About Us</a>
-  <a class="active" href="main.php">Home</a>
-  <a style="float:left; position:relative; bottom:20px;"><img class="logo" src = "../image/logo.png"></a>
-  <a style="font-family: Comic San; font-weight:bold; position:relative; right:10cm" >AP Photography Club</a>
+    <a class="active" href="#home">Home</a>
+    <img class="logo" style="float: left;" src = "../image/logo.png">
+    <p style="float: left;">AP Photography Club</p>
 </div>
 
 <!-- <h2 id="home" style="margin:25px; text-align:center">Home</h2> -->
@@ -107,7 +107,7 @@
 	<div style="padding-right:10px; margin:auto">
 		<div class="title" style="text-align:center;">
 		<?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '8'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID ASC LIMIT 1");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
