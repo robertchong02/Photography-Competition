@@ -22,7 +22,7 @@
 <h2 id="Login">Login</h2><br/><br/>
 <form name="login" method="POST" action="login.php">
 	Username:
-	<input type="text" name="username2" size="20" maxlength="8"/><br/><br/>
+	<input type="text" name="username2" size="20" maxlength="255"/><br/><br/>
 	Password:	
 	<input type="password" name="pw2" size="20" maxlength="16"/><br/><br/>
 	<br>

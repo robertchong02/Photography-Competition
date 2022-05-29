@@ -3,6 +3,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* *{
+    border: 1px solid black;
+} */
+
 img.logo{
 width: 100px;
 height: 60px;
@@ -127,6 +131,10 @@ width: 450px;
     display: flex;
 }
 
+.column{
+    flex-direction:column;
+}
+
 .flex-container > div {
     margin-right: 30px;
     padding: 5px;
@@ -148,4 +156,8 @@ margin: 20px 0 20px 30px;
     text-decoration: none;
     font-size: 20px;
     cursor: pointer;
+}
+
+.baise{
+    background-color: rgb(255, 255, 255);
 }

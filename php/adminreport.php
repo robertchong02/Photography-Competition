@@ -15,7 +15,7 @@ include("connect.php");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
-x    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="stylesheet" href="../css/report.css">
 </head>
@@ -57,7 +57,6 @@ x    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 		
     ?>
     <h1 style="margin: 50px;font-size: 50px; border: 5px solid black; height: 100 px;text-align:center;">Competition Detail</h1>
-
     <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID ASC LIMIT 1");
   			while($row = mysqli_fetch_assoc($fetchData)) 
@@ -69,8 +68,18 @@ x    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 		}
     ?>	
 
-    
-    <?php
+    <!-- SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+    FROM ((Orders
+    INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+    INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID); -->
+
+
+    <!--Php for Statistical Chart-->
+
+    <?php     
+
+        $query = $con->query("SELECT V.COUNT(Customer_ID) AS 'mon', V.vcontentID AS 'total' FROM voting INNER JOIN content ON V.vcontentID = C.ContentID GROUP BY vcontentID ");
+
         $query = $con->query("SELECT COUNT(Customer_ID) AS 'mon', vcontentID AS 'total' FROM voting GROUP BY vcontentID");
 
         foreach($query as $data)
@@ -80,14 +89,56 @@ x    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         }
     ?>
 
-    <div class ="title" style="background-color:#A7CAD7;"> 
-    <canvas id="voteChart"></canvas>
-    <!-- <p style="font-size: 30px;">"Results:"</p>
-    <p style="font-size: 20px;">username 1 = 0 votes</p>
-    <p style="font-size: 20px;">username 2 = 0 votes</p>
-    <p style="font-size: 20px;">username 3 = 0 votes</p>
-    <p style="font-size: 20px;">username 4 = 0 votes</p> -->
+    <!--Php for commend Chart-->
+    <?php
+
+        $query1 = $con->query("SELECT monthname AS 'total1', amount AS 'mon1' FROM test GROUP BY monthname");
+
+        foreach($query1 as $data)
+        {
+            $a[] = $data['total1'];
+            $b[] = $data['mon1'];
+        }
+    ?>
+
+
+
+    <!-- 左右Flex 布局 -->
+    <div class = "flex-container" style="height:700px">
+
+        <div class="baise" style="width: 500px; background-color: red;">
+
+
+        </div>
+
+        <div class="baise flex-container column" style="width: 500px;">
+
+            <!--Statistic report Area-->
+            <div class ="title" style="background-color:#A7CAD7;"> 
+            <canvas id="voteChart"></canvas>
+            </div>
+
+
+            <!--Statistical Commend-->
+            <div class= "title" style="background-color:#A7CAD7;">
+            <canvas id="comChart"></canvas>
+            </div>
+
+
+
+        </div>
+
+
+
+
     </div>
+
+    <!-- <div class ="title" style="background-color:#A7CAD7;"> 
+    <canvas id="voteChart"></canvas>
+    </div> -->
+
+
+    <!--Statistically Report JS-->
     <script>  
         const labels = <?php echo json_encode($x)?>;
         const data = {
@@ -133,11 +184,63 @@ x    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         document.getElementById('voteChart'),
         config
         );
+
+        
+    
+
+    </script>
+
+    <!--Comment Report JS-->
+    <script>  
+        const labels = <?php echo json_encode($a)?>;
+        const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Comment Report',
+            data: <?php echo json_encode($b)?>,
+            backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(201, 203, 207, 0.2)'
+            ],
+            borderColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)'
+            ],
+            borderWidth: 1
+        }]
+        };
+
+        const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            scales: {
+            y: {
+                beginAtZero: true
+            }
+            }
+        },
+        };
+
+        var comChart = new Chart(
+        document.getElementById('comChart'),
+        config
+        );
     
 
     </script>
     
-
+    
 <!-- footer -->
 <div class="footer column" style="font-size:14px" >
 	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
