@@ -14,17 +14,16 @@
   <link href="../css/adminaddcomp.css" rel="stylesheet" type="text/css">
 </head>
 
-<body style="background-image:url('../image/bg1.png')">
+<body style="background-image:url('../image/bg.gif');font-family:Old Standard TT, serif">
 
+<div class="topnav">
+  <a href="logout.php">Logout</a>
+  <a href="#Winner">Winner</a>
+  <a class="active" href="main.php">Home</a>
+  <a style="float:left; position:relative; bottom:20px;"><img class="logo" src = "../image/logo.png"></a>
+  <a style="font-family: Comic San; font-weight:bold; position:relative; right:10cm" >AP Photography Club</a>
+</div>
 
-  <div class="topnav">
-    <a href="logout.php">Logout</a>
-    <a href="winnerannounce.php">Winner</a>
-    <a class="active" href="adminhome.php">Home</a>
-    <img class="logo" style="float: left;" src="../image/logo.png">
-    <p style="float: left;">AP Photography Club</p>
-
-  </div>
   <p style="margin-left:50px; margin-top:20px">
     <a href="admincompetition.php">
       <button type="button" class="button button1">BACK</button>
@@ -58,8 +57,31 @@
         <div class="post-container">
           <input type="submit" value="Post Competition">
         </div>
+      </div>
     </form>
   </div>
+
+<!-- footer -->
+<div class="footer" style="font-size:14px; margin-top:1000px" >
+	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
+	<div style="padding-top:20px"> 
+		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
+	</div>
+	<div>
+		<p><b>Asia Pacific University</b></p>
+		Jalan Teknologi 5, </br>
+		Taman Teknologi Malaysia,</br>
+		57000 Kuala Lumpur,</br>
+		Wilayah Persekutuan Kuala Lumpur.
+	</div>
+	</div></br>
+	<div>
+		<p style="text-align:center">Contact us by clicking
+		<a href="https://api.whatsapp.com/send?phone=60163543712&text=Hello,%20I%20have%20questions%20regarding%20the%20AP%20Photo%20Competition%20%3E.%3C">here</a>
+		</p>
+	</div>
+	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
+</div>
 
 </body>
 

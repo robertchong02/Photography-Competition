@@ -1,6 +1,6 @@
 ﻿img.logo{
-  width: 160px;
-  height: 128px;
+  width: 100px;
+  height: 65px;
   border: 5px groove;
 }
 body {
@@ -9,21 +9,24 @@ body {
 }
 
 /* navigation */
-.topnav {                     
-  padding: 0px;
-  margin-left: 10px;
+.topnav {         
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
+  background-color: white;
+  height:70px;            
 }
 
 .topnav a {
   display: block;
   float: right;
-  color: #f2f2f2;
+  color: #000000;
   text-align: center;
   padding: 24px 26px;
   text-decoration: none;
   font-size: 17px;
-  background-color: #333;
+  background-color: rgb(255, 255, 255);
 }
 
 .topnav p {
@@ -32,18 +35,28 @@ body {
   font-size: 32px;
   padding: 0px;
   margin-top: 17px;
-  font-weight: bold;
-  font-family: Comic San
+  font-family: Comic San;
+  font-weight:bold;
+
 }
 
+
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(205, 205, 205);
   color: black;
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #091dfb;
   color: white;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(6, 6, 6);
+  text-align: center;
 }
 
 .title{
@@ -195,7 +208,7 @@ input {
 	height:1000px;
 	background-color:#ffffff;
 	margin: 0px 50px 50px 50px;
-    align-items: center;
+  align-items: center;
 }
 .container1{
 	border:none;

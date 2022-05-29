@@ -12,53 +12,69 @@
     </script>
     <link rel="stylesheet" href="index.css">
     <style>
-    img.logo {
-        width: 160px;
-        height: 128px;
-        border: 5px groove;
-    }
-
     body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    .topnav {
-        padding: 0px;
-        margin-left: 10px;
-        overflow: hidden;
-    }
+    img.logo{
+    width: 100px;
+    height: 65px;
+    border: 5px groove;
+  }
+  
+  .topnav {         
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    height:70px;            
+    /* padding: 0px;
+    margin-left: 10px;
+    overflow: hidden; */
+  }
 
-    .topnav a {
-        display: block;
-        float: right;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 24px 26px;
-        text-decoration: none;
-        font-size: 17px;
-        background-color: #333;
-    }
+  .topnav a {
+    display: block;
+    float: right;
+    color: #000000;
+    text-align: center;
+    padding: 24px 26px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .topnav p {
+    float: left;
+    margin-left: 10px;
+    font-size: 32px;
+    padding: 0px;
+    margin-top: 17px;
+    font-family: Comic San;
+    font-weight:bold;
+  
+  }
 
-    .topnav p {
-        float: left;
-        margin-left: 10px;
-        font-size: 32px;
-        padding: 0px;
-        margin-top: 17px;
-        font-family: Comic San;
-        font-weight: bold;
-    }
+  
+  .topnav a:hover {
+    background-color: rgb(205, 205, 205);
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #091dfb;
+    color: white;
+  }
 
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-
-    .topnav a.active {
-        background-color: #04aa6d;
-        color: white;
-    }
+  .footer {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(6, 6, 6);
+    text-align: center;
+ }
 
     /* content box */
     body {
@@ -120,6 +136,15 @@
     text-align:center;
     width: 450px;
 }
+    .flex-container {
+        display: flex;
+    }
+    
+    .flex-container > div {
+        margin-right: 30px;
+        padding: 5px;
+    }
+
     
     </style>
     
@@ -154,3 +179,29 @@
         </a>
     </div>
 </div>
+
+<!-- footer -->
+<div class="footer column" style="font-size:14px" >
+	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
+	<div style="padding-top:20px"> 
+		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
+	</div>
+	<div>
+		<p><b>Asia Pacific University</b></p>
+		Jalan Teknologi 5, </br>
+		Taman Teknologi Malaysia,</br>
+		57000 Kuala Lumpur,</br>
+		Wilayah Persekutuan Kuala Lumpur.
+	</div>
+	</div></br>
+	<div>
+		<p style="text-align:center">Contact us by clicking
+		<a href="https://api.whatsapp.com/send?phone=60163543712&text=Hello,%20I%20have%20questions%20regarding%20the%20AP%20Photo%20Competition%20%3E.%3C">here</a>
+		</p>
+	</div>
+	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
+</div></br>
+
+</body>
+
+</html>
