@@ -8,6 +8,12 @@ include("connect.php");
 
 <head>
     <title>Statistic report</title>
+    <style>
+        .chartBox{
+            width:300px;
+        }
+
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,18 +23,10 @@ include("connect.php");
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <link rel="stylesheet" href="../css/report.css">
-</head>
 
-<<<<<<< HEAD
-<body style="background-image:url('../image/bg.gif')">
-    <div class="topnav">
-            <a href="#Logout">Logout</a>
-            <a href="#Winner">Winner</a>
-            <a class="active" href="#home">Home</a>
-            <img class="logo" style="float: left;" src = "../image/logo.png">
-            <p style="float: left;">AP Photography Club</p>
-=======
+    <link rel="stylesheet" href="../css/report.css">
+</head> 
+
 <body style="background-image:url('../image/bg.gif');font-family:Old Standard TT, serif;">
     
     <div class="topnav">
@@ -37,35 +35,11 @@ include("connect.php");
         <a class="active" href="adminhome.php">Home</a>
         <img class="logo" style="float: left" src="../image/logo.png" />
         <p style="float: left">AP Photography Club</p>
->>>>>>> ba08232c4dd0cd1a93f9b645d8b7269b7eb387af
     </div>
     <a href="adminhome.php">
             <button class="button button1">BACK</button>
     </a>    
 
-    <?php
-    
-    
-
-		// // __________HARDSETING THE vcompID....
-		// $fetchData = mysqli_query($con, "SELECT COUNT(voteID) AS 'Total of Votes' FROM voting WHERE vcompetitionID = 8 ");
-		// while($row = mysqli_fetch_assoc($fetchData)){
-
-        //     $displayData = '
-        //     <h1 style="margin: 50px;font-size: 50px; border: 5px solid black; height: 100 px;text-align:center;">Competition Detail</h1>
-            
-            
-        //     <p style="display:inline; margin-left: 650px;font-size: 30px; border: 5px solid black; height:50 px; width: 500px; text-align:center;background-color:#A7CAD7; ";>
-        //     Number of Votes:  </p> <input style = "background-color:#A7CAD7;" type="text" value = "'.$row["Total of Votes"].'" name="voteSum" readonly/>
-            
-        //     ';
-        //     echo $displayData;
-
-
-			
-		// }
-		
-    ?>
     <h1 style="margin: 50px;font-size: 50px; border: 5px solid black; height: 100 px;text-align:center;">Competition Detail</h1>
     <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID ASC LIMIT 1");
@@ -78,17 +52,10 @@ include("connect.php");
 		}
     ?>	
 
-    <!-- SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
-    FROM ((Orders
-    INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
-    INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID); -->
-
-
     <!--Php for Statistical Chart-->
 
     <?php     
 
-        $query = $con->query("SELECT V.COUNT(Customer_ID) AS 'mon', V.vcontentID AS 'total' FROM voting INNER JOIN content ON V.vcontentID = C.ContentID GROUP BY vcontentID ");
 
         $query = $con->query("SELECT COUNT(Customer_ID) AS 'mon', vcontentID AS 'total' FROM voting GROUP BY vcontentID");
 
@@ -99,153 +66,134 @@ include("connect.php");
         }
     ?>
 
-    <!--Php for commend Chart-->
     <?php
+        $fetchData = $con->query("SELECT monthname AS 'Months', amount AS 'amo' FROM test ");
+    
+        foreach($fetchData as $data_1){
 
-        $query1 = $con->query("SELECT monthname AS 'total1', amount AS 'mon1' FROM test GROUP BY monthname");
-
-        foreach($query1 as $data)
-        {
-            $a[] = $data['total1'];
-            $b[] = $data['mon1'];
+            $tot = $data_1['amo'];
+            $month= $data_1['Months'];
         }
     ?>
 
-
-
+    <!--Php for commend Chart-->
     <!-- 左右Flex 布局 -->
     <div class = "flex-container" style="height:700px">
 
         <div class="baise" style="width: 500px; background-color: red;">
-
-
         </div>
 
         <div class="baise flex-container column" style="width: 500px;">
-
             <!--Statistic report Area-->
             <div class ="title" style="background-color:#A7CAD7;"> 
             <canvas id="voteChart"></canvas>
             </div>
 
-
             <!--Statistical Commend-->
             <div class= "title" style="background-color:#A7CAD7;">
-            <canvas id="comChart"></canvas>
+            <canvas id= "commentChart"></canvas>
             </div>
-
-
-
         </div>
-
-
-
-
     </div>
-
-    <!-- <div class ="title" style="background-color:#A7CAD7;"> 
-    <canvas id="voteChart"></canvas>
-    </div> -->
-
 
     <!--Statistically Report JS-->
     <script>  
-        const labels = <?php echo json_encode($x)?>;
-        const data = {
-        labels: labels,
-        datasets: [{
-            label: 'Statistical Report',
-            data: <?php echo json_encode($y)?>,
-            backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(255, 205, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(201, 203, 207, 0.2)'
-            ],
-            borderColor: [
-            'rgb(255, 99, 132)',
-            'rgb(255, 159, 64)',
-            'rgb(255, 205, 86)',
-            'rgb(75, 192, 192)',
-            'rgb(54, 162, 235)',
-            'rgb(153, 102, 255)',
-            'rgb(201, 203, 207)'
-            ],
-            borderWidth: 1
-        }]
+            const labels = <?php echo json_encode($x)?>;
+            const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Statistical Report',
+                data: <?php echo json_encode($y)?>,
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 205, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(201, 203, 207, 0.2)'
+                ],
+                borderColor: [
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                'rgb(201, 203, 207)'
+                ],
+                borderWidth: 1
+            }]
+            };
+
+            const config = {
+                type: 'bar',
+                data: data,
+                options: {
+                    scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                    }
+                },
+            };
+
+            const voteChart = new Chart(
+            document.getElementById('voteChart'),
+            config
+            );
+
+        // comment Statistic
+        // data of pie chart
+
+        const comlab = <?php echo json_encode($month)?>;
+        const dataCom = {
+            labels: comlab,
+            datasets: [{
+                label: 'Comment Report',
+                data: <?php echo json_encode($tot)?>,
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 205, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(201, 203, 207, 0.2)'
+                ],
+                borderColor: [
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                'rgb(201, 203, 207)'
+                ],
+                borderWidth: 1
+            }]
         };
 
-        const config = {
-        type: 'bar',
-        data: data,
-        options: {
-            scales: {
-            y: {
-                beginAtZero: true
-            }
-            }
-        },
+        // config commendReport
+        
+        const configCom={
+            type: 'bar',
+            data: dataCom,
+            options: {
+                scales: {
+                y: {
+                    beginAtZero: true
+                }
+                }
+            },
         };
-
-        var voteChart = new Chart(
-        document.getElementById('voteChart'),
-        config
-        );
+        // render comment report
+        const commentChart = new Chart(
+        document.getElementById('commentChart'),
+        configCom
+        ); 
 
         
-    
-
-    </script>
-
-    <!--Comment Report JS-->
-    <script>  
-        const labels = <?php echo json_encode($a)?>;
-        const data = {
-        labels: labels,
-        datasets: [{
-            label: 'Comment Report',
-            data: <?php echo json_encode($b)?>,
-            backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(255, 205, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(201, 203, 207, 0.2)'
-            ],
-            borderColor: [
-            'rgb(255, 99, 132)',
-            'rgb(255, 159, 64)',
-            'rgb(255, 205, 86)',
-            'rgb(75, 192, 192)',
-            'rgb(54, 162, 235)',
-            'rgb(153, 102, 255)',
-            'rgb(201, 203, 207)'
-            ],
-            borderWidth: 1
-        }]
-        };
-
-        const config = {
-        type: 'bar',
-        data: data,
-        options: {
-            scales: {
-            y: {
-                beginAtZero: true
-            }
-            }
-        },
-        };
-
-        var comChart = new Chart(
-        document.getElementById('comChart'),
-        config
-        );
     
 
     </script>
