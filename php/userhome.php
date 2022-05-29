@@ -214,9 +214,6 @@
 </div>
 <br><br><br><br>
 
-<<<<<<< HEAD
-
-=======
 <!-- footer -->
 <div class="footer" style="font-size:14px" >
 	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
@@ -238,7 +235,6 @@
 	</div>
 	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
 </div></br>
->>>>>>> 98a9c78511a889168892b1145dbce5b58b4d9229
 
 <!-- footer -->
 <div class="footer column" style="font-size:14px" >
