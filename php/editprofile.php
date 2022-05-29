@@ -19,9 +19,9 @@ $customerID = $_SESSION['Customer_ID'];
   <a href="editprofile.php">Profile</a>
   <a href="#Winner">Winner</a>
   <a href="#About">About Us</a>
-  <a class="active" href="main.php">Home</a>
-  <a style="float:left; position:relative; bottom:20px;"><img class="logo" src = "../image/logo.png"></a>
-  <a style="font-family: Comic San; font-weight:bold; position:relative; right:10cm" >AP Photography Club</a>
+  <a class="active" href="userhome.php">Home</a>
+  <img class="logo" style="float: left;" src = "../image/logo.png">
+    <p style="float: left;">AP Photography Club</p>
 </div>
 <h2 style="text-align:center;">USER PROFILE</h2>	
 <nav>

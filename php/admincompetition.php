@@ -62,9 +62,9 @@ include("connect.php");
       <br><br>
       <br><br>
 
-      
-      <a href="report.php"><button class="button button1" style="bottom:0;right:0;margin-left:650px">Statistic Report</button></a>  
-      
+      <div style="padding-right:10px;padding-bottom:50px">
+      <a href="report.php"><button class="button button1" style="margin: auto; float:right">Statistic Report</button></a>  
+      </div>
     </div> ';
     echo $displayData;  
 	}

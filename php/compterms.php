@@ -116,8 +116,9 @@ $customerID = $_SESSION['Customer_ID'];
       <?php 
       echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["CompID"]. '>';
       ?>
-
-      <input style="position:absolute;bottom:0;right:0;margin-right:20px;background-color: #4CAF50;color:white" type="submit" value="Submit">
+      <div style="margin-right:30px">
+      <input style="margin-right:20px;background-color: #4CAF50;color:white;margin:auto; float:right" type="submit" value="Submit">
+      </div>
       </form>
     </div>
   </div>

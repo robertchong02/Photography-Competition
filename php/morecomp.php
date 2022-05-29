@@ -22,8 +22,8 @@ $customerID = $_SESSION['Customer_ID'];
   <a href="#Winner">Winner</a>
   <a href="#About">About Us</a>
   <a class="active" href="main.php">Home</a>
-  <a style="float:left; position:relative; bottom:20px;"><img class="logo" src = "../image/logo.png"></a>
-  <a style="font-family: Comic San; font-weight:bold; position:relative; right:10cm" >AP Photography Club</a>
+ <img class="logo" style="float: left;" src = "../image/logo.png">
+    <p style="float: left;">AP Photography Club</p>
 </div>
 
 <p style="margin-left:50px; margin-top:20px">
@@ -64,8 +64,8 @@ $customerID = $_SESSION['Customer_ID'];
       <br><br><br><br><br><br>
 
       <a href="viewcontent.php">
-      <input style="position:absolute;bottom:0;right:0;margin-right:20px;background-color: #4CAF50;color:white" type="button" value="Go Voting">
-      </a>
+      <div style="margin-right:30px"><input style="background-color:#4CAF50;color:white; margin:auto; float:right" type="button" value="Go Voting">
+      </div></a>
     </div> ';
     echo $displayData;  
 	}
