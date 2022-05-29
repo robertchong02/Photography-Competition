@@ -109,7 +109,7 @@ $customerID = $_SESSION['Customer_ID'];
 	
 			<form name="viewcomment" method="get" action="readcomment.php">
 
-				<input type ="submit" value= "Read Comments" style="width:540px;background-color:#AFB4A4"/>	
+				<input type ="submit" value= "Read Comments" style="width:540px;background-color:#AFB4A4;cursor: pointer;"/>	
 				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
 				<input style="display:none;" type="text" name="vcompetitionID" value='.$row["vcompetitionID"].'>
 
@@ -118,15 +118,6 @@ $customerID = $_SESSION['Customer_ID'];
 			<form name="viewcontent" method="get" action="vote.php" style="padding-left:200px; margin:auto">
 			<div style="display:inline-block; float:right;">
 				<input class = "button button1" type ="submit"  value= "Vote" name="vote" style="width:100px;margin-right:20px"/>		
-				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
-				<input style="display:none;" type="text" name="vcompetitionID" value='.$row["vcompetitionID"].'>
-				
-			</div>
-			</form>
-
-			<form name="comment" method="get" action="comment.php" style="padding-left:200px; margin:auto">
-			<div style="display:inline-block; float:right;">		
-				<input class = "button button1" type ="submit"  value= "Comment" name="comment" style="width:100px;margin-right:20px"/>	
 				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
 				<input style="display:none;" type="text" name="vcompetitionID" value='.$row["vcompetitionID"].'>
 				
@@ -141,7 +132,14 @@ echo $displayData;
 	?>
 </nav>
 <!-- </form> -->
-
+<!-- <form name="comment" method="get" action="comment.php" style="padding-left:200px; margin:auto">
+			<div style="display:inline-block; float:right;">		
+				<input class = "button button1" type ="submit"  value= "Comment" name="comment" style="width:100px;margin-right:20px"/>	
+				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
+				<input style="display:none;" type="text" name="vcompetitionID" value='.$row["vcompetitionID"].'>
+				
+			</div>
+			</form> -->
 <script>
 let popup = document.getElementById("popup");
 
