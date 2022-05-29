@@ -15,7 +15,7 @@
 </head>
 
 
-<body style="background-image:url('../image/bg.gif')">
+<body style="background-image:url('../image/bg.gif');font-family:Old Standard TT, serif;">
 <div class="topnav">
   <a href="logout.php">Logout</a>
   <a href="editprofile.php">Profile</a>
@@ -26,12 +26,7 @@
     <p style="float: left;">AP Photography Club</p>
 </div>
 
-<div style="text-align:right; margin-right:30px">
-<a href="email.html">  
-	<button type="button" class="btn btn-primary">Notifications</button>  
-</a></div>
-<h2 id="home" style="margin:25px; text-align:center">Welcome!  </h2>
-<img style="object-fit: contain;width:100%;height:100%" src = "../image/home.png">
+<img id="home" style="object-fit: contain;width:100%;height:100%" src = "../image/home.png">
 	<div class=title style="font-size:16px; margin:auto; margin-top:18px; margin:25px">
 	<form name="login" method="get" action="compread2.php" style="padding-left:200px; margin:auto">
 		<table>
@@ -46,50 +41,50 @@
 		<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="object-fit: contain;width:500px; height:600px; padding-top:10px;padding-right:35px ">
 		</td>
 		<td></td>
-		<td colspan="3"style="font-size:20px; padding-top:10px;padding-left:15px"><b>Open for Registration!!!</b><br/></td>
+		<td colspan="3"style="font-size:24px; padding-top:10px;padding-left:15px;color:red"><b>Open for Registration Now!!!</b><br/></td>
 		</tr>
 		<tr><td></td></tr>
 		<tr>
 			<td></td>
-			<td style="text-align:left;padding-left:15px">Title</td>
+			<td style="text-align:left;padding-left:15px;font-weight:bold">Title</td>
 			<td>:</td>
-			<td><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="37" maxlength="50" style="height:50px" readonly/></td>
+			<td><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="37" maxlength="50" style="background-color:transparent;border:none" readonly/></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td style="text-align:left;padding-left:15px">Theme</td>
+			<td style="text-align:left;padding-left:15px;font-weight:bold">Theme</td>
 			<td>:</td>
-			<td><input type="text" value = "'.$row["Theme"].'" name="theme" size="37" maxlength="30" readonly/></td>
+			<td><input type="text" value = "'.$row["Theme"].'" name="theme" size="37" maxlength="30" style="background-color:transparent;border:none" readonly/></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td style="text-align:left;padding-left:15px">Register Date</td>
+			<td style="text-align:left;padding-left:15px;font-weight:bold">Register Date</td>
 			<td>:</td>
-			<td><input type="text" value = "'.$row["RegisterDate"].'" name="registerdate" size="37" maxlength="15" readonly/></td>
+			<td><input type="text" value = "'.$row["RegisterDate"].'" name="registerdate" size="37" maxlength="15" style="background-color:transparent;border:none" readonly/></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td style="text-align:left;padding-left:15px">Deadline</td>
+			<td style="text-align:left;padding-left:15px;font-weight:bold">Deadline</td>
 			<td>:</td>
-			<td><input type="text" value = "'.$row["Deadline"].'" name="deadline" size="37" maxlength="15" readonly/></td>
+			<td><input type="text" value = "'.$row["Deadline"].'" name="deadline" size="37" maxlength="15" style="background-color:transparent;border:none" readonly/></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td style="text-align:left;padding-left:15px">Competition Date</td>
+			<td style="text-align:left;padding-left:15px;font-weight:bold">Competition Date</td>
 			<td>:</td>
-			<td><input type="text" value = "'.$row["CompetitionDate"].'" name="compdate" size="37" maxlength="15" readonly/></td>
+			<td><input type="text" value = "'.$row["CompetitionDate"].'" name="compdate" size="37" maxlength="15" style="background-color:transparent;border:none" readonly/></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td style="text-align:left;padding-left:15px">Prize</td>
+			<td style="text-align:left;padding-left:15px;font-weight:bold">Prize</td>
 			<td>:</td>
-			<td><input type="text" value = "'.$row["Prize"].'" name="prize" size="37" maxlength="8" readonly/></td>
+			<td><textarea name = "prize" style="width: 80%;height: 80px;background:transparent;border:none;" readonly>'.$row["Prize"].'</textarea></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td style="text-align:left;padding-left:15px">Eligibility</td>
+			<td style="text-align:left;padding-left:15px;font-weight:bold">Eligibility</td>
 			<td>:</td>
-			<td><input type="text" value = "'.$row["Eligibility"].'" name="eligibility" size="37" maxlength="8" readonly/></td>
+			<td><input type="text" value = "'.$row["Eligibility"].'" name="eligibility" size="37" maxlength="8" style="background-color:transparent;border:none" readonly/></td>
 		</tr>
 		<tr>
 			<td></td>
@@ -110,15 +105,17 @@
 
 
 	<div style="padding-right:10px; margin:auto">
-		<div class="title" style="text-align:center; height:150px">
+		<div class="title" style="text-align:center;">
 		<?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '8'");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
 		$displayData = '
-			<input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50" style="height:50px;border:none;background-color:#A7CAD7;" readonly/>
-			<b style="font-size:17px">(Closed)</b><br/><br/>
+			<input type="text" value = "'.$row["CompetitionTitle"].'" name="title" style="height:50px;border:none;background-color:#A7CAD7;font-size:28px" readonly/>
+			<b style="font-size:28px">(Closed)</b><br/><br/>
+			<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="object-fit: contain;width:500px; height:600px;">
+			<br><br>
 			<a href="viewcontent.php">
 				<button type="button" class="btn btn-primary">Click Here to Vote</button>
 			</a>';
@@ -135,10 +132,10 @@
 			</a>
 		</div>
 	</div>
+<br>
+<br>
 
-
-
-	<h2 id="Winner" style="margin:25px; text-align:center">Winner</h2>
+<h2 id="Winner" style="margin:25px; text-align:center;font-family:Franklin Gothic Medium">Winner</h2>
 <div class="title">
 	<p style="text-align:center; font-size:24px">Winner for the latest competition:</p>
 	<?php
@@ -208,17 +205,36 @@
 	</div>
 </div><br/><vr/>
 
-<h2 id="About" style="margin:25px; text-align:center">About Us</h2>
-<div class="title" style="text-align:justify; margin:25px"> 
+<h2 id="About" style="margin:25px; text-align:center;font-family:Franklin Gothic Medium">About Us</h2>
+<div class="title" style="text-align:justify; margin:25px;font-size:20px"> 
 	<p>Founded in 2022 by Asia Pacific University student in University Photography Organisation is a leading global platform dedicated to the development and advancement of photographic culture. Our programming and competition initiatives provide valuable opportunities for artists working in photography and help broaden the conversation around their work. Through our fairs we play a key role in driving the growth of the contemporary art market for photo-based art and deepening audience engagement with the medium. </p>
 	<p>Our value lies in the integrity of our expertise, our years of experience and the strength of our relationships with both individual photographers as well as our industry-leading partners around the world. Our objective is to let every student to have a platform to share their masterpiece of photography and gain their confident on photography skills plus give them an opportunity to share their experiences of photography techniques. So, competition is organized by the admin to know who has the most perfect skills of photography and winner will be announce at the end. Contact Us if you need enquires. So, what are you waiting for? </p>
 	<br/><br/>
-	<p style="text-align:center; font-size:20px">LOGIN and JOIN US NOW!!</p>
+	<p style="text-align:center; font-size:20px;color:blue">LOGIN and JOIN US NOW!!</p>
 </div>
+<br><br><br><br>
 
-<p style="text-align:center">Contact us by clicking
-<a href="https://api.whatsapp.com/send?phone=60163543712&text=Hello,%20I%20have%20questions%20regarding%20the%20AP%20Photo%20Competition%20%3E.%3C">here</a>
-</p>
+<!-- footer -->
+<div class="footer column" style="font-size:14px" >
+	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
+	<div style="padding-top:20px"> 
+		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
+	</div>
+	<div>
+		<p><b>Asia Pacific University</b></p>
+		Jalan Teknologi 5, </br>
+		Taman Teknologi Malaysia,</br>
+		57000 Kuala Lumpur,</br>
+		Wilayah Persekutuan Kuala Lumpur.
+	</div>
+	</div></br>
+	<div>
+		<p style="text-align:center">Contact us by clicking
+		<a href="https://api.whatsapp.com/send?phone=60163543712&text=Hello,%20I%20have%20questions%20regarding%20the%20AP%20Photo%20Competition%20%3E.%3C">here</a>
+		</p>
+	</div>
+	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
+</div></br>
 
 	
 </body>
