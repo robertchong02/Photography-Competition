@@ -215,7 +215,7 @@
 <br><br><br><br>
 
 <!-- footer -->
-<div class="footer column" style="font-size:14px" >
+<div class="footer" style="font-size:14px" >
 	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
 	<div style="padding-top:20px"> 
 		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
