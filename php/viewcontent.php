@@ -82,11 +82,11 @@ $customerID = $_SESSION['Customer_ID'];
 
 <!-- <form method="get" action="comment.php" style="margin:auto"> -->
 <nav class="content1 title" style="background-color:#A7CAD7;">
-
 <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcompetitionID = '8'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcompetitionID = ".$_GET['CompID']);
   			while($row = mysqli_fetch_assoc($fetchData)) 
-  		{		
+  		{
+			echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["CompID"]. '>';		
 			
       $displayData = '
 	  
@@ -139,7 +139,6 @@ echo $displayData;
 
 	}
 	?>
-
 </nav>
 <!-- </form> -->
 
