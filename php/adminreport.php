@@ -54,22 +54,12 @@ include("connect.php");
     ?>	
     <br>
     <div style="position:relative;left:40%">
-    <?php
-        $query = "SELECT COUNT(ContentID) AS 'Total', ContentTitle FROM content";
-        $result= mysqli_query($con, $query);
-        if($result){
-            while($row=mysqli_fetch_assoc($result)){
-                $display_Data = '
 
-                    <div>
-                    <b>Total Number of Participant     : </b><input type="text" value = "'.$row['Total'].'" name="ContentTitle" readonly>
-                    </div>
-                    <br>
-                ';
-                echo $display_Data;
-            }
-        }   
-        ?>
+            <div style="display:inline-block">
+            <p style="float:left;font-weight:bold">Total Number of Participant     :</p>
+            <p style="float:left;border:1px solid black;background:white;width:200px;margin-left:2px;padding:2px" id="total"></p> 
+            </div>
+            <br>
             <?php
             $query = "SELECT COUNT(vcontentID) AS 'Total', vcontentTitle FROM verifycontent";
             $result= mysqli_query($con, $query);
@@ -77,7 +67,7 @@ include("connect.php");
                 while($row=mysqli_fetch_assoc($result)){
                     $display_Data = '
                     <div>
-                    <b>Number of Content Approved: </b><input type="text" value = "'.$row['Total'].'" name="ContentTitle" readonly>
+                    <b>Number of Content Approved: </b><input type="text" value = "'.$row['Total'].'" id="num1" readonly>
                     </div>
                     <br>
                     ';
@@ -92,7 +82,7 @@ include("connect.php");
                 while($row=mysqli_fetch_assoc($result)){
                     $display_Data = '
                     <div>
-                    <b>Number of Content Rejected   :</b> <input type="text" value = "'.$row['Total'].'" name="ContentTitle" readonly>
+                    <b>Number of Content Rejected   :</b> <input type="text" value = "'.$row['Total'].'" id="num2" readonly>
                     </div>
                     <br>
                     ';
@@ -326,6 +316,11 @@ include("connect.php");
         configCom
         ); 
 
+        
+        var x = document.getElementById("num1").value;
+        var y = document.getElementById("num2").value;
+        document.getElementById("total").innerHTML = +x + +y;
+        
         
     
 
