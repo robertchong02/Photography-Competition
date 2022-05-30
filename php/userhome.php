@@ -117,7 +117,7 @@
 			<b style="font-size:28px">(Closed)</b><br/><br/>
 			<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="object-fit: contain;width:500px; height:600px;">
 			<br><br>
-			<input type ="submit" class="btn btn-primary"  value= "Click here to vote"/>';
+			<input type ="submit" class="btn btn-primary"  value= "Click here to vote and Comment"/>';
 			echo '<input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>';
 			echo $displayData;  
 		}
