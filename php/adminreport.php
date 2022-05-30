@@ -42,7 +42,6 @@ include("connect.php");
 
     <h1 style="margin: 50px;font-size: 50px; border: 2px solid black; height: 100 px;text-align:center;background:white">Statistic Report</h1>
     <?php
-            echo '<input style="display:none" type="text" name="CompID" value='.$_GET["CompID"]. '>';	
   			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = ".$_GET['CompID']);
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
@@ -54,7 +53,7 @@ include("connect.php");
 		}
     ?>	
     <br>
-    <div style="position:relative;left:40%">
+    <div style="position:relative;margin:auto;display:flex;flex-direction:column;justify-content:center;align-items:center;">
 
             <div style="display:inline-block">
             <p style="float:left;font-weight:bold">Total Number of Participant     :</p>
@@ -65,8 +64,7 @@ include("connect.php");
             $query = "SELECT COUNT(vcontentID) AS 'Total', vcontentTitle FROM verifycontent WHERE vcompetitionID =".$_GET['CompID'] ;
             $result= mysqli_query($con, $query);
             if($result){
-                while($row=mysqli_fetch_assoc($result)){
-                    echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["CompID"]. '>';	
+                while($row=mysqli_fetch_assoc($result)){	
                     $display_Data = '
                     <div>
                     <b>Number of Content Approved: </b><input style="width:93px" type="text" value = "'.$row['Total'].'" id="num1" readonly>
@@ -81,8 +79,7 @@ include("connect.php");
             $query = "SELECT COUNT(rcontentID) AS 'Total', rcontentTitle FROM rejectedcontent WHERE rcompetitionID =".$_GET['CompID'] ;
             $result= mysqli_query($con, $query);
             if($result){
-                while($row=mysqli_fetch_assoc($result)){
-                    echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["CompID"]. '>';	
+                while($row=mysqli_fetch_assoc($result)){	
                     $display_Data = '
                     <div>
                     <b>Number of Content Rejected   :</b> <input style="width:98px" type="text" value = "'.$row['Total'].'" id="num2" readonly>
@@ -108,7 +105,8 @@ include("connect.php");
     ?>
 
     <?php
-        $query = $con->query("SELECT COUNT(contentcomment) AS 'conTotal', vcID  FROM contentcomment GROUP BY vcID");
+        $run = mysqli_real_escape_string($con, $_GET['CompID']);
+        $query = $con->query("SELECT COUNT(contentcomment) AS 'conTotal', vcID  FROM contentcomment WHERE compID ='$run' GROUP BY vcID");
     
         foreach($query as $data_1){
 
@@ -159,13 +157,15 @@ include("connect.php");
             <!--Statistic report Area-->
             <div class ="title" style="width:100%"> 
             <canvas id="voteChart"></canvas>
+            <p>x-axis:Content ID;y-axis:Total votes</p>
             </div>
-
+            
 
             <!--HAVENT DONE-->
             <!--Statistical Commend-->
             <div class= "title" style="width:100%">
             <canvas id= "commentChart"></canvas>
+            <p>x-axis:Content ID;y-axis:Total comments</p>
             </div>
 
 
@@ -175,7 +175,7 @@ include("connect.php");
                 while($row = mysqli_fetch_assoc($fetchData)){
                     $disData= '
                     <div style="border: 1px solid black;width:100%">
-                        <p>This Tab Should list every Content ID and The Tilte And The Participant</p>
+                        <p>This Tab Should list every Content ID and The Title And The Participant</p>
 
                         <b>Content ID: </b><input style="border:none;background:transparent" type="text" value="'.$row["vcontentID"].'"><br>
                         
