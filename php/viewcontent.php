@@ -64,7 +64,7 @@ $customerID = $_SESSION['Customer_ID'];
 </div>
 <h2 style="text-align:center">POSTS</h2>
 <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID ASC LIMIT 1");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = ".$_GET['CompID']);
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			

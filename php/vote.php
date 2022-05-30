@@ -8,20 +8,14 @@ $date = date('Y-m-d');
 
 
 if($_GET["vote"]) {
-        $checkCustomerID = "SELECT * FROM `voting` WHERE `Customer_ID` = '$customerID'";    
-        $checkCompID = "SELECT * FROM `voting` WHERE `vcompetitionID` = '$vcompetitionID'";
-        // $checkVContentID ="SELECT * FROM `voting` WHERE`vconID` ='$vconID'";
+        $checkCustomerID = "SELECT * FROM `voting` WHERE `Customer_ID` = '$customerID' And `vcompetitionID` = '$vcompetitionID'";    
 
         $validate_CustomerID = mysqli_query($con, $checkCustomerID);
-        $validate_CompID = mysqli_query($con, $checkCompID);
-        // $validate_VContentID = mysqli_query($con, $checkVContentID);
 
-        $row_CustomerID = mysqli_fetch_assoc($validate_CustomerID);
-        $row_CompID = mysqli_fetch_assoc($validate_CompID);
-        // $row_VContentID = mysqli_fetch_assoc($validate_VContentID);
+        $rowresultcount = mysqli_num_rows($validate_CustomerID);
 
-        if (($customerID == $row_CustomerID["Customer_ID"]) && ($vcompetitionID == $row_CompID["vcompetitionID"])){
-        echo '<script> alert ("Vote already existed");
+        if ($rowresultcount>0){
+            echo '<script> alert ("Vote already existed");
             window.location.href= "userhome.php";
             </script>';
         }

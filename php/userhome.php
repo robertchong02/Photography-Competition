@@ -212,7 +212,6 @@
 	<p>Founded in 2022 by Asia Pacific University student in University Photography Organisation is a leading global platform dedicated to the development and advancement of photographic culture. Our programming and competition initiatives provide valuable opportunities for artists working in photography and help broaden the conversation around their work. Through our fairs we play a key role in driving the growth of the contemporary art market for photo-based art and deepening audience engagement with the medium. </p>
 	<p>Our value lies in the integrity of our expertise, our years of experience and the strength of our relationships with both individual photographers as well as our industry-leading partners around the world. Our objective is to let every student to have a platform to share their masterpiece of photography and gain their confident on photography skills plus give them an opportunity to share their experiences of photography techniques. So, competition is organized by the admin to know who has the most perfect skills of photography and winner will be announce at the end. Contact Us if you need enquires. So, what are you waiting for? </p>
 	<br/><br/>
-	<p style="text-align:center; font-size:20px;color:blue">LOGIN and JOIN US NOW!!</p>
 </div>
 <br><br><br><br>
 
