@@ -57,8 +57,8 @@ include("connect.php");
         <div class="admingrid-item">
             <img  style="object-fit: contain;width:90%;height:90%" src="../image/photography.jpeg" />
             <br>
-            <a href="admincompetition.php">
-            <button type="button" class="functbtn">All Competition</button><br />
+            <a href="adminaddcomp.php">
+            <button type="button" class="functbtn">Add New Competition</button><br />
             </a>
         </div>
 		
@@ -73,7 +73,7 @@ include("connect.php");
         <div class="admingrid-item">
             <img style="object-fit: contain;width:90%;height:90%" src="../image/report.png" />
             <br>
-            <a href="adminreport.php">
+            <a href="admincompetition.php">
             <button type="button" class="functbtn">View Statistical Report</button><br />
             </a>
         </div>  

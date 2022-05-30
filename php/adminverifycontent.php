@@ -43,7 +43,7 @@ include("connect.php");
                 <div style="padding:70px 30px"><img src="data:image/jpg;base64, '.base64_encode($row["ContentImage"]).'" style="max-width:100%; height:250px"></div>
                 </div>
                 <div style="width:60%">
-                <b>ContentID:</b><input type="text" value = "'.$row["ContentID"].'" name="contentID"  class="compread2" readonly/>
+                <input type="text" value = "'.$row["ContentID"].'" name="contentID"  class="compread2" style=display:none;" readonly/>
                 <br>
                 <b>CompetitionID:</b><input type="text" value = "'.$row["CompetitionID"].'" name="compID"  class="compread2" readonly/>
                 <br>

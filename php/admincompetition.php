@@ -32,13 +32,14 @@ include("connect.php");
 <br>
 <br>
 
-<form name="compread2" method="get"  style=" padding-left:6px;">
+<form name="compread2" action="adminreport.php" method="get"  style=" padding-left:6px;">
   <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID DESC");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID Desc");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
       $displayData = '
+      
       <div class="box1" style="background-color:#A7CAD7;text-align:center;">
       <h2>Title: <input type="text" value = "'.$row["CompetitionTitle"].'" name="title"  style="width:200px" readonly/></h2>
       <img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="width:300px; height:300px; ">
@@ -55,16 +56,17 @@ include("connect.php");
     </div> 
     <div class="box2" style="background-color:#A7CAD7; margin-bottom:100px">
       <h3> Description </h3>
-      <textarea name = "description" cols=40  rows=3 style="width: 90%;height: 338px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Description"].'</textarea>
+      <textarea name = "description" cols=40  rows=3 style="width: 90%;height: 330px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Description"].'</textarea>
       
       <h3> Guideline </h3>
-      <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 350px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Guideline"].'</textarea>
-      <br><br>
-      <br><br>
+      <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 345px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Guideline"].'</textarea>
 
+      <form method="get" action="adminreport.php">
       <div style="padding-right:10px;padding-bottom:50px">
-      <a href="report.php"><button class="button button1" style="margin: auto; float:right">Statistic Report</button></a>  
+      <input type ="submit" class="btn btn-primary" style="margin-left:530px;"  value= "Statistic Report"/>
+      <input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>	
       </div>
+      </form>
     </div> ';
     echo $displayData;  
 	}

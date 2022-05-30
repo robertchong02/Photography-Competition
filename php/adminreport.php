@@ -42,10 +42,11 @@ include("connect.php");
 
     <h1 style="margin: 50px;font-size: 50px; border: 2px solid black; height: 100 px;text-align:center;background:white">Statistic Report</h1>
     <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID ASC LIMIT 1");
+            echo '<input style="display:none" type="text" name="CompID" value='.$_GET["CompID"]. '>';	
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = ".$_GET['CompID']);
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
-			
+            
       $displayData = '
 			<p style="margin: auto;font-size: 30px; border:none; height:50 px; width: 500px; text-align:center;background-color:transparent; ">
             Competition Title:<input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="60" style="border-style: none none solid none; background-color:transparent;font-size:24px; text-align:center" readonly/></p>';
@@ -57,17 +58,18 @@ include("connect.php");
 
             <div style="display:inline-block">
             <p style="float:left;font-weight:bold">Total Number of Participant     :</p>
-            <p style="float:left;border:1px solid black;background:white;width:200px;margin-left:2px;padding:2px" id="total"></p> 
+            <p style="float:left;border:1px solid black;background:white;width:100px;height:30px;margin-left:2px;padding:2px" id="total"></p> 
             </div>
             <br>
             <?php
-            $query = "SELECT COUNT(vcontentID) AS 'Total', vcontentTitle FROM verifycontent";
+            $query = "SELECT COUNT(vcontentID) AS 'Total', vcontentTitle FROM verifycontent WHERE vcompetitionID =".$_GET['CompID'] ;
             $result= mysqli_query($con, $query);
             if($result){
                 while($row=mysqli_fetch_assoc($result)){
+                    echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["CompID"]. '>';	
                     $display_Data = '
                     <div>
-                    <b>Number of Content Approved: </b><input type="text" value = "'.$row['Total'].'" id="num1" readonly>
+                    <b>Number of Content Approved: </b><input style="width:93px" type="text" value = "'.$row['Total'].'" id="num1" readonly>
                     </div>
                     <br>
                     ';
@@ -76,13 +78,14 @@ include("connect.php");
             }   
             ?>
             <?php
-            $query = "SELECT COUNT(rcontentID) AS 'Total', rcontentTitle FROM rejectedcontent";
+            $query = "SELECT COUNT(rcontentID) AS 'Total', rcontentTitle FROM rejectedcontent WHERE rcompetitionID =".$_GET['CompID'] ;
             $result= mysqli_query($con, $query);
             if($result){
                 while($row=mysqli_fetch_assoc($result)){
+                    echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["CompID"]. '>';	
                     $display_Data = '
                     <div>
-                    <b>Number of Content Rejected   :</b> <input type="text" value = "'.$row['Total'].'" id="num2" readonly>
+                    <b>Number of Content Rejected   :</b> <input style="width:98px" type="text" value = "'.$row['Total'].'" id="num2" readonly>
                     </div>
                     <br>
                     ';
@@ -94,7 +97,7 @@ include("connect.php");
     <!--Php for Statistical Chart-->
 
     <?php     
-        $query = $con->query("SELECT COUNT(Customer_ID) AS 'mon', vcontentID  FROM voting GROUP BY vcontentID");
+        $query = $con->query("SELECT COUNT(Customer_ID) AS 'mon', vcontentID  FROM voting GROUP BY vcontentID ");
 
         foreach($query as $data)
         {
@@ -168,7 +171,7 @@ include("connect.php");
 
             <h3 style="margin:auto">Reference Table</h3>
             <?php
-                $fetchData = mysqli_query($con, "SELECT * FROM verifycontent");
+                $fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcompetitionID =".$_GET['CompID']);
                 while($row = mysqli_fetch_assoc($fetchData)){
                     $disData= '
                     <div style="border: 1px solid black;width:100%">
