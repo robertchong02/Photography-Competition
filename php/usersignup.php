@@ -46,7 +46,7 @@
  	<tr>
  		<td style="text-align:left">Contact Number</td>
  		<td>:</td>
- 		<td><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{7}" /></td>
+ 		<td><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{7}" placeholder="Eg:xxx-xxxxxxx" /></td>
  	</tr>
  	<tr>
  		<td style="text-align:left">Gender</td>
