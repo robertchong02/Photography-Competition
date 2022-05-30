@@ -96,8 +96,9 @@ include("connect.php");
     </div>
     <!--Php for Statistical Chart-->
 
-    <?php     
-        $query = $con->query("SELECT COUNT(Customer_ID) AS 'mon', vcontentID  FROM voting GROUP BY vcontentID ");
+    <?php  
+        $run = mysqli_real_escape_string($con, $_GET['CompID']);
+        $query = $con->query("SELECT COUNT(Customer_ID) AS 'mon', vcontentID FROM voting WHERE vcompetitionID ='$run' GROUP BY vcontentID");
 
         foreach($query as $data)
         {
@@ -107,8 +108,7 @@ include("connect.php");
     ?>
 
     <?php
-    //ORDER BY 后面可以不要 给你们看Difference
-        $query = $con->query("SELECT COUNT(contentcomment) AS 'conTotal', vcID  FROM contentcomment GROUP BY vcID ORDER BY vcID DESC");
+        $query = $con->query("SELECT COUNT(contentcomment) AS 'conTotal', vcID  FROM contentcomment GROUP BY vcID");
     
         foreach($query as $data_1){
 
