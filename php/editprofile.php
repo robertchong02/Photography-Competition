@@ -17,8 +17,8 @@ $customerID = $_SESSION['Customer_ID'];
 <div class="topnav">
   <a href="logout.php">Logout</a>
   <a href="editprofile.php">Profile</a>
-  <a href="#Winner">Winner</a>
-  <a href="#About">About Us</a>
+  <a href="userhome.php">Winner</a>
+  <a href="userhome.php">About Us</a>
   <a class="active" href="userhome.php">Home</a>
   <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">AP Photography Club</p>

@@ -18,8 +18,8 @@
 
 <div class="topnav">
   <a href="logout.php">Logout</a>
-  <a href="#Winner">Winner</a>
-  <a class="active" href="main.php">Home</a>
+  <a href="adminhome.php">Winner</a>
+  <a class="active" href="adminhome.php">Home</a>
   <a style="float:left; position:relative; bottom:20px;"><img class="logo" src = "../image/logo.png"></a>
   <a style="font-family: Comic San; font-weight:bold; position:relative; right:10cm" >AP Photography Club</a>
 </div>

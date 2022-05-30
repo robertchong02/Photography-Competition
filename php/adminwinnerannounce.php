@@ -20,7 +20,7 @@ include("connect.php");
         <!--头部栏-->
         <div class="topnav">
         <a href="logout.php">Logout</a>
-        <a href="adminwinnerannounce.php">Winner</a>
+        <a href="adminhome.php">Winner</a>
         <a class="active" href="adminhome.php">Home</a>
         <img class="logo" style="float: left" src="../image/logo.png" />
         <p style="float: left">AP Photography Club</p>

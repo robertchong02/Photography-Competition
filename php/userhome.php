@@ -21,7 +21,7 @@
   <a href="editprofile.php">Profile</a>
   <a href="#Winner">Winner</a>
   <a href="#About">About Us</a>
-  <a class="active" href="userhome.php">Home</a>
+  <a class="active" href="#home">Home</a>
   <img class="logo" style="float: left;" src = "../image/logo.png">
     <p style="float: left;">AP Photography Club</p>
 </div>
