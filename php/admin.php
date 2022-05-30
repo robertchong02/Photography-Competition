@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                         echo
                         '<script>
 
-                        alert("Congrats.");
+                        alert("Login Successfully.");
                         window.location.href = "adminhome.php"
 
                         </script>';
