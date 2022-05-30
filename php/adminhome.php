@@ -47,7 +47,7 @@ include("connect.php");
     </div>
     <br>
     <div style="text-align:center">
-        <h1>Welcome, &lt;Admin&gt;</h1>
+        <h1>Welcome to Admin Page</h1>
         <div class="col-4">
         </div>
     </div>
