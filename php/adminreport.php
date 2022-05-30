@@ -40,19 +40,56 @@ include("connect.php");
             <button class="button button1">BACK</button>
     </a>    
 
-    <h1 style="margin: 50px;font-size: 50px; border: 5px solid black; height: 100 px;text-align:center;">Competition Detail</h1>
+    <h1 style="margin: 50px;font-size: 50px; border: 2px solid black; height: 100 px;text-align:center;background:white">Statistic Report</h1>
     <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID ASC LIMIT 1");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
       $displayData = '
-			<p style="margin: auto;font-size: 30px; border: 5px solid black; height:50 px; width: 500px; text-align:center;background-color:#A7CAD7; "><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="60" style="border: none; background-color:transparent;font-size:24px; text-align:center" readonly/></p>';
+			<p style="margin: auto;font-size: 30px; border:none; height:50 px; width: 500px; text-align:center;background-color:transparent; ">
+            Competition Title:<input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="60" style="border-style: none none solid none; background-color:transparent;font-size:24px; text-align:center" readonly/></p>';
 		echo $displayData;  
 		}
     ?>	
     <br>
+    <div style="position:relative;left:40%">
+    <?php
+        $query = "SELECT COUNT(ContentID) AS 'Total', ContentTitle FROM content";
+        $result= mysqli_query($con, $query);
+        if($result){
+            while($row=mysqli_fetch_assoc($result)){
+                $display_Data = '
 
+                    <div>
+                    <b>Total Number of Participant     : </b><input type="text" value = "'.$row['Total'].'" name="ContentTitle" readonly>
+                    </div>
+                    <br>
+                ';
+                echo $display_Data;
+            }
+        }   
+        ?>
+            <?php
+            $query = "SELECT COUNT(vcontentID) AS 'Total', vcontentTitle FROM verifycontent";
+            $result= mysqli_query($con, $query);
+            if($result){
+                while($row=mysqli_fetch_assoc($result)){
+                    $display_Data = '
+                    <div>
+                    <b>Number of Content Approved: </b><input type="text" value = "'.$row['Total'].'" name="ContentTitle" readonly>
+                    </div>
+                    <br>
+                    <div>
+                    <b>Number of Content Rejected   :</b> <input type = "text" readonly>
+                    </div>
+                    <br>
+                    ';
+                    echo $display_Data;
+                }
+            }   
+            ?>
+    </div>
     <!--Php for Statistical Chart-->
 
     <?php     
@@ -81,9 +118,9 @@ include("connect.php");
 
     <!--Php for commend Chart-->
     <!-- 左右Flex 布局 -->
-    <div class = "flex-container" style="height:1000px">
+    <!-- <div class = "flex-container" style="height:1000px"> -->
 
-        <!--左边区域-->
+        <!-- 左边区域
         <div class="baise flex-container column " style="width: 500px; background-color: #DAF7A6;">
 
         <?php
@@ -92,9 +129,6 @@ include("connect.php");
         if($result){
             while($row=mysqli_fetch_assoc($result)){
                 $display_Data = '
-                    <div class="">
-                    <b>Competition Title: </b><input type="text" value = "'.$row["ContentTitle"].'" name="ContentTitle" readonly>
-                    </div>
 
                     <div>
                     <b>Total Number of Participant: </b><input type="text" value = "'.$row['Total'].'" name="ContentTitle" readonly>
@@ -110,48 +144,42 @@ include("connect.php");
 
                 ';
                 echo $display_Data;
-
             }
-        }
-        
-        
+        }   
         ?>
 
 
-        </div>
+        </div> -->
 
-        <div class="baise flex-container column" style="width: 500px;">
+        <div class="baise flex-container column" style="width: 60%;margin:auto">
             <!--Statistic report Area-->
-            <div class ="title" style="background-color:#A7CAD7;"> 
+            <div class ="title" style="width:100%"> 
             <canvas id="voteChart"></canvas>
             </div>
 
 
             <!--HAVENT DONE-->
             <!--Statistical Commend-->
-            <div class= "title" style="background-color:#A7CAD7;">
+            <div class= "title" style="width:100%">
             <canvas id= "commentChart"></canvas>
             </div>
 
 
-            
+            <h3 style="margin:auto">Reference Table</h3>
             <?php
-                $fetchData = mysqli_query($con, "SELECT * FROM content");
+                $fetchData = mysqli_query($con, "SELECT * FROM verifycontent");
                 while($row = mysqli_fetch_assoc($fetchData)){
                     $disData= '
-                    <div style="border: 1px solid black">
+                    <div style="border: 1px solid black;width:100%">
                         <p>This Tab Should list every Content ID and The Tilte And The Participant</p>
 
-                        <b>Content ID: </b><input type="text" value="'.$row["ContentID"].'"><br>
+                        <b>Content ID: </b><input style="border:none;background:transparent" type="text" value="'.$row["vcontentID"].'"><br>
                         
-                        <b>Content Tilte: </b> <input type="text" value="'.$row["ContentTitle"].'"><br>
-                        <b>Participant Name: </b> <input type="text" value="'.$row["ParticipantName"].'"><br>
+                        <b>Content Tilte: </b> <input style="border:none;background:transparent" type="text" value="'.$row["vcontentTitle"].'"><br>
+                        <b>Participant Name: </b> <input style="border:none;background:transparent" type="text" value="'.$row["ParticipantName"].'"><br>
 
-
-                        
                     </div>
 
-                    
                     
                     ';
                     echo $disData;
@@ -168,7 +196,7 @@ include("connect.php");
     
     
 <!-- footer -->
-<div class="footer column" style="font-size:14px" >
+<div class="footer column" style="font-size:14px;margin-top:100px" >
 	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
 	<div style="padding-top:20px"> 
 		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>

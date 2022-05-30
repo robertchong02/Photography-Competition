@@ -44,4 +44,3 @@ if($_GET["vote"]) {
         
         mysqli_close($con);
   }
-
