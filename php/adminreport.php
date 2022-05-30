@@ -228,7 +228,7 @@ include("connect.php");
             const data = {
             labels: labels,
             datasets: [{
-                label: 'Statistical Report',
+                label: 'Votes Report',
                 data: <?php echo json_encode($y)?>,
                 backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
