@@ -4,10 +4,11 @@ include("connect.php");
 
 $vconID = mysqli_real_escape_string($con,$_POST['vconID']);
 $comment = mysqli_real_escape_string($con,$_POST['comment']);
+$compID = mysqli_real_escape_string($con, $_POST['CompID']);
 
-$sql = "INSERT INTO contentcomment (vcID, contentcomment)
+$sql = "INSERT INTO contentcomment (vcID, compID, contentcomment)
 VALUES
-('$vconID','$comment')" ;
+('$vconID', '$compID', '$comment')" ;
 
 $insert = mysqli_query($con, $sql);
 

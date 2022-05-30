@@ -22,16 +22,18 @@ $customerID = $_SESSION['Customer_ID'];
     <p style="float: left;">AP Photography Club</p>
 </div>
 <h2 style="text-align:center">POST</h2>	
+<form action="addcomment.php" method="get">
 <?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '8'");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = ".$_GET['vcompetitionID']);
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
       $displayData = '
-			<h2 style="text-align:center"><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="50" style="background-color:transparent;font-size:24px; text-align:center" readonly/></h2>';
-		echo $displayData;  
+			<h2 style="text-align:center"><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="60" style="background-color:transparent;font-size:24px; text-align:center" readonly/></h2>';
+			echo $displayData;  
 		}
 ?>	
+</form>
 <br>
 <nav class="buttonbackground">
 <p align="left">
@@ -93,6 +95,7 @@ $customerID = $_SESSION['Customer_ID'];
 		<input style="width:95%;height:100px;" type="text" placeholder="Comment here" name="comment">
 		<?php
 		echo '<input style = "display:none;" type = text name="vconID" value='.$_GET["vconID"].'>';
+		echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["vcompetitionID"]. '>';
 		?>
 		<p align="center" style="margin-top:0px">
 			<input type="submit" value="SUBMIT" style="background-color:green;color:white" >

@@ -63,6 +63,8 @@ $customerID = $_SESSION['Customer_ID'];
     <p style="float: left;">AP Photography Club</p>
 </div>
 <h2 style="text-align:center">POSTS</h2>
+
+<form action="readcomment.php" method="get">
 <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = ".$_GET['CompID']);
   			while($row = mysqli_fetch_assoc($fetchData)) 
@@ -70,9 +72,11 @@ $customerID = $_SESSION['Customer_ID'];
 			
       $displayData = '
 			<h2 style="text-align:center"><input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="60" style="background-color:transparent;font-size:24px; text-align:center" readonly/></h2>';
-		echo $displayData;  
+			echo $displayData;  
 		}
 ?>	
+</form>
+
 <br>
 <nav class="buttonbackground">
 <p align="left">
@@ -112,7 +116,6 @@ $customerID = $_SESSION['Customer_ID'];
 				<input type ="submit" value= "Read Comments" style="width:540px;background-color:#AFB4A4;cursor: pointer;"/>	
 				<input style="display:none;" type="text" name="vconID" value='.$row["vcontentID"].'>
 				<input style="display:none;" type="text" name="vcompetitionID" value='.$row["vcompetitionID"].'>
-
 			</form>
 
 			<form name="viewcontent" method="get" action="vote.php" style="padding-left:200px; margin:auto">
