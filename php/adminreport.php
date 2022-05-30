@@ -80,8 +80,19 @@ include("connect.php");
                     <b>Number of Content Approved: </b><input type="text" value = "'.$row['Total'].'" name="ContentTitle" readonly>
                     </div>
                     <br>
+                    ';
+                    echo $display_Data;
+                }
+            }   
+            ?>
+            <?php
+            $query = "SELECT COUNT(rcontentID) AS 'Total', rcontentTitle FROM rejectedcontent";
+            $result= mysqli_query($con, $query);
+            if($result){
+                while($row=mysqli_fetch_assoc($result)){
+                    $display_Data = '
                     <div>
-                    <b>Number of Content Rejected   :</b> <input type = "text" readonly>
+                    <b>Number of Content Rejected   :</b> <input type="text" value = "'.$row['Total'].'" name="ContentTitle" readonly>
                     </div>
                     <br>
                     ';
