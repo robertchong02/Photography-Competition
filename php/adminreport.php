@@ -1,18 +1,14 @@
 <?php
-
 include("connect.php");
 ?>
-
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Statistic report</title>
     <style>
         .chartBox{
             width:300px;
         }
-
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap -->
@@ -22,13 +18,10 @@ include("connect.php");
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
     <link rel="stylesheet" href="../css/report.css">
 </head> 
 
 <body style="background-image:url('../image/bg.gif');font-family:Old Standard TT, serif;">
-    
     <div class="topnav">
         <a href="logout.php">Logout</a>
         <a href="adminhome.php">Winner</a>
@@ -60,6 +53,9 @@ include("connect.php");
             <p style="float:left;border:1px solid black;background:white;width:100px;height:30px;margin-left:2px;padding:2px" id="total"></p> 
             </div>
             <br>
+
+
+            <!--Number of Content Approved-->
             <?php
             $query = "SELECT COUNT(vcontentID) AS 'Total', vcontentTitle FROM verifycontent WHERE vcompetitionID =".$_GET['CompID'] ;
             $result= mysqli_query($con, $query);
@@ -75,6 +71,7 @@ include("connect.php");
                 }
             }   
             ?>
+            
             <?php
             $query = "SELECT COUNT(rcontentID) AS 'Total', rcontentTitle FROM rejectedcontent WHERE rcompetitionID =".$_GET['CompID'] ;
             $result= mysqli_query($con, $query);
@@ -91,6 +88,7 @@ include("connect.php");
             }   
             ?>
     </div>
+    
     <!--Php for Statistical Chart-->
 
     <?php  
@@ -103,6 +101,7 @@ include("connect.php");
             $y[] = $data['mon'];
         }
     ?>
+    <!--Php for Commend Chart-->
 
     <?php
         $run = mysqli_real_escape_string($con, $_GET['CompID']);
@@ -159,46 +158,33 @@ include("connect.php");
             <canvas id="voteChart"></canvas>
             <p>x-axis:Content ID;y-axis:Total votes</p>
             </div>
-            
 
-            <!--HAVENT DONE-->
-            <!--Statistical Commend-->
+            <!--Statistical Commend A-->
             <div class= "title" style="width:100%">
             <canvas id= "commentChart"></canvas>
             <p>x-axis:Content ID;y-axis:Total comments</p>
             </div>
 
-
             <h3 style="margin:auto">Reference Table</h3>
+
+            <!--Reference Table-->
             <?php
                 $fetchData = mysqli_query($con, "SELECT * FROM verifycontent WHERE vcompetitionID =".$_GET['CompID']);
                 while($row = mysqli_fetch_assoc($fetchData)){
+
                     $disData= '
                     <div style="border: 1px solid black;width:100%">
                         <p>This Tab Should list every Content ID and The Title And The Participant</p>
-
                         <b>Content ID: </b><input style="border:none;background:transparent" type="text" value="'.$row["vcontentID"].'"><br>
-                        
                         <b>Content Tilte: </b> <input style="border:none;background:transparent" type="text" value="'.$row["vcontentTitle"].'"><br>
                         <b>Participant Name: </b> <input style="border:none;background:transparent" type="text" value="'.$row["ParticipantName"].'"><br>
-
-                    </div>
-
-                    
+                    </div>      
                     ';
                     echo $disData;
-                }
-            
-            
-            ?>
-            
-            
+                } 
+            ?>            
         </div>
     </div>
-
-    
-    
-    
 <!-- footer -->
 <div class="footer column" style="font-size:14px;margin-top:100px" >
 	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left">
@@ -218,7 +204,6 @@ include("connect.php");
 	</div>
 	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
 </div></br>
-
 
 <!--Statistically Report JS-->
 <script>  
@@ -269,7 +254,6 @@ include("connect.php");
 
         // comment Statistic
         // data of Comment chart
-
         const comlab = <?php echo json_encode($_id)?>;
         const dataCom = {
             labels: comlab,
@@ -297,7 +281,6 @@ include("connect.php");
                 borderWidth: 1
             }]
         };
-
         // config commendReport
         
         const configCom={
@@ -316,16 +299,10 @@ include("connect.php");
         document.getElementById('commentChart'),
         configCom
         ); 
-
-        
+      
         var x = document.getElementById("num1").value;
         var y = document.getElementById("num2").value;
         document.getElementById("total").innerHTML = +x + +y;
-        
-        
-    
-
     </script>
 </body>
-
 </html>
