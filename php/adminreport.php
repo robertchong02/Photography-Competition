@@ -214,9 +214,7 @@ include("connect.php");
 	</div>
 	</div></br>
 	<div>
-		<p style="text-align:center">Contact us by clicking
-		<a href="https://api.whatsapp.com/send?phone=60163543712&text=Hello,%20I%20have%20questions%20regarding%20the%20AP%20Photo%20Competition%20%3E.%3C">here</a>
-		</p>
+        <p style="text-align:center">Kindly click <a href="https://web.whatsapp.com/">here</a> to contact with users.</p>
 	</div>
 	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
 </div></br>
