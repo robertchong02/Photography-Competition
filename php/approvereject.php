@@ -11,7 +11,7 @@ if($_POST["approve"]) {
         $result2 = $con -> query($sql2);
 
         if($result == 1) {
-            echo '<script> alert ("Content verified successfully. A message will be sent to notify the participant.");
+            echo '<script> alert ("Content verified successfully. Please contact to user manually.");
             window.location.href= "adminverifycontent.php";
             </script>';
 
