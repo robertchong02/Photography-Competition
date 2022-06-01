@@ -110,7 +110,7 @@ $customerID = $_SESSION['Customer_ID'];
       <input style="width:95%;" type="text" placeholder="Enter your content title"  name="conTitle" required>
       <input style="width:95%;height:152px" type="text" placeholder="Enter short content description"  name="conDesc" required>
       <input style="width:95%;" type="text" placeholder="Enter your username" name="userName" required>
-      <h6 style="margin-left:15px">*This Username will be displayed on the content page"</h6>
+      <h6 style="margin-left:15px">*Please use the username that match your account, else your be disqualified. "</h6>    
 
 
       <?php 

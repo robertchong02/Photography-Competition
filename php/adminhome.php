@@ -10,7 +10,14 @@ include("connect.php");
   gap: 20px;
   background-color: #A7CAD7;
   padding: 10px;
-  margin: 20px 20px 20px 20px;
+  margin: 20px 20px 0px 20px;
+}
+.admingrid-container1 {
+  display: grid;
+  grid-template-columns: 300px 5fr;
+  background-color: #A7CAD7;
+  padding: 10px;
+  margin: 0 20px 20px 20px;
 }
 .admingrid-item {
   background-color: rgba(255, 255, 255, 0.8);
@@ -61,8 +68,6 @@ include("connect.php");
             <button type="button" class="functbtn">Add New Competition</button><br />
             </a>
         </div>
-		
-
         <div class="admingrid-item">
             <img style="object-fit: contain;width:90%;height:90%" src="../image/verification.png" />
             <br>
@@ -85,6 +90,16 @@ include("connect.php");
             </a>
         </div>
     </div>
+	<div class="admingrid-container1" style="display: flex;justify-content: center;">
+		<div class="admingrid-item"  >            
+			<img style="object-fit: contain;width:50%;" src="../image/userrecord.jpg" />
+			<br>
+			<a href="adminuserrecord.php">
+			<button type="button" class="functbtn">User Records</button>
+			</a>
+		</div>
+	</div>
+
     </div>
 <br><br><br>
 <h2 id="Winner" style="margin:25px; text-align:center;font-family:Franklin Gothic Medium;">Winner</h2>

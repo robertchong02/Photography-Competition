@@ -77,7 +77,7 @@ include("connect.php");
 	?>	
 
 <!-- footer -->
-<div class="footer" style="font-size:14px;margin-top:2200px" >
+<div class="footer" style="font-size:14px;margin-top:2500px" >
 	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left;font-size:14px">
 	<div> 
 		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
