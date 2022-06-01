@@ -42,7 +42,7 @@ include("connect.php");
       $displayData = '
 			<p style="margin: auto;font-size: 30px; border:none; height:50 px; width: 500px; text-align:center;background-color:transparent; ">
             Competition Title:<input type="text" value = "'.$row["CompetitionTitle"].'" name="title" size="30" maxlength="60" style="border-style: none none solid none; background-color:transparent;font-size:24px; text-align:center" readonly/></p>';
-		echo $displayData;  
+		echo $displayData; 
 		}
     ?>	
     <br>

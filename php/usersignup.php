@@ -26,54 +26,54 @@
     <tr>
 		<td style="text-align:left">First Name</td>
  		<td>:</td>
- 		<td><input type="text" name="firstname" size="20" maxlength="15"/></td>
+ 		<td><input type="text" name="firstname" size="20" maxlength="15" required/></td>
  	</tr>
  	<tr>
  		<td style="text-align:left">Last Name</td>
  		<td>:</td>
- 		<td><input type="text" name="lastname" size="20" maxlength="15"/></td>
+ 		<td><input type="text" name="lastname" size="20" maxlength="15" required/></td>
  	</tr>
  	<tr>
  		<td style="text-align:left">Username</td>
  		<td>:</td>
- 		<td><input type="text" name="username" size="20" maxlength="15"/></td>
+ 		<td><input type="text" name="username" size="20" maxlength="15" required/></td>
  	</tr>
  	<tr>
  		<td style="text-align:left">Email</td>
  		<td>:</td>
- 		<td><input type="email" id="email" size="20" name="email"/></td>
+ 		<td><input type="email" id="email" size="20" name="email" required/></td>
 	</tr>
  	<tr>
  		<td style="text-align:left">Contact Number</td>
  		<td>:</td>
- 		<td><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{7}" placeholder="Eg:xxx-xxxxxxx" /></td>
+ 		<td><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{7}" placeholder="Eg:xxx-xxxxxxx" required /></td>
  	</tr>
  	<tr>
  		<td style="text-align:left">Gender</td>
  		<td>:</td>
- 		<td>	<input type="radio" name="gender" value="M"/>Male
- 				<input type="radio" name="gender" value="F"/>Female
+ 		<td>	<input type="radio" name="gender" value="M" required/>Male
+ 				<input type="radio" name="gender" value="F" required/>Female
  		</td>
 	</tr>
  	<tr>
  		<td style="text-align:left">Date of Birth</td>
  		<td>:</td>
- 		<td><input type="date" id="dob" name="dob"/></td>
+ 		<td><input type="date" id="dob" name="dob" required/></td>
  	</tr>
  	<tr>
  		<td style="text-align:left">Nationality</td>
  		<td>:</td>
- 		<td><input type="text" name="nationality" size="20" maxlength="15"/></td>
+ 		<td><input type="text" name="nationality" size="20" maxlength="15" required/></td>
  	</tr>
  	<tr>
  		<td style="text-align:left">Password</td>
  		<td>:</td>
- 		<td><input type="password" name="password" size="20" maxlength="15"/></td>
+ 		<td><input type="password" name="password" size="20" maxlength="15" required/></td>
  	</tr>
  	<tr>
  		<td style="text-align:left">Confirm Password</td>
  		<td>:</td>
- 		<td><input type="password" name="confirmpassword" size="20" maxlength="15"/></td>
+ 		<td><input type="password" name="confirmpassword" size="20" maxlength="15" required/></td>
  	</tr>
  		<td></td>
  	<tr></tr>

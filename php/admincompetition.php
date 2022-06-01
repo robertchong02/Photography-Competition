@@ -24,15 +24,11 @@ include("connect.php");
 <p>
 	<a href="adminhome.php"><button class="compbtn">Back</button></a>
 </p>
-<p style="margin-right:50px; margin-top:20px;align:right">
-	<a href="adminaddcomp.php"><button class="button button2" style="font-size:20px;border:5px solid black" >+ Add New Competition</button></a>
-</p>
 </nav>
 
 <br>
 <br>
 
-<form name="compread2" action="adminreport.php" method="get"  style=" padding-left:6px;">
   <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID Desc");
   			while($row = mysqli_fetch_assoc($fetchData)) 
@@ -60,18 +56,25 @@ include("connect.php");
       
       <h3> Guideline </h3>
       <textarea name = "guideline" cols=40  rows=3 style="width: 90%;height: 345px;margin-left:25px;background: #f1f1f1;font-size:20px" readonly>'.$row["Guideline"].'</textarea>
-
-      <form method="get" action="adminreport.php">
-      <div style="padding-right:10px;padding-bottom:50px">
-      <input type ="submit" class="btn btn-primary" style="margin-left:530px;"  value= "Statistic Report"/>
-      <input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>	
+      
+      <div class="flex-container" style="margin-left:350px">
+        <div>
+          <form method="get" action="admincontent.php">
+            <input type ="submit" class="btn btn-primary" style="width:170px" value= "Participant Content"/>
+            <input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>	
+          </form>
+        </div>
+        <div>
+          <form method="get" action="adminreport.php">
+            <input type ="submit" class="btn btn-primary" style="width:170px" value= "Statistic Report"/>
+            <input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>	
+          </form>
+        </div>
       </div>
-      </form>
     </div> ';
     echo $displayData;  
 	}
 	?>	
-</form>
 
 <!-- footer -->
 <div class="footer" style="font-size:14px;margin-top:2200px" >

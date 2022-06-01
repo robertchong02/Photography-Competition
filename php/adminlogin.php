@@ -25,9 +25,9 @@
 <h2 id="Login">Admin Login</h2><br/><br/>
 <form name="login" method="POST" action="admin.php">
 	Admin ID:
-	<input type="text" name="adminName" size="20" maxlength="8"/><br/><br/>
+	<input type="text" name="adminName" size="20" maxlength="8" required/><br/><br/>
 	Password:	
-	<input type="password" name="adminPassword" size="20" maxlength="16"/><br/><br/>
+	<input type="password" name="adminPassword" size="20" maxlength="16" required/><br/><br/>
 	<br>
 	<input style="width:50%;border-radius:15px;background-color:#4CAF50;color:white" type="submit" value="Log In as Admin">
 	<br>
