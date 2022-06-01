@@ -28,7 +28,7 @@ include("connect.php");
 
 <br>
 <br>
-
+  <div>
   <?php
   			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID Desc");
   			while($row = mysqli_fetch_assoc($fetchData)) 
@@ -75,9 +75,10 @@ include("connect.php");
     echo $displayData;  
 	}
 	?>	
+  </div>
 
 <!-- footer -->
-<div class="footer" style="font-size:14px;margin-top:2500px" >
+<div class="footer" style="font-size:14px;margin-top:2100px">
 	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left;font-size:14px">
 	<div> 
 		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
@@ -94,7 +95,7 @@ include("connect.php");
     <p style="text-align:center">Kindly click <a href="https://web.whatsapp.com/">here</a> to contact with users.</p>
 	</div>
 	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
-</div></br>
+</div>
 
 </body>
 </html>

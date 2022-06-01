@@ -207,6 +207,12 @@ include("connect.php");
 
 <!--Statistically Report JS-->
 <script>  
+
+        var xx = document.getElementById("num1").value;
+        var yy = document.getElementById("num2").value;
+        document.getElementById("total").innerHTML = parseInt(xx) + parseInt(yy);
+
+        
             const labels = <?php echo json_encode($x)?>;
             const data = {
             labels: labels,
@@ -300,9 +306,7 @@ include("connect.php");
         configCom
         ); 
       
-        var x = document.getElementById("num1").value;
-        var y = document.getElementById("num2").value;
-        document.getElementById("total").innerHTML = +x + +y;
+
     </script>
 </body>
 </html>
