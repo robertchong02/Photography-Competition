@@ -1,3 +1,9 @@
+<?php
+include("connect.php");
+include("adminsession.php");
+$AdminID = $_SESSION['adminID'];
+?>
+
 <!DOCTYPE html>
 <html>
 

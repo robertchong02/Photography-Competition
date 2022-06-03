@@ -3,6 +3,6 @@
     session_start();
     if(!isset($_SESSION['adminID']))
     {
-        // header("location: signuploginforgot.php");
+        header("location: adminhome.php");
     }
 ?>

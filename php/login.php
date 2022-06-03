@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
                 echo
                 '<script>
-                alert("Login successful. Welcome to APU Photography Page!");
+                alert("Login successful. Welcome to AP Photography Page!");
                 window.location.href = "userhome.php";
                 </script>';
             }

@@ -1,6 +1,7 @@
 <?php
 include("connect.php");
 
+
 if($_POST["approve"]) {
 
         $sql="INSERT INTO verifycontent (`vcontentID`, `vcompetitionID`, `vcontentImage` ,`vcontentTitle`, `vcontentDescription`, `ParticipantName`) 

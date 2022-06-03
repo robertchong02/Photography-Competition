@@ -1,5 +1,7 @@
 <?php
 include("connect.php");
+include("adminsession.php");
+$AdminID = $_SESSION['adminID'];
 ?>
 
 <!DOCTYPE html>
@@ -77,25 +79,6 @@ include("connect.php");
 	?>	
   </div>
 
-<!-- footer -->
-<div class="footer" style="font-size:14px;margin-top:2100px">
-	<div class="flex-container" style="align-items:center; justify-content:center; text-align:left;font-size:14px">
-	<div> 
-		<img class="logo" style="width:120px; height:100px" src = "../image/logo.png"></br></br>
-	</div>
-	<div style="font-size:14px">
-		<p><b>Asia Pacific University</b></p>
-		Jalan Teknologi 5, </br>
-		Taman Teknologi Malaysia,</br>
-		57000 Kuala Lumpur,</br>
-		Wilayah Persekutuan Kuala Lumpur.
-	</div>
-	</div>
-	<div>
-    <p style="text-align:center">Kindly click <a href="https://web.whatsapp.com/">here</a> to contact with users.</p>
-	</div>
-	<div style="text-align:center; font-size:10px">Copyright &copy; 2022 AP Photography Club</div></br>
-</div>
 
 </body>
 </html>
