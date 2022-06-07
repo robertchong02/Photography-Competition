@@ -101,43 +101,47 @@
 
 	</form>
 	</div>
+	<br><br>
 
-
-	
-	<div style="padding-right:10px; margin:auto">
-	<form method="get" action="viewcontent.php">
+	<h2 id="Winner" style="margin:25px; text-align:center;font-family:Franklin Gothic Medium">Voting Session</h2>
+	<div style="padding-right:10px; margin:auto;">
 		<div class="title" style="text-align:center;">
 		<?php
-  			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID ASC LIMIT 1");
+  			$fetchData = mysqli_query($con, "SELECT * FROM competition ORDER BY CompetitionID DESC LIMIT 2");
   			while($row = mysqli_fetch_assoc($fetchData)) 
   		{		
 			
 		$displayData = '
-			<input type="text" value = "'.$row["CompetitionTitle"].'" name="title" style="height:50px;border:none;background-color:#A7CAD7;font-size:28px" readonly/>
-			<b style="font-size:28px">(Closed)</b><br/><br/>
-			<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="object-fit: contain;width:500px; height:600px;">
+			<input type="text" value = "'.$row["CompetitionTitle"].'" name="title" style="height:50px;border:none;background-color:transparent;font-size:28px" readonly/>
+			<b style="font-size:28px"></b><br/><br/>
+			<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="object-fit: contain;max-width:500px;max-height:500px">
 			<br><br>
-			<input type ="submit" class="btn btn-primary"  value= "Click here to vote and Comment"/>';
-			echo '<input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>';
+			<form method="get" action="viewcontent.php">
+			<input type ="submit" class="btn btn-primary"  value= "Click here to vote and Comment"/>
+			<input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>
+			</form>
+			<br><br>';
 			echo $displayData;  
 		}
 		?>	
 		</div>
-	</form>
+	
 	</div>
 	
 
 	<div style="padding-right:10px; margin:auto" >
-		<div class="title" style="text-align:center;height:80px; padding-top:20px">
+		<div class="title" style="text-align:center;height:300px; padding-top:20px;">
+		<img style="object-fit: contain;width:150px;height:300px;margin-right:30px" src = "../image/clickhere.png">
 		<a href="morecomp.php">
-				<button type="button" class="btn btn-primary">More Competitions</button>
-			</a>
+		<button type="button" class="btn btn-primary">Click here for more competitions</button>
+		</a>
+		<br>
 		</div>
 	</div>
 <br>
 <br>
 
-<h2 id="Winner" style="margin:25px; text-align:center;font-family:Franklin Gothic Medium">Winner</h2>
+<h2 id="Winner" style="margin:25px; text-align:center;font-family:Franklin Gothic Medium">Winner Dashboard</h2>
 <div class="title">
 	<p style="text-align:center; font-size:24px">Winner for the latest competition:</p>
 	<?php
@@ -208,7 +212,9 @@
 </div><br/><vr/>
 
 <h2 id="About" style="margin:25px; text-align:center;font-family:Franklin Gothic Medium">About Us</h2>
-<div class="title" style="text-align:justify; margin:25px;font-size:20px"> 
+<div class="title" style="text-align:justify; margin:25px;font-size:20px;"> 
+	<img style="object-fit: contain;width:50%;height:300px;margin-left:auto;margin-right:auto;display:block" src = "../image/apu.jpg">
+	<br>	
 	<p>Founded in 2022 by Asia Pacific University student in University Photography Organisation is a leading global platform dedicated to the development and advancement of photographic culture. Our programming and competition initiatives provide valuable opportunities for artists working in photography and help broaden the conversation around their work. Through our fairs we play a key role in driving the growth of the contemporary art market for photo-based art and deepening audience engagement with the medium. </p>
 	<p>Our value lies in the integrity of our expertise, our years of experience and the strength of our relationships with both individual photographers as well as our industry-leading partners around the world. Our objective is to let every student to have a platform to share their masterpiece of photography and gain their confident on photography skills plus give them an opportunity to share their experiences of photography techniques. So, competition is organized by the admin to know who has the most perfect skills of photography and winner will be announce at the end. Contact Us if you need enquires. So, what are you waiting for? </p>
 	<br/><br/>

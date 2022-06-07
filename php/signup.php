@@ -37,7 +37,7 @@ if($Password == $ConfirmPassword)
             {
                 echo 
                 '<script>
-                alert("Thank you for signing up with APU Photography Club. Please proceed to login.");
+                alert("Thank you for signing up with AP Photography Club. Please proceed to login.");
                 window.location.href = "userlogin.php";
                 </script>';
             }

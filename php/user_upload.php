@@ -1,17 +1,5 @@
 <?php
 include("connect.php");
-include("session.php");
-    $customerID = $_SESSION['Customer_ID'];
-
-	// $CompetitionID = mysqli_query($con, "SELECT * FROM competition WHERE CompetitionID = '$CompetitionID';");
-
-// include("session.php");
-//     $customerID = $_SESSION['ID'];
-
-// if ($con->connect_error) {
-//     die("Connection failed: " . $con->connect_error);
-//  }
-//    echo "Connected successfully";
 
 $uploadImage = $_FILES['image']['tmp_name'];
 
@@ -19,9 +7,7 @@ $img = file_get_contents($uploadImage);
 
 $sql = "INSERT INTO content (CompetitionID, ContentImage ,ContentTitle ,ContentDescription ,ParticipantName)
 VALUES
-($_POST[CompID],?,'$_POST[conTitle]','$_POST[conDesc]', '$_POST[userName]')" ;
-
-echo $sql;
+('$_POST[CompID]',?,'$_POST[conTitle]','$_POST[conDesc]', '$_POST[userName]');" ;
 
 $stmt = mysqli_prepare($con,$sql);
 
@@ -39,7 +25,7 @@ if($check == 1) {
 
 } else {
     echo '<script> alert ("Upload failed.");
-    window.location.href = "compterms.php";
+    window.location.href = "userhome.php";
     </script>';
 }
 

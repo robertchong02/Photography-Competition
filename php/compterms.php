@@ -111,42 +111,16 @@ $customerID = $_SESSION['Customer_ID'];
       <input style="width:95%;height:152px" type="text" placeholder="Enter short content description"  name="conDesc" required>
       <input style="width:95%;" type="text" placeholder="Enter your username" name="userName" required>
       <h6 style="margin-left:15px">*Please use the username that match your account, else your be disqualified. "</h6>    
-
-
-      <?php 
-      echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["CompID"]. '>';
-      ?>
+      
       <div style="margin-right:30px">
       <input style="margin-right:20px;background-color: #4CAF50;color:white;margin:auto; float:right" type="submit" value="Submit">
       </div>
+      <?php 
+      echo '<input style="display:none;" type="text" name="CompID" value='.$_GET["CompID"]. '>';
+      ?>
       </form>
     </div>
   </div>
-
-	  <!-- <button type="button" class="button button1 btn btn-primary joinButton" onclick="openPopup()" style="padding-bottom:35px">Join Competition</button>
-            <div class = "popup" id="popup">
-                <h2>Thank You!</h2>
-                <p>Your content has been successfully submitted for verification.</p>
-                <button type="button" onclick="closePopup()">OK</button>
-                
-
-            </div>    -->
-<!-- <script>
-// let popup = document.getElementById("popup");
-
-// function openPopup(){
-//     popup.classList.add("open-popup");
-// }
-
-
-// function closePopup(){
-
-//     popup.classList.remove("open-popup");
-
-//     //redirect 
-//     window.location.href = "userhome.php";
-// }
-</script> -->
 
 <!-- footer -->
 <div class="footer" style="font-size:14px; margin-top:1100px" >

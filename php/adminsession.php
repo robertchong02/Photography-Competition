@@ -3,6 +3,6 @@
     session_start();
     if(!isset($_SESSION['adminID']))
     {
-        header("location: adminhome.php");
+        // header("location: adminhome.php");
     }
 ?>
