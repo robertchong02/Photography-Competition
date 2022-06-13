@@ -117,7 +117,7 @@
 			<b style="font-size:28px"></b><br/><br/>
 			<img src="data:image/jpg;base64, '.base64_encode($row["CompetitionImage"]).'" style="object-fit: contain;max-width:500px;max-height:500px">
 			<br><br>
-			<form method="get" action="viewcontent.php">
+			<form method="get" action="userlogin.php">
 			<input type ="submit" class="btn btn-primary"  value= "Click here to vote and Comment"/>
 			<input style="display:none;" type="text" name="CompID" value='.$row["CompetitionID"]. '>
 			</form>
